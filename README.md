@@ -1,19 +1,25 @@
-# KeyzPal
- ![https://github.com/limbo666/KeyzPal/blob/master/Resources/KeysPal.png]()
+---
+typora-root-url: Resources
+---
+
+# **KeyzPal**
+![img](https://raw.githubusercontent.com/limbo666/KeyzPal/master/Resources/KeysPal.png)
+
+
 
 A Windows tray utility to indicate the **CAPS**, **NUM** and **SCROLL** key status.
 
 The program currently offers:
 
-- Lightweight interface - Runs on system tray.
+- *Lightweight interface - Runs on system tray.*
 
-- Selectable LOCK keys to indicate.
+- *Selectable LOCK keys to indicate.*
 
-- Option to auto start on windows start.
+- *Option to auto start on windows start.*
 
-- Easy to use interface.
+- *Easy to use interface.*
 
-- Keys normalization function.
+- *Keys normalization function.*
 
   
 
