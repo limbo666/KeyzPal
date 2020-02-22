@@ -1,10 +1,8 @@
 ---
-typora-root-url: Resources
+
 ---
 
 # **KeyzPal**
-![img](https://raw.githubusercontent.com/limbo666/KeyzPal/master/Resources/KeysPal.png)
-
 
 
 A Windows tray utility to indicate the **CAPS**, **NUM** and **SCROLL** key status.
