@@ -125,13 +125,13 @@ Partial Class FrmMain
         'HideToTrayToolStripMenuItem
         '
         Me.HideToTrayToolStripMenuItem.Name = "HideToTrayToolStripMenuItem"
-        Me.HideToTrayToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
-        Me.HideToTrayToolStripMenuItem.Text = "Hide to Tray"
+        Me.HideToTrayToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.HideToTrayToolStripMenuItem.Text = "Hide to  system tray"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'EditToolStripMenuItem
@@ -144,7 +144,7 @@ Partial Class FrmMain
         'SettingsToolStripMenuItem
         '
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
-        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SettingsToolStripMenuItem.Text = "Settings"
         '
         'HelpToolStripMenuItem
@@ -157,13 +157,13 @@ Partial Class FrmMain
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'VersionHistoryToolStripMenuItem
         '
         Me.VersionHistoryToolStripMenuItem.Name = "VersionHistoryToolStripMenuItem"
-        Me.VersionHistoryToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.VersionHistoryToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.VersionHistoryToolStripMenuItem.Text = "Version history"
         '
         'NotifyIcon1

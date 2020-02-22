@@ -51,7 +51,7 @@ Partial Class FrmNotify
         Me.Label2.ForeColor = System.Drawing.Color.Gainsboro
         Me.Label2.Location = New System.Drawing.Point(-3, 56)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(180, 77)
+        Me.Label2.Size = New System.Drawing.Size(180, 47)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "KeyzPal"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter

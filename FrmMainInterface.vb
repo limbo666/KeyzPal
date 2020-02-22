@@ -428,8 +428,17 @@
     End Sub
 
     Private Sub HideToTrayToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HideToTrayToolStripMenuItem.Click
-        Me.Hide()
-        Me.ShowInTaskbar = False
+        CountActiveIndicators()
+
+        If TotalIndicators > 0 Then
+            Me.Hide()
+            Me.ShowInTaskbar = False
+        Else
+            Label4.Visible = True
+            TmrResetLabel.Enabled = True
+
+        End If
+
     End Sub
 
     Private Sub TmrResetLabel_Tick(sender As Object, e As EventArgs) Handles TmrResetLabel.Tick
