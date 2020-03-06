@@ -196,7 +196,7 @@
 
         If My.Computer.Keyboard.NumLock = True Then
             Num = 1
-            Label2.Text = "NumLock Lock ON"
+            Label2.Text = "Num Lock ON"
             If num <> oldnum Then
                 Dim img As Image = PictureBox2.Image
                 Dim bm As Bitmap = img
@@ -216,7 +216,7 @@
             Panel2.BackColor = Color.DimGray
         Else
             num = 0
-            Label2.Text = "NumLock Lock OFF"
+            Label2.Text = "Num Lock OFF"
             If num <> oldnum Then
                 Dim img As Image = PictureBox5.Image
                 Dim bm As Bitmap = img
@@ -240,7 +240,7 @@
         If My.Computer.Keyboard.ScrollLock = True Then
 
             scr = 1
-            Label3.Text = "ScrollLock Lock ON"
+            Label3.Text = "Scroll Lock ON"
             If scr <> oldscr Then
                 Dim img As Image = PictureBox3.Image
                 Dim bm As Bitmap = img
@@ -261,7 +261,7 @@
         Else
 
             scr = 0
-            Label3.Text = "ScrollLock Lock OFF"
+            Label3.Text = "Scroll Lock OFF"
             If scr <> oldscr Then
                 Dim img As Image = PictureBox6.Image
                 Dim bm As Bitmap = img
