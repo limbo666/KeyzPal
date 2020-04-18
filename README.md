@@ -30,3 +30,13 @@ This function can set the lock keys state to "normal" after a selectable period 
 **NUM lock:** ON
 
 **SCROLL lock:** OFF
+
+## GUI
+
+![](https://github.com/limbo666/KeyzPal/blob/master/additional_files/gui_1.png?raw=true)
+
+The GUI is simple and self explained. Once you are execute and configure it, the program will run silently on you system tray indicating the status of lock keys.
+
+## Download 
+
+You can get the latest executable from releases page: https://github.com/limbo666/KeyzPal/releases
