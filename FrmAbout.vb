@@ -1,4 +1,7 @@
-﻿Public Class FrmAbout
+﻿Imports System.IO
+Imports System.Net
+
+Public Class FrmAbout
     Dim Klist As New List(Of String)
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -103,6 +106,20 @@
         End If
 
 
+
+    End Sub
+
+    Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
+        Dim remotefilenm = "https://raw.githubusercontent.com/limbo666/KeyzPal/master/latest_version/version.txt"
+        Dim filenm = Application.StartupPath & "\version.txt"
+        Using WClient As New WebClient()
+            WClient.DownloadFile(remotefilenm, filenm)
+        End Using
+        If File.Exists(filenm) Then
+            Dim filetext = File.ReadAllText(filenm)
+            MsgBox(filetext)
+
+        End If
 
     End Sub
 End Class

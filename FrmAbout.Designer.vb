@@ -35,6 +35,7 @@ Partial Class FrmAbout
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -155,11 +156,22 @@ Partial Class FrmAbout
         Me.TextBox1.Size = New System.Drawing.Size(125, 20)
         Me.TextBox1.TabIndex = 11
         '
+        'LinkLabel2
+        '
+        Me.LinkLabel2.AutoSize = True
+        Me.LinkLabel2.Location = New System.Drawing.Point(127, 233)
+        Me.LinkLabel2.Name = "LinkLabel2"
+        Me.LinkLabel2.Size = New System.Drawing.Size(74, 13)
+        Me.LinkLabel2.TabIndex = 12
+        Me.LinkLabel2.TabStop = True
+        Me.LinkLabel2.Text = "Check update"
+        '
         'FrmAbout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(212, 246)
+        Me.Controls.Add(Me.LinkLabel2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label6)
@@ -196,4 +208,5 @@ Partial Class FrmAbout
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label6 As Label
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents LinkLabel2 As LinkLabel
 End Class
