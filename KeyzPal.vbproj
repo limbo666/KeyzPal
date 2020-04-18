@@ -6,9 +6,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{76C5E607-EE0E-4959-84E3-621F3FD07931}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>KeysPal.My.MyApplication</StartupObject>
-    <RootNamespace>KeysPal</RootNamespace>
-    <AssemblyName>KeysPal</AssemblyName>
+    <StartupObject>KeyzPal.My.MyApplication</StartupObject>
+    <RootNamespace>KeyzPal</RootNamespace>
+    <AssemblyName>KeyzPal</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -21,7 +21,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>KeysPal.xml</DocumentationFile>
+    <DocumentationFile>KeyzPal.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -31,7 +31,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>KeysPal.xml</DocumentationFile>
+    <DocumentationFile>KeyzPal.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -47,7 +47,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Untitled.ico</ApplicationIcon>
+    <ApplicationIcon>colibri_new.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -75,11 +75,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmMainInterface.vb">
+    <Compile Include="FrmMain.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMainInterface.Designer.vb">
-      <DependentUpon>FrmMainInterface.vb</DependentUpon>
+    <Compile Include="FrmMain.Designer.vb">
+      <DependentUpon>FrmMain.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmSettings.Designer.vb">
@@ -123,6 +123,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -136,8 +137,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FrmMainInterface.resx">
-      <DependentUpon>FrmMainInterface.vb</DependentUpon>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSettings.resx">
       <DependentUpon>FrmSettings.vb</DependentUpon>
@@ -159,9 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -179,31 +180,50 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\A.png" />
+    <None Include="Resources\capsOn1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\1.png" />
+    <None Include="Resources\numOn1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\scr.png" />
+    <None Include="Resources\scrOn1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\a_low.png" />
+    <None Include="Resources\capsOff1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\dash.png" />
+    <None Include="Resources\numOff1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\no_scr.png" />
+    <None Include="Resources\scrOff1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\KeysPal.png" />
+    <None Include="Resources\KeyzPal.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="colibri_new.ico" />
     <Content Include="icondefault.ico" />
+    <None Include="Resources\capsOff2.png" />
+    <None Include="Resources\capsOn2.png" />
+    <None Include="Resources\numOff2.png" />
+    <None Include="Resources\numOn2.png" />
+    <None Include="Resources\scrOff2.png" />
+    <None Include="Resources\scrOn2.png" />
+    <None Include="Resources\capsOff3.png" />
+    <None Include="Resources\capsOn3.png" />
+    <None Include="Resources\numOff3.png" />
+    <None Include="Resources\numOn3.png" />
+    <None Include="Resources\scrOff3.png" />
+    <None Include="Resources\scrOn3.png" />
+    <None Include="Resources\capsOff4.png" />
+    <None Include="Resources\capsOn4.png" />
+    <None Include="Resources\numOff4.png" />
+    <None Include="Resources\numOn4.png" />
+    <None Include="Resources\scrOff4.png" />
+    <None Include="Resources\scrOn4.png" />
     <Content Include="Untitled.ico" />
-    <None Include="Resources\paypal.png" />
-    <None Include="Resources\images.jpg" />
+    <None Include="Resources\paypalLogo2.png" />
+    <None Include="Resources\paypalLogo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

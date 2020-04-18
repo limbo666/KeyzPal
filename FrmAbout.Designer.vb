@@ -74,9 +74,9 @@ Partial Class FrmAbout
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(26, 6)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(95, 13)
+        Me.Label4.Size = New System.Drawing.Size(107, 13)
         Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Hand Water Pump"
+        Me.Label4.Text = "© Hand Water Pump"
         '
         'Label5
         '
@@ -90,9 +90,9 @@ Partial Class FrmAbout
         'Button1
         '
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(134, 9)
+        Me.Button1.Location = New System.Drawing.Point(139, 9)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 25)
+        Me.Button1.Size = New System.Drawing.Size(70, 25)
         Me.Button1.TabIndex = 6
         Me.Button1.Text = "Close"
         Me.Button1.UseVisualStyleBackColor = True
@@ -120,20 +120,20 @@ Partial Class FrmAbout
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.KeysPal.My.Resources.Resources.KeysPal
-        Me.PictureBox1.Location = New System.Drawing.Point(59, 1)
+        Me.PictureBox1.Image = Global.KeyzPal.My.Resources.Resources.KeyzPal
+        Me.PictureBox1.Location = New System.Drawing.Point(21, -4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(79, 84)
+        Me.PictureBox1.Size = New System.Drawing.Size(172, 89)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
         'PictureBox2
         '
-        Me.PictureBox2.Image = Global.KeysPal.My.Resources.Resources.paypal
-        Me.PictureBox2.Location = New System.Drawing.Point(48, 138)
+        Me.PictureBox2.Image = Global.KeyzPal.My.Resources.Resources.paypalLogo2
+        Me.PictureBox2.Location = New System.Drawing.Point(48, 130)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(103, 29)
+        Me.PictureBox2.Size = New System.Drawing.Size(103, 37)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 9
         Me.PictureBox2.TabStop = False
@@ -150,9 +150,9 @@ Partial Class FrmAbout
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(68, 36)
+        Me.TextBox1.Location = New System.Drawing.Point(48, 40)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(59, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(125, 20)
         Me.TextBox1.TabIndex = 11
         '
         'FrmAbout
@@ -173,6 +173,7 @@ Partial Class FrmAbout
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmAbout"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "KeyzPal - About"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

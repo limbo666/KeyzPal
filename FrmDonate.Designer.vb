@@ -85,7 +85,7 @@ Partial Class FrmDonate
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.KeysPal.My.Resources.Resources.paypal
+        Me.PictureBox1.Image = Global.KeyzPal.My.Resources.Resources.paypalLogo2
         Me.PictureBox1.Location = New System.Drawing.Point(172, 19)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(100, 50)

@@ -46,6 +46,7 @@ Partial Class FrmMain
         Me.NotifyIcon2 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.NotifyIcon3 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
@@ -63,9 +64,11 @@ Partial Class FrmMain
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TmrResetLabel = New System.Windows.Forms.Timer(Me.components)
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.MenuStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -74,6 +77,7 @@ Partial Class FrmMain
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Timer1
@@ -125,13 +129,13 @@ Partial Class FrmMain
         'HideToTrayToolStripMenuItem
         '
         Me.HideToTrayToolStripMenuItem.Name = "HideToTrayToolStripMenuItem"
-        Me.HideToTrayToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.HideToTrayToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
         Me.HideToTrayToolStripMenuItem.Text = "Hide to  system tray"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'EditToolStripMenuItem
@@ -144,7 +148,7 @@ Partial Class FrmMain
         'SettingsToolStripMenuItem
         '
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
-        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.SettingsToolStripMenuItem.Text = "Settings"
         '
         'HelpToolStripMenuItem
@@ -157,13 +161,13 @@ Partial Class FrmMain
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'VersionHistoryToolStripMenuItem
         '
         Me.VersionHistoryToolStripMenuItem.Name = "VersionHistoryToolStripMenuItem"
-        Me.VersionHistoryToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.VersionHistoryToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
         Me.VersionHistoryToolStripMenuItem.Text = "Version history"
         '
         'NotifyIcon1
@@ -218,6 +222,8 @@ Partial Class FrmMain
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.Gainsboro
+        Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Controls.Add(Me.Panel3)
         Me.GroupBox1.Controls.Add(Me.Panel2)
         Me.GroupBox1.Controls.Add(Me.PictureBox7)
@@ -231,11 +237,21 @@ Partial Class FrmMain
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(9, 19)
+        Me.GroupBox1.Location = New System.Drawing.Point(9, 25)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(371, 216)
         Me.GroupBox1.TabIndex = 11
         Me.GroupBox1.TabStop = False
+        '
+        'NumericUpDown1
+        '
+        Me.NumericUpDown1.Location = New System.Drawing.Point(24, 25)
+        Me.NumericUpDown1.Maximum = New Decimal(New Integer() {4, 0, 0, 0})
+        Me.NumericUpDown1.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.NumericUpDown1.Name = "NumericUpDown1"
+        Me.NumericUpDown1.Size = New System.Drawing.Size(46, 20)
+        Me.NumericUpDown1.TabIndex = 11
+        Me.NumericUpDown1.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'Panel3
         '
@@ -256,10 +272,10 @@ Partial Class FrmMain
         'PictureBox7
         '
         Me.PictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox7.Image = Global.KeysPal.My.Resources.Resources.KeysPal
-        Me.PictureBox7.Location = New System.Drawing.Point(11, 54)
+        Me.PictureBox7.Image = Global.KeyzPal.My.Resources.Resources.KeyzPal
+        Me.PictureBox7.Location = New System.Drawing.Point(21, 18)
         Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(116, 114)
+        Me.PictureBox7.Size = New System.Drawing.Size(97, 91)
         Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox7.TabIndex = 10
         Me.PictureBox7.TabStop = False
@@ -274,7 +290,7 @@ Partial Class FrmMain
         '
         'PictureBox6
         '
-        Me.PictureBox6.Image = Global.KeysPal.My.Resources.Resources.no_scr
+        Me.PictureBox6.Image = Global.KeyzPal.My.Resources.Resources.scrOff1
         Me.PictureBox6.Location = New System.Drawing.Point(318, 146)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(37, 48)
@@ -285,7 +301,7 @@ Partial Class FrmMain
         '
         'PictureBox5
         '
-        Me.PictureBox5.Image = Global.KeysPal.My.Resources.Resources.dash
+        Me.PictureBox5.Image = Global.KeyzPal.My.Resources.Resources.numOff1
         Me.PictureBox5.Location = New System.Drawing.Point(318, 80)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(37, 48)
@@ -296,7 +312,7 @@ Partial Class FrmMain
         '
         'PictureBox4
         '
-        Me.PictureBox4.Image = Global.KeysPal.My.Resources.Resources.a_low
+        Me.PictureBox4.Image = Global.KeyzPal.My.Resources.Resources.capsOff1
         Me.PictureBox4.Location = New System.Drawing.Point(318, 14)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(37, 48)
@@ -307,7 +323,7 @@ Partial Class FrmMain
         '
         'PictureBox3
         '
-        Me.PictureBox3.Image = Global.KeysPal.My.Resources.Resources.scr
+        Me.PictureBox3.Image = Global.KeyzPal.My.Resources.Resources.scrOn1
         Me.PictureBox3.Location = New System.Drawing.Point(318, 146)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(37, 48)
@@ -318,7 +334,7 @@ Partial Class FrmMain
         '
         'PictureBox2
         '
-        Me.PictureBox2.Image = Global.KeysPal.My.Resources.Resources._1
+        Me.PictureBox2.Image = Global.KeyzPal.My.Resources.Resources.numOn1
         Me.PictureBox2.Location = New System.Drawing.Point(318, 80)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(37, 48)
@@ -329,7 +345,7 @@ Partial Class FrmMain
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.KeysPal.My.Resources.Resources.A
+        Me.PictureBox1.Image = Global.KeyzPal.My.Resources.Resources.capsOn1
         Me.PictureBox1.Location = New System.Drawing.Point(318, 14)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(37, 48)
@@ -382,13 +398,23 @@ Partial Class FrmMain
         '
         'PictureBox8
         '
-        Me.PictureBox8.Image = Global.KeysPal.My.Resources.Resources.paypal
+        Me.PictureBox8.Image = Global.KeyzPal.My.Resources.Resources.paypalLogo2
         Me.PictureBox8.Location = New System.Drawing.Point(225, 288)
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.Size = New System.Drawing.Size(156, 44)
         Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox8.TabIndex = 15
         Me.PictureBox8.TabStop = False
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.NumericUpDown1)
+        Me.GroupBox2.Location = New System.Drawing.Point(21, 140)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(97, 58)
+        Me.GroupBox2.TabIndex = 16
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Select icon set"
         '
         'FrmMain
         '
@@ -411,6 +437,7 @@ Partial Class FrmMain
         Me.MenuStrip1.PerformLayout()
         Me.ContextMenuStrip1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
@@ -419,6 +446,7 @@ Partial Class FrmMain
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -463,4 +491,6 @@ Partial Class FrmMain
     Friend WithEvents ExitToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents VersionHistoryToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents NumericUpDown1 As NumericUpDown
+    Friend WithEvents GroupBox2 As GroupBox
 End Class

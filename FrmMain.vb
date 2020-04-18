@@ -17,6 +17,9 @@
     Dim OldScr As Integer = -1
 
     Dim CountToNormal As Integer = 0
+
+    Dim ImageSet As Integer = 1
+
     Private Declare Sub keybd_event Lib "user32" (ByVal bVk As Byte, ByVal bScan As Byte, ByVal dwFlags As Integer, ByVal dwExtraInfo As Integer)
 
     Sub SaveSettings()
@@ -33,7 +36,7 @@
 
     Sub LoadSettings()
         StDN = GetSetting("KeysPal", "GeneralSettings", "StDN", False)
-
+        ImageSet = GetSetting("KeysPal", "GeneralSettings", "ImageSet", 1)
         Dim deftop As Integer = (My.Computer.Screen.WorkingArea.Height - Me.Height) / 2
         Dim defleft As Integer = (My.Computer.Screen.WorkingArea.Width - Me.Width) / 2
         EnableCap = GetSetting("KeysPal", "GeneralSettings", "CapsLock", True)
@@ -66,7 +69,7 @@
             TotalIndicators += 1
             NotifyIcon2.Visible = True
         End If
-        If EnableNum = True Then
+        If EnableScroll = True Then
             TotalIndicators += 1
             NotifyIcon3.Visible = True
         End If
@@ -123,7 +126,24 @@
 
         '   TmrPopUp.Enabled = True
         EnableDisableIcons()
+
+
+
+
+        NumericUpDown1.Value = ImageSet
+
+        UpdateImageSet()
+        OldCap = -1
+        OldNum = -1
+        OldScr = -1
         UpdateIcons()
+
+
+
+
+
+
+
         FullyLoaded = True
 
     End Sub
@@ -281,12 +301,58 @@
             Panel3.BackColor = Color.Red
         End If
 
+
+
+
         Call UpdateIcons()
 
     End Sub
+    Sub UpdateImageSet()
+
+
+        If ImageSet = 1 Then
+            PictureBox1.Image = My.Resources.capsOn1
+            PictureBox2.Image = My.Resources.numOn1
+            PictureBox3.Image = My.Resources.scrOn1
+            PictureBox4.Image = My.Resources.capsOff1
+            PictureBox5.Image = My.Resources.numOff1
+            PictureBox6.Image = My.Resources.scrOff1
+
+        ElseIf ImageSet = 2 Then
+            PictureBox1.Image = My.Resources.capsOn2
+            PictureBox2.Image = My.Resources.numOn2
+            PictureBox3.Image = My.Resources.scrOn2
+            PictureBox4.Image = My.Resources.capsOff2
+            PictureBox5.Image = My.Resources.numOff2
+            PictureBox6.Image = My.Resources.scrOff2
+
+
+
+        ElseIf ImageSet = 3 Then
+            PictureBox1.Image = My.Resources.capsOn3
+            PictureBox2.Image = My.Resources.numOn3
+            PictureBox3.Image = My.Resources.scrOn3
+            PictureBox4.Image = My.Resources.capsOff3
+            PictureBox5.Image = My.Resources.numOff3
+            PictureBox6.Image = My.Resources.scrOff3
+
+        ElseIf ImageSet = 4 Then
+            PictureBox1.Image = My.Resources.capsOn4
+            PictureBox2.Image = My.Resources.numOn4
+            PictureBox3.Image = My.Resources.scrOn4
+            PictureBox4.Image = My.Resources.capsOff4
+            PictureBox5.Image = My.Resources.numOff4
+            PictureBox6.Image = My.Resources.scrOff4
+
+        End If
+
+    End Sub
+
 
     Sub UpdateIcons()
-        If cap = 1 Then
+
+
+        If Cap = 1 Then
             PictureBox1.Visible = True
             PictureBox4.Visible = False
 
@@ -294,7 +360,7 @@
             PictureBox1.Visible = False
             PictureBox4.Visible = True
         End If
-        If num = 1 Then
+        If Num = 1 Then
             PictureBox2.Visible = True
             PictureBox5.Visible = False
         Else
@@ -302,7 +368,7 @@
             PictureBox5.Visible = True
         End If
 
-        If scr = 1 Then
+        If Scr = 1 Then
             PictureBox3.Visible = True
             PictureBox6.Visible = False
         Else
@@ -477,11 +543,22 @@
 
     Private Sub VersionHistoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VersionHistoryToolStripMenuItem.Click
         FrmVerHistory.Show()
+    End Sub
+
+
+    Private Sub NumericUpDown1_ValueChanged(sender As Object, e As EventArgs) Handles NumericUpDown1.ValueChanged
+        If FullyLoaded = True Then
+            ImageSet = NumericUpDown1.Value
+            SaveSetting("KeysPal", "GeneralSettings", "ImageSet", ImageSet)
+            UpdateImageSet()
+            OldCap = -1
+            OldNum = -1
+            OldScr = -1
+            UpdateIcons()
+
+        End If
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs)
 
-
-    End Sub
 End Class

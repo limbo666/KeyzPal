@@ -1,10 +1,61 @@
 ﻿Public Class FrmAbout
+    Dim Klist As New List(Of String)
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Close()
 
     End Sub
 
     Private Sub FrmAbout_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
+
+        Klist.Add("BKEZWVGRUFJBCCDL")
+        Klist.Add("CRGIGOOXMTSPYNLN")
+        Klist.Add("DPWNLUSLOVMVAXZS")
+        Klist.Add("FEQYEYICZKNFBOSO")
+        Klist.Add("JSFPRAWDYGCUIJUH")
+        Klist.Add("IFNCZWJYQDOKPIEB")
+        Klist.Add("EWYCKZRBBMLPTIAZ")
+        Klist.Add("BJODRWOFKCKZXAZU")
+        Klist.Add("YCSLAFLLSJKUUULM")
+        Klist.Add("MXPHMEZRRMJIFGXR")
+
+        Klist.Add("TNHUMRQLAPIJTRWN")
+        Klist.Add("KLWRZTJGRLSUJKTX")
+        Klist.Add("GECDNOSXSMZXBKDV")
+        Klist.Add("OQUIFPXKTIYNJSUP")
+        Klist.Add("CZJTVDWUCVQMAPJD")
+        Klist.Add("IVWNMKQQSPJRDXRF")
+        Klist.Add("KIESUVPJZDPMKFHJ")
+        Klist.Add("JEIKUYJXAVMCXXJR")
+        Klist.Add("EVVZEMAFDYOIBMAC")
+        Klist.Add("SYFRZDQCOOPOOZZU")
+
+        Klist.Add("KAKKKCEDSDTKWVVI")
+        Klist.Add("NYPOPOZWIGKITFZA")
+        Klist.Add("ZNSQFPWISGVNBHDZ")
+        Klist.Add("CHIYAMAOMVJNIHKS")
+        Klist.Add("GNBJGJPXDFUPMSDA")
+        Klist.Add("UEWPGHZXXWJEVLMQ")
+        Klist.Add("ZGGQAIJISTPTARWN")
+        Klist.Add("LZDQZVENKDMIJFKB")
+        Klist.Add("TDMRBEBRMSZUIRBI")
+        Klist.Add("PNMVZWZTONIOVBHD")
+
+        Klist.Add("USDCPQVSSAYUITVC")
+        Klist.Add("FFZNWJQEKRPDCNDL")
+        Klist.Add("OWLWJGVIIRCDHAYE")
+        Klist.Add("WWPNWDQARXNTBUEV")
+        Klist.Add("JQKIHCLYDYSBALOW")
+        Klist.Add("QIIFQQVDXCRTGYNW")
+        Klist.Add("TOLBORRMVRDKNXWX")
+        Klist.Add("RCTSEEVADEYTYUQ")
+        Klist.Add("WDUMMXQTPJGNEFED")
+        Klist.Add("ZVXGGQKKYYKBOJKE")
+
+
+
         Label1.Text = Application.ProductName
         Label2.Text = Application.ProductVersion
 
@@ -42,11 +93,16 @@
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-        If TextBox1.Text = "TXN" Then
+
+
+        If Klist.Contains(TextBox1.Text) Then
+
             SaveSetting("KeysPal", "GeneralSettings", "StDN", True)
             FrmMain.PictureBox8.Visible = False
-
+            Beep()
         End If
+
+
 
     End Sub
 End Class

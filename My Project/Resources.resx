@@ -118,31 +118,85 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="no_scr" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\no_scr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="scrOff1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\scrOff1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="a_low" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a_low.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="capsOff1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\capsOff1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="scr" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\scr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="scrOn1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\scrOn1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="paypalLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paypalLogo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="A" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="capsOn1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\capsOn1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="numOn1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\numOn1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="KeysPal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KeysPal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="KeyzPal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KeyzPal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="numOff1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\numOff1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="paypal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\paypal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="paypalLogo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paypalLogo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="capsOff2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\capsOff2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="capsOff3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\capsOff3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="capsOff4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\capsOff4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="capsOn2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\capsOn2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="capsOn3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\capsOn3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="capsOn4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\capsOn4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="numOff2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\numOff2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="numOff3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\numOff3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="numOff4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\numOff4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="numOn2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\numOn2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="numOn3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\numOn3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="numOn4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\numOn4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="scrOff2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\scrOff2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="scrOff3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\scrOff3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="scrOff4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\scrOff4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="scrOn2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\scrOn2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="scrOn3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\scrOn3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="scrOn4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\scrOn4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

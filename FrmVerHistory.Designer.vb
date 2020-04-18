@@ -32,15 +32,15 @@ Partial Class FrmVerHistory
         Me.RichTextBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RichTextBox1.Location = New System.Drawing.Point(0, 0)
+        Me.RichTextBox1.Location = New System.Drawing.Point(-1, 0)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(316, 210)
+        Me.RichTextBox1.Size = New System.Drawing.Size(587, 135)
         Me.RichTextBox1.TabIndex = 0
         Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(241, 216)
+        Me.Button1.Location = New System.Drawing.Point(511, 139)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 25)
         Me.Button1.TabIndex = 1
@@ -51,12 +51,13 @@ Partial Class FrmVerHistory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(318, 245)
+        Me.ClientSize = New System.Drawing.Size(589, 173)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.RichTextBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmVerHistory"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "KeyzPal - Version history"
         Me.ResumeLayout(False)
 
