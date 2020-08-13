@@ -23,7 +23,9 @@ The program currently offers:
 
 Normalization function: 
 
-This function can set the lock keys state to "normal" after a selectable period of time. Currently, normal sate is consider as follows: 
+This function can set the lock keys state to "normal" after a selectable period of time. From version 1.0.3.8 the program can detect key presses on the keyboard and reset the remaining time each time a key is pressed. This way the program will normalize the keys only if the system is inactive for the predefined time. 
+
+Currently, normal state is consider as follows: 
 
 **CAPS lock:** OFF
 
