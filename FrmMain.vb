@@ -19,7 +19,9 @@
     Dim CountToNormal As Integer = 0
 
     Dim ImageSet As Integer = 1
-
+    ' Keyboard hook variable below
+    Dim WithEvents K As New Module_Keyboard
+    'Keyboard command below
     Private Declare Sub keybd_event Lib "user32" (ByVal bVk As Byte, ByVal bScan As Byte, ByVal dwFlags As Integer, ByVal dwExtraInfo As Integer)
 
     Sub SaveSettings()
@@ -76,10 +78,26 @@
 
     End Sub
 
+
+
+    Private Sub K_UP(ByVal Key As String) Handles K.Up
+        Dim LastKey = Key
+        If Debug = True Then
+            FrmDiagnostics.Label1.Text = LastKey
+        End If
+
+
+        If LastKey <> "<Capital>" Then
+
+            CountToNormal = 0 ' reset the timer counter 
+        End If
+    End Sub
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Debug = True Then
             FrmDiagnostics.Show()
         End If
+        K.CreateHook()
         SaveSetting("KeysPal", "GeneralSettings", "IsFirstTimeRun", False)
         FullyLoaded = False
         LoadSettings()
@@ -379,6 +397,8 @@
 
     Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         'CountActiveIndicators()
+        K.DiposeHook()
+
         If CommandClose = True Then
             Call SaveSettings()
 

@@ -1,5 +1,4 @@
-﻿Imports System.IO
-Imports System.Net
+﻿
 
 Public Class FrmAbout
     Dim Klist As New List(Of String)
@@ -110,16 +109,24 @@ Public Class FrmAbout
     End Sub
 
     Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
-        Dim remotefilenm = "https://raw.githubusercontent.com/limbo666/KeyzPal/master/latest_version/version.txt"
-        Dim filenm = Application.StartupPath & "\version.txt"
-        Using WClient As New WebClient()
-            WClient.DownloadFile(remotefilenm, filenm)
-        End Using
-        If File.Exists(filenm) Then
-            Dim filetext = File.ReadAllText(filenm)
-            MsgBox(filetext)
+        Label6.Visible = True
 
+        Label6.Text = "Fetching info"
+        Me.Update()
+        If My.Computer.Network.Ping("www.github.com") Then
+
+            If CheckForNewVersion() = True Then
+                Label6.Text = "New version found"
+            Else
+                Label6.Text = "You running the latest version"
+            End If
+        Else
+            Label6.Text = "Server cannot be reached"
         End If
+
+    End Sub
+
+    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
 
     End Sub
 End Class

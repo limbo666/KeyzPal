@@ -129,6 +129,10 @@
 .Fixed bug where scroll indicator was appeared even when it was disabled
 .Some other control optimizations 
 .Program icon and logo changed.
+
+1.0.3.8 - Holidays update
+. Added keyboard hook function to detect Caps lock keypress. Normalization time resets every time a key  is pressed.
+
   
 </value>
   </data>

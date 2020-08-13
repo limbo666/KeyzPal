@@ -142,7 +142,7 @@ Partial Class FrmAbout
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(-2, 233)
+        Me.Label6.Location = New System.Drawing.Point(-2, 238)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(16, 13)
         Me.Label6.TabIndex = 10
@@ -159,7 +159,7 @@ Partial Class FrmAbout
         'LinkLabel2
         '
         Me.LinkLabel2.AutoSize = True
-        Me.LinkLabel2.Location = New System.Drawing.Point(127, 233)
+        Me.LinkLabel2.Location = New System.Drawing.Point(135, 238)
         Me.LinkLabel2.Name = "LinkLabel2"
         Me.LinkLabel2.Size = New System.Drawing.Size(74, 13)
         Me.LinkLabel2.TabIndex = 12
@@ -170,7 +170,7 @@ Partial Class FrmAbout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(212, 246)
+        Me.ClientSize = New System.Drawing.Size(212, 253)
         Me.Controls.Add(Me.LinkLabel2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.TextBox1)
