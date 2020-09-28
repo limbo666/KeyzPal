@@ -5,6 +5,7 @@ Public Class FrmSettings
         EnableCap = CheckBox1.Checked
         EnableNum = CheckBox2.Checked
         EnableScroll = CheckBox3.Checked
+        EnableNormalize = CheckBox4.Checked
         If CheckBox4.Checked = True Then
             FrmMain.Timer2.Enabled = True
         Else
