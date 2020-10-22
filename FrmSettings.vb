@@ -5,7 +5,11 @@ Public Class FrmSettings
         EnableCap = CheckBox1.Checked
         EnableNum = CheckBox2.Checked
         EnableScroll = CheckBox3.Checked
+        '<<<<<<< Updated upstream
         EnableNormalize = CheckBox4.Checked
+        '=======
+        ShowPop = CheckBox5.Checked
+        '>>>>>>> Stashed changes
         If CheckBox4.Checked = True Then
             FrmMain.Timer2.Enabled = True
         Else
@@ -45,7 +49,7 @@ Public Class FrmSettings
 
         SaveSetting("KeysPal", "GeneralSettings", "timetonormalize", NumericUpDown1.Value)
         SaveSetting("KeysPal", "GeneralSettings", "EnableNormalize", CheckBox4.Checked)
-
+        SaveSetting("KeysPal", "GeneralSettings", "ShowPop", CheckBox5.Checked)
 
     End Sub
 
@@ -54,6 +58,7 @@ Public Class FrmSettings
         CheckBox2.Checked = EnableNum
         CheckBox3.Checked = EnableScroll
         CheckBox4.Checked = EnableNormalize
+        CheckBox5.Checked = ShowPop
         NumericUpDown1.Value = TimeToNormalize
         LoadSettings()
 
@@ -88,4 +93,6 @@ Public Class FrmSettings
             .DeleteValue(ApplicationName, False)
         End With
     End Sub
+
+
 End Class

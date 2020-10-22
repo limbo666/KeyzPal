@@ -11,5 +11,23 @@
         Catch ex As Exception
 
         End Try
+
+        ' Append the new text and a new line
+        ' RichTextBox1.AppendText("New Text" & vbNewLine)
+        ' Sets the starting point of the selection         
+        RichTextBox1.SelectionStart = Len(RichTextBox1.Text)
+        ' Scrolls to the caret
+        RichTextBox1.ScrollToCaret()
+        ' Select the range 
+        RichTextBox1.Select()
+
+    End Sub
+
+    Private Sub RichTextBox1_TextChanged(sender As Object, e As EventArgs) Handles RichTextBox1.TextChanged
+
+    End Sub
+
+    Private Sub RichTextBox1_GotFocus(sender As Object, e As EventArgs) Handles RichTextBox1.GotFocus
+        Button1.Focus() ' to hide the richtextbox annoying caret 
     End Sub
 End Class

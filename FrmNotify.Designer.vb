@@ -34,9 +34,10 @@ Partial Class FrmNotify
         '
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(161, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label1.Location = New System.Drawing.Point(-3, 21)
+        Me.Label1.Location = New System.Drawing.Point(-4, 26)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(180, 47)
+        Me.Label1.Size = New System.Drawing.Size(240, 58)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "KeyzPal"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -49,9 +50,10 @@ Partial Class FrmNotify
         '
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label2.Location = New System.Drawing.Point(-3, 56)
+        Me.Label2.Location = New System.Drawing.Point(-4, 69)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(180, 47)
+        Me.Label2.Size = New System.Drawing.Size(240, 58)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "KeyzPal"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -62,16 +64,17 @@ Partial Class FrmNotify
         '
         'FrmNotify
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(44, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(174, 149)
+        Me.ClientSize = New System.Drawing.Size(232, 183)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Enabled = False
         Me.ForeColor = System.Drawing.Color.Gainsboro
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmNotify"
         Me.Opacity = 0.8R
         Me.Text = "KeyzPal"

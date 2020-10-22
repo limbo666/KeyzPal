@@ -41,7 +41,7 @@ Partial Class FrmDonate
         '
         'TmrHold
         '
-        Me.TmrHold.Interval = 3000
+        Me.TmrHold.Interval = 4500
         '
         'Label1
         '

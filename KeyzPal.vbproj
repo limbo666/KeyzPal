@@ -47,7 +47,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>colibri_new.ico</ApplicationIcon>
+    <ApplicationIcon>KeyzPal.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -222,6 +222,8 @@
     <None Include="Resources\numOn4.png" />
     <None Include="Resources\scrOff4.png" />
     <None Include="Resources\scrOn4.png" />
+    <None Include="Resources\KeyzPal_Key_Logo.png" />
+    <Content Include="KeyzPal.ico" />
     <Content Include="Untitled.ico" />
     <None Include="Resources\paypalLogo2.png" />
     <None Include="Resources\paypalLogo.jpg" />

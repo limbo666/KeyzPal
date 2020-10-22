@@ -137,7 +137,7 @@ Partial Class FrmSettings
         '
         'NumericUpDown1
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(154, 30)
+        Me.NumericUpDown1.Location = New System.Drawing.Point(155, 28)
         Me.NumericUpDown1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.NumericUpDown1.Maximum = New Decimal(New Integer() {3600, 0, 0, 0})
         Me.NumericUpDown1.Minimum = New Decimal(New Integer() {5, 0, 0, 0})
@@ -172,7 +172,6 @@ Partial Class FrmSettings
         'GroupBox4
         '
         Me.GroupBox4.Controls.Add(Me.CheckBox5)
-        Me.GroupBox4.Enabled = False
         Me.GroupBox4.Location = New System.Drawing.Point(16, 244)
         Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox4.Name = "GroupBox4"
@@ -185,19 +184,20 @@ Partial Class FrmSettings
         'CheckBox5
         '
         Me.CheckBox5.AutoSize = True
+        Me.CheckBox5.Enabled = False
         Me.CheckBox5.Location = New System.Drawing.Point(25, 30)
         Me.CheckBox5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.CheckBox5.Name = "CheckBox5"
-        Me.CheckBox5.Size = New System.Drawing.Size(317, 21)
+        Me.CheckBox5.Size = New System.Drawing.Size(325, 21)
         Me.CheckBox5.TabIndex = 0
-        Me.CheckBox5.Text = "Show screen indications on each lock change"
+        Me.CheckBox5.Text = "Show screen notifications on each lock change"
         Me.CheckBox5.UseVisualStyleBackColor = True
         '
         'FrmSettings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(458, 380)
+        Me.ClientSize = New System.Drawing.Size(459, 380)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)

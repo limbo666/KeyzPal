@@ -119,6 +119,7 @@ Partial Class FrmMain
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
         Me.MenuStrip1.Size = New System.Drawing.Size(521, 28)
         Me.MenuStrip1.TabIndex = 9
         Me.MenuStrip1.Text = "MenuStrip1"
@@ -133,13 +134,13 @@ Partial Class FrmMain
         'HideToTrayToolStripMenuItem
         '
         Me.HideToTrayToolStripMenuItem.Name = "HideToTrayToolStripMenuItem"
-        Me.HideToTrayToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.HideToTrayToolStripMenuItem.Size = New System.Drawing.Size(220, 26)
         Me.HideToTrayToolStripMenuItem.Text = "Hide to system tray"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(220, 26)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'EditToolStripMenuItem
@@ -152,12 +153,12 @@ Partial Class FrmMain
         'SettingsToolStripMenuItem
         '
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
-        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(145, 26)
         Me.SettingsToolStripMenuItem.Text = "Settings"
         '
         'HelpToolStripMenuItem
         '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem, Me.VersionHistoryToolStripMenuItem})
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VersionHistoryToolStripMenuItem, Me.AboutToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(55, 24)
         Me.HelpToolStripMenuItem.Text = "Help"
@@ -165,13 +166,13 @@ Partial Class FrmMain
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(188, 26)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'VersionHistoryToolStripMenuItem
         '
         Me.VersionHistoryToolStripMenuItem.Name = "VersionHistoryToolStripMenuItem"
-        Me.VersionHistoryToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.VersionHistoryToolStripMenuItem.Size = New System.Drawing.Size(188, 26)
         Me.VersionHistoryToolStripMenuItem.Text = "Version history"
         '
         'NotifyIcon1
@@ -294,7 +295,7 @@ Partial Class FrmMain
         'PictureBox7
         '
         Me.PictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox7.Image = Global.KeyzPal.My.Resources.Resources.KeyzPal
+        Me.PictureBox7.Image = Global.KeyzPal.My.Resources.Resources.KeyzPal_Key_Logo
         Me.PictureBox7.Location = New System.Drawing.Point(28, 22)
         Me.PictureBox7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox7.Name = "PictureBox7"

@@ -8,7 +8,7 @@
     Dim Num As Integer
     Dim Scr As Integer
     Dim Debug As Boolean = False
-    Dim ShowPop As Boolean = False
+    Dim ShowPop As Boolean
 
     Dim FullyLoaded As Boolean
 
@@ -46,6 +46,7 @@
         EnableScroll = GetSetting("KeysPal", "GeneralSettings", "ScrollLock", False)
         EnableNormalize = GetSetting("KeysPal", "GeneralSettings", "EnableNormalize", False)
         TimeToNormalize = GetSetting("KeysPal", "GeneralSettings", "TimeToNormalize", 60)
+        ShowPop = GetSetting("KeysPal", "GeneralSettings", "ShowPop", False)
         Me.Top = GetSetting("KeysPal", "GeneralSettings", "frmmaintop", deftop)
         Me.Left = GetSetting("KeysPal", "GeneralSettings", "frmmainleft", defleft)
 
@@ -97,9 +98,10 @@
         If Debug = True Then
             FrmDiagnostics.Show()
         End If
+        FullyLoaded = False
         K.CreateHook()
         SaveSetting("KeysPal", "GeneralSettings", "IsFirstTimeRun", False)
-        FullyLoaded = False
+
         LoadSettings()
 
         Dim RunTimes = GetSetting("KeysPal", "Stats", "RunTimes", 0)
@@ -155,10 +157,6 @@
         OldNum = -1
         OldScr = -1
         UpdateIcons()
-
-
-
-
 
 
 
