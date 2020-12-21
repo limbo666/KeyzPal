@@ -1,5 +1,5 @@
 # **KeyzPal**
-![alt text](https://github.com/limbo666/KeyzPal/blob/master/additional_files/KeyzPal_Key_Logo.png)
+![alt text](https://github.com/limbo666/KeyzPal/blob/master/additional_files/KeyzPal_Key_Logo_1.png)
 
 KeyzPal is a Windows tray utility to indicate the **CAPS**, **NUM** and **SCROLL** key status. 
 
