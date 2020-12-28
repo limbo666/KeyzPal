@@ -60,9 +60,17 @@ Public Class FrmAbout
 
         Label1.Text = Application.ProductName
         Label2.Text = Application.ProductVersion
+        Dim deftop As Integer
+        Dim defleft As Integer
+        If FrmMain.Visible = True Then
+            deftop = FrmMain.Top + ((FrmMain.Height - Me.Height) / 2)
+            defleft = FrmMain.Left + ((FrmMain.Width - Me.Width) / 2)
+        Else
+            deftop = (My.Computer.Screen.WorkingArea.Height - Me.Height) / 2
+            defleft = (My.Computer.Screen.WorkingArea.Width - Me.Width) / 2
 
-        Dim deftop As Integer = (My.Computer.Screen.WorkingArea.Height - Me.Height) / 2
-        Dim defleft As Integer = (My.Computer.Screen.WorkingArea.Width - Me.Width) / 2
+        End If
+
 
         Me.Top = deftop
         Me.Left = defleft
@@ -74,16 +82,27 @@ Public Class FrmAbout
         '
         'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CPVNKJT498RC6&source=url
         ' Process.Start("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CPVNKJT498RC6&source=url")
-        Process.Start("http://bit.ly/2SZyfsY")
+
+        Try
+            Process.Start("http://bit.ly/2SZyfsY")
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-        Process.Start("http://bit.ly/2SZyfsY")
+
+        Try
+            Process.Start("http://bit.ly/2SZyfsY")
+        Catch ex As Exception
+
+        End Try
+
+
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
-    End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
 
@@ -102,6 +121,9 @@ Public Class FrmAbout
             SaveSetting("KeysPal", "GeneralSettings", "StDN", True)
             FrmMain.PictureBox8.Visible = False
             Beep()
+            LblThanks.Visible = True
+            StDN = True
+
         End If
 
 
@@ -127,6 +149,16 @@ Public Class FrmAbout
     End Sub
 
     Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+
+        Try
+            Process.Start("https://www.facebook.com/handwaterpump")
+        Catch ex As Exception
+
+        End Try
 
     End Sub
 End Class

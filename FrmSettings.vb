@@ -54,6 +54,8 @@ Public Class FrmSettings
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
         CheckBox1.Checked = EnableCap
         CheckBox2.Checked = EnableNum
         CheckBox3.Checked = EnableScroll
@@ -61,6 +63,20 @@ Public Class FrmSettings
         CheckBox5.Checked = ShowPop
         NumericUpDown1.Value = TimeToNormalize
         LoadSettings()
+
+        Dim deftop As Integer
+        Dim defleft As Integer
+        If FrmMain.Visible = True Then
+            deftop = FrmMain.Top + ((FrmMain.Height - Me.Height) / 2)
+            defleft = FrmMain.Left + ((FrmMain.Width - Me.Width) / 2)
+        Else
+            deftop = (My.Computer.Screen.WorkingArea.Height - Me.Height) / 2
+            defleft = (My.Computer.Screen.WorkingArea.Width - Me.Width) / 2
+
+        End If
+        Me.Top = deftop
+        Me.Left = defleft
+
 
     End Sub
 

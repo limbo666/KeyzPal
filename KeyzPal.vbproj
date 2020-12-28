@@ -224,6 +224,7 @@
     <None Include="Resources\scrOn4.png" />
     <None Include="Resources\KeyzPal_Key_Logo.png" />
     <Content Include="KeyzPal.ico" />
+    <None Include="Resources\CreditsImageHandWaterPump.png" />
     <Content Include="Untitled.ico" />
     <None Include="Resources\paypalLogo2.png" />
     <None Include="Resources\paypalLogo.jpg" />

@@ -21,6 +21,22 @@
         ' Select the range 
         RichTextBox1.Select()
 
+
+
+        Dim deftop As Integer
+        Dim defleft As Integer
+        If FrmMain.Visible = True Then
+            deftop = FrmMain.Top + ((FrmMain.Height - Me.Height) / 2)
+            defleft = FrmMain.Left + ((FrmMain.Width - Me.Width) / 2)
+        Else
+            deftop = (My.Computer.Screen.WorkingArea.Height - Me.Height) / 2
+            defleft = (My.Computer.Screen.WorkingArea.Width - Me.Width) / 2
+
+        End If
+        Me.Top = deftop
+        Me.Left = defleft
+
+
     End Sub
 
     Private Sub RichTextBox1_TextChanged(sender As Object, e As EventArgs) Handles RichTextBox1.TextChanged

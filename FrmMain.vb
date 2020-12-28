@@ -52,6 +52,8 @@
 
         IsFirstTimeRun = GetSetting("KeysPal", "GeneralSettings", "IsFirstTimeRun", True)
 
+
+        StDN = GetSetting("KeysPal", "GeneralSettings", "StDN", False)
         If Me.Left < 0 Then
             Me.Left = defleft
         End If
@@ -433,7 +435,10 @@
 
     Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
         FrmAbout.Show()
-        FrmDonate.Show()
+        If StDN = False Then
+            FrmDonate.Show()
+        End If
+
     End Sub
 
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
@@ -544,7 +549,10 @@
 
     Private Sub AboutToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem1.Click
         FrmAbout.Show()
-        FrmDonate.Show()
+        If StDN = False Then
+            FrmDonate.Show()
+        End If
+
     End Sub
 
     Private Sub PictureBox8_Click(sender As Object, e As EventArgs) Handles PictureBox8.Click

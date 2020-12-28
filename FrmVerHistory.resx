@@ -135,8 +135,11 @@
 
  1.0.3.9 - After "operation" update
 .Logo changed
-.Bug fixed by chris-kwl "normalization function is deactivated by opening settings". (Thanks)
+.Bug fixed by chris-kwl "normalization function is deactivated by opening settings" (Thanks)
 .Minor interface improvements
+
+ 1.0.3.10 - Second quarantine update
+.Impoved GUI behavior
 
 </value>
   </data>
