@@ -225,6 +225,7 @@
     <None Include="Resources\KeyzPal_Key_Logo.png" />
     <Content Include="KeyzPal.ico" />
     <None Include="Resources\CreditsImageHandWaterPump.png" />
+    <None Include="Resources\New Patch Ver1_250x250.png" />
     <Content Include="Untitled.ico" />
     <None Include="Resources\paypalLogo2.png" />
     <None Include="Resources\paypalLogo.jpg" />

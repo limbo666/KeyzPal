@@ -35,8 +35,8 @@ Partial Class FrmMain
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VersionHistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.AboutToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -65,6 +65,7 @@ Partial Class FrmMain
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TmrResetLabel = New System.Windows.Forms.Timer(Me.components)
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.TmrPopEnabler = New System.Windows.Forms.Timer(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -85,30 +86,27 @@ Partial Class FrmMain
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(208, 54)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(156, 44)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(189, 16)
+        Me.Label1.Size = New System.Drawing.Size(142, 13)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "..."
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label2
         '
-        Me.Label2.Location = New System.Drawing.Point(208, 134)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(156, 109)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(189, 16)
+        Me.Label2.Size = New System.Drawing.Size(142, 13)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "..."
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label3
         '
-        Me.Label3.Location = New System.Drawing.Point(208, 212)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(156, 172)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(189, 16)
+        Me.Label3.Size = New System.Drawing.Size(142, 13)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "..."
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -119,8 +117,8 @@ Partial Class FrmMain
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(521, 28)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(391, 24)
         Me.MenuStrip1.TabIndex = 9
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -128,52 +126,52 @@ Partial Class FrmMain
         '
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HideToTrayToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(46, 24)
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
         '
         'HideToTrayToolStripMenuItem
         '
         Me.HideToTrayToolStripMenuItem.Name = "HideToTrayToolStripMenuItem"
-        Me.HideToTrayToolStripMenuItem.Size = New System.Drawing.Size(220, 26)
+        Me.HideToTrayToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
         Me.HideToTrayToolStripMenuItem.Text = "Hide to system tray"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(220, 26)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'EditToolStripMenuItem
         '
         Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SettingsToolStripMenuItem})
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(49, 24)
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
         Me.EditToolStripMenuItem.Text = "Edit"
         '
         'SettingsToolStripMenuItem
         '
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
-        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(145, 26)
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.SettingsToolStripMenuItem.Text = "Settings"
         '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VersionHistoryToolStripMenuItem, Me.AboutToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(55, 24)
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
-        '
-        'AboutToolStripMenuItem
-        '
-        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(188, 26)
-        Me.AboutToolStripMenuItem.Text = "About"
         '
         'VersionHistoryToolStripMenuItem
         '
         Me.VersionHistoryToolStripMenuItem.Name = "VersionHistoryToolStripMenuItem"
-        Me.VersionHistoryToolStripMenuItem.Size = New System.Drawing.Size(188, 26)
+        Me.VersionHistoryToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
         Me.VersionHistoryToolStripMenuItem.Text = "Version history"
+        '
+        'AboutToolStripMenuItem
+        '
+        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.AboutToolStripMenuItem.Text = "About"
         '
         'NotifyIcon1
         '
@@ -187,29 +185,29 @@ Partial Class FrmMain
         Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem1, Me.ToolStripMenuItem1, Me.ShowToolStripMenuItem, Me.ExitToolStripMenuItem1})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(120, 82)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(108, 76)
         '
         'AboutToolStripMenuItem1
         '
         Me.AboutToolStripMenuItem1.Name = "AboutToolStripMenuItem1"
-        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(119, 24)
+        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(107, 22)
         Me.AboutToolStripMenuItem1.Text = "&About"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(116, 6)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(104, 6)
         '
         'ShowToolStripMenuItem
         '
         Me.ShowToolStripMenuItem.Name = "ShowToolStripMenuItem"
-        Me.ShowToolStripMenuItem.Size = New System.Drawing.Size(119, 24)
+        Me.ShowToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.ShowToolStripMenuItem.Text = "&Show"
         '
         'ExitToolStripMenuItem1
         '
         Me.ExitToolStripMenuItem1.Name = "ExitToolStripMenuItem1"
-        Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(119, 24)
+        Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(107, 22)
         Me.ExitToolStripMenuItem1.Text = "E&xit"
         '
         'NotifyIcon2
@@ -243,63 +241,55 @@ Partial Class FrmMain
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 31)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Location = New System.Drawing.Point(9, 25)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GroupBox1.Size = New System.Drawing.Size(495, 266)
+        Me.GroupBox1.Size = New System.Drawing.Size(371, 216)
         Me.GroupBox1.TabIndex = 11
         Me.GroupBox1.TabStop = False
         '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.NumericUpDown1)
-        Me.GroupBox2.Location = New System.Drawing.Point(28, 172)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Location = New System.Drawing.Point(21, 140)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GroupBox2.Size = New System.Drawing.Size(129, 71)
+        Me.GroupBox2.Size = New System.Drawing.Size(97, 58)
         Me.GroupBox2.TabIndex = 16
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Select icon set"
         '
         'NumericUpDown1
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(32, 31)
-        Me.NumericUpDown1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.NumericUpDown1.Location = New System.Drawing.Point(24, 25)
         Me.NumericUpDown1.Maximum = New Decimal(New Integer() {4, 0, 0, 0})
         Me.NumericUpDown1.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(61, 22)
+        Me.NumericUpDown1.Size = New System.Drawing.Size(46, 20)
         Me.NumericUpDown1.TabIndex = 11
         Me.NumericUpDown1.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.DimGray
-        Me.Panel3.Location = New System.Drawing.Point(208, 230)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel3.Location = New System.Drawing.Point(156, 187)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(183, 5)
+        Me.Panel3.Size = New System.Drawing.Size(137, 4)
         Me.Panel3.TabIndex = 10
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.DimGray
-        Me.Panel2.Location = New System.Drawing.Point(208, 153)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Location = New System.Drawing.Point(156, 124)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(183, 5)
+        Me.Panel2.Size = New System.Drawing.Size(137, 4)
         Me.Panel2.TabIndex = 10
         '
         'PictureBox7
         '
         Me.PictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox7.Image = Global.KeyzPal.My.Resources.Resources.KeyzPal_Key_Logo
-        Me.PictureBox7.Location = New System.Drawing.Point(28, 22)
-        Me.PictureBox7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox7.Location = New System.Drawing.Point(21, 18)
         Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(129, 112)
+        Me.PictureBox7.Size = New System.Drawing.Size(97, 91)
         Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox7.TabIndex = 10
         Me.PictureBox7.TabStop = False
@@ -307,19 +297,17 @@ Partial Class FrmMain
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.DimGray
-        Me.Panel1.Location = New System.Drawing.Point(208, 71)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Location = New System.Drawing.Point(156, 58)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(183, 5)
+        Me.Panel1.Size = New System.Drawing.Size(137, 4)
         Me.Panel1.TabIndex = 9
         '
         'PictureBox6
         '
         Me.PictureBox6.Image = Global.KeyzPal.My.Resources.Resources.scrOff1
-        Me.PictureBox6.Location = New System.Drawing.Point(424, 180)
-        Me.PictureBox6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox6.Location = New System.Drawing.Point(318, 146)
         Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(49, 59)
+        Me.PictureBox6.Size = New System.Drawing.Size(37, 48)
         Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox6.TabIndex = 8
         Me.PictureBox6.TabStop = False
@@ -328,10 +316,9 @@ Partial Class FrmMain
         'PictureBox5
         '
         Me.PictureBox5.Image = Global.KeyzPal.My.Resources.Resources.numOff1
-        Me.PictureBox5.Location = New System.Drawing.Point(424, 98)
-        Me.PictureBox5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox5.Location = New System.Drawing.Point(318, 80)
         Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(49, 59)
+        Me.PictureBox5.Size = New System.Drawing.Size(37, 48)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox5.TabIndex = 7
         Me.PictureBox5.TabStop = False
@@ -340,10 +327,9 @@ Partial Class FrmMain
         'PictureBox4
         '
         Me.PictureBox4.Image = Global.KeyzPal.My.Resources.Resources.capsOff1
-        Me.PictureBox4.Location = New System.Drawing.Point(424, 17)
-        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox4.Location = New System.Drawing.Point(318, 14)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(49, 59)
+        Me.PictureBox4.Size = New System.Drawing.Size(37, 48)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox4.TabIndex = 6
         Me.PictureBox4.TabStop = False
@@ -352,10 +338,9 @@ Partial Class FrmMain
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.KeyzPal.My.Resources.Resources.scrOn1
-        Me.PictureBox3.Location = New System.Drawing.Point(424, 180)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox3.Location = New System.Drawing.Point(318, 146)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(49, 59)
+        Me.PictureBox3.Size = New System.Drawing.Size(37, 48)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox3.TabIndex = 5
         Me.PictureBox3.TabStop = False
@@ -364,10 +349,9 @@ Partial Class FrmMain
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.KeyzPal.My.Resources.Resources.numOn1
-        Me.PictureBox2.Location = New System.Drawing.Point(424, 98)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox2.Location = New System.Drawing.Point(318, 80)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(49, 59)
+        Me.PictureBox2.Size = New System.Drawing.Size(37, 48)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 4
         Me.PictureBox2.TabStop = False
@@ -376,10 +360,9 @@ Partial Class FrmMain
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.KeyzPal.My.Resources.Resources.capsOn1
-        Me.PictureBox1.Location = New System.Drawing.Point(424, 17)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Location = New System.Drawing.Point(318, 14)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(49, 59)
+        Me.PictureBox1.Size = New System.Drawing.Size(37, 48)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
@@ -395,20 +378,18 @@ Partial Class FrmMain
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(407, 305)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Location = New System.Drawing.Point(305, 248)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(100, 31)
+        Me.Button1.Size = New System.Drawing.Size(75, 25)
         Me.Button1.TabIndex = 12
         Me.Button1.Text = "Close"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(300, 305)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button2.Location = New System.Drawing.Point(225, 248)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(100, 31)
+        Me.Button2.Size = New System.Drawing.Size(75, 25)
         Me.Button2.TabIndex = 13
         Me.Button2.Text = "Hide"
         Me.Button2.UseVisualStyleBackColor = True
@@ -418,10 +399,9 @@ Partial Class FrmMain
         Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label4.AutoSize = True
         Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(8, 390)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(6, 317)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(262, 17)
+        Me.Label4.Size = New System.Drawing.Size(196, 13)
         Me.Label4.TabIndex = 14
         Me.Label4.Text = "At least one indicator should be enabled"
         Me.Label4.Visible = False
@@ -433,19 +413,22 @@ Partial Class FrmMain
         'PictureBox8
         '
         Me.PictureBox8.Image = Global.KeyzPal.My.Resources.Resources.paypalLogo2
-        Me.PictureBox8.Location = New System.Drawing.Point(300, 354)
-        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox8.Location = New System.Drawing.Point(225, 288)
         Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(208, 54)
+        Me.PictureBox8.Size = New System.Drawing.Size(156, 44)
         Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox8.TabIndex = 15
         Me.PictureBox8.TabStop = False
         '
+        'TmrPopEnabler
+        '
+        Me.TmrPopEnabler.Interval = 5000
+        '
         'FrmMain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(521, 422)
+        Me.ClientSize = New System.Drawing.Size(391, 343)
         Me.Controls.Add(Me.PictureBox8)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button2)
@@ -454,7 +437,6 @@ Partial Class FrmMain
         Me.Controls.Add(Me.GroupBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmMain"
@@ -519,4 +501,5 @@ Partial Class FrmMain
     Friend WithEvents VersionHistoryToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NumericUpDown1 As NumericUpDown
     Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents TmrPopEnabler As Timer
 End Class

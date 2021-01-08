@@ -30,26 +30,27 @@ Partial Class FrmAbout
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.LblThanks = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
-        Me.Label1.Location = New System.Drawing.Point(56, 88)
+        Me.Label1.Location = New System.Drawing.Point(80, 88)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(52, 13)
         Me.Label1.TabIndex = 1
@@ -59,7 +60,7 @@ Partial Class FrmAbout
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
-        Me.Label2.Location = New System.Drawing.Point(114, 88)
+        Me.Label2.Location = New System.Drawing.Point(83, 88)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(47, 13)
         Me.Label2.TabIndex = 2
@@ -68,7 +69,7 @@ Partial Class FrmAbout
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(18, 101)
+        Me.Label3.Location = New System.Drawing.Point(19, 101)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(175, 26)
         Me.Label3.TabIndex = 3
@@ -78,16 +79,16 @@ Partial Class FrmAbout
         '
         Me.Label4.AutoSize = True
         Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label4.Location = New System.Drawing.Point(21, 347)
+        Me.Label4.Location = New System.Drawing.Point(26, 346)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(160, 15)
         Me.Label4.TabIndex = 4
-        Me.Label4.Text = "©2019-2021 Hand Water Pump"
+        Me.Label4.Text = "©2018-2021 Hand Water Pump"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(70, 37)
+        Me.Label5.Location = New System.Drawing.Point(81, 37)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(90, 13)
         Me.Label5.TabIndex = 5
@@ -108,15 +109,24 @@ Partial Class FrmAbout
         Me.Panel1.BackColor = System.Drawing.Color.BurlyWood
         Me.Panel1.Controls.Add(Me.Label7)
         Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Location = New System.Drawing.Point(-14, 192)
+        Me.Panel1.Location = New System.Drawing.Point(-17, 190)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(246, 63)
         Me.Panel1.TabIndex = 7
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(100, 19)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(44, 13)
+        Me.Label7.TabIndex = 6
+        Me.Label7.Text = "Creator:"
+        '
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(34, 170)
+        Me.LinkLabel1.Location = New System.Drawing.Point(43, 170)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(127, 13)
         Me.LinkLabel1.TabIndex = 8
@@ -126,7 +136,7 @@ Partial Class FrmAbout
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(12, 358)
+        Me.Label6.Location = New System.Drawing.Point(8, 365)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(16, 13)
         Me.Label6.TabIndex = 10
@@ -135,7 +145,7 @@ Partial Class FrmAbout
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(48, 40)
+        Me.TextBox1.Location = New System.Drawing.Point(44, 40)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(125, 20)
         Me.TextBox1.TabIndex = 11
@@ -143,7 +153,7 @@ Partial Class FrmAbout
         'LinkLabel2
         '
         Me.LinkLabel2.AutoSize = True
-        Me.LinkLabel2.Location = New System.Drawing.Point(-2, 394)
+        Me.LinkLabel2.Location = New System.Drawing.Point(9, 386)
         Me.LinkLabel2.Name = "LinkLabel2"
         Me.LinkLabel2.Size = New System.Drawing.Size(89, 13)
         Me.LinkLabel2.TabIndex = 12
@@ -155,12 +165,21 @@ Partial Class FrmAbout
         Me.LblThanks.AutoSize = True
         Me.LblThanks.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblThanks.ForeColor = System.Drawing.Color.Red
-        Me.LblThanks.Location = New System.Drawing.Point(55, 68)
+        Me.LblThanks.Location = New System.Drawing.Point(58, 68)
         Me.LblThanks.Name = "LblThanks"
         Me.LblThanks.Size = New System.Drawing.Size(96, 20)
         Me.LblThanks.TabIndex = 13
         Me.LblThanks.Text = "Thank you!"
         Me.LblThanks.Visible = False
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(69, 24)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(75, 13)
+        Me.Label8.TabIndex = 14
+        Me.Label8.Text = "Enter your key"
         '
         'PictureBox1
         '
@@ -172,51 +191,43 @@ Partial Class FrmAbout
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.KeyzPal.My.Resources.Resources.New_Patch_Ver1_250x250
+        Me.PictureBox3.Location = New System.Drawing.Point(52, 251)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(110, 97)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 7
+        Me.PictureBox3.TabStop = False
+        '
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.KeyzPal.My.Resources.Resources.paypalLogo2
-        Me.PictureBox2.Location = New System.Drawing.Point(51, 132)
+        Me.PictureBox2.Location = New System.Drawing.Point(60, 132)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(92, 37)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 9
         Me.PictureBox2.TabStop = False
         '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = Global.KeyzPal.My.Resources.Resources.CreditsImageHandWaterPump
-        Me.PictureBox3.Location = New System.Drawing.Point(47, 261)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(104, 81)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 7
-        Me.PictureBox3.TabStop = False
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(89, 19)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(44, 13)
-        Me.Label7.TabIndex = 6
-        Me.Label7.Text = "Creator:"
-        '
         'FrmAbout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(212, 409)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.LblThanks)
         Me.Controls.Add(Me.LinkLabel2)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.LinkLabel1)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -229,8 +240,8 @@ Partial Class FrmAbout
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -252,4 +263,5 @@ Partial Class FrmAbout
     Friend WithEvents LblThanks As Label
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label7 As Label
+    Friend WithEvents Label8 As Label
 End Class

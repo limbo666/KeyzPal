@@ -6,7 +6,7 @@ Module ModuleVariables
     Public EnableScroll As Boolean
     Public EnableNormalize As Boolean
     Public TimeToNormalize As Integer = 60
-    Public ShowPop As Boolean = False
+    Public ShowPop As Boolean
     Public StDN As Boolean = False
 
 

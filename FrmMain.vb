@@ -8,13 +8,19 @@
     Dim Num As Integer
     Dim Scr As Integer
     Dim Debug As Boolean = False
-    Dim ShowPop As Boolean
+    ' ShowPop As Boolean
 
     Dim FullyLoaded As Boolean
 
     Dim OldCap As Integer = -1
     Dim OldNum As Integer = -1
     Dim OldScr As Integer = -1
+
+
+    Dim EnableCapPop As Boolean = False
+    Dim EnableNumPop As Boolean = False
+    Dim EnableScrPop As Boolean = False
+
 
     Dim CountToNormal As Integer = 0
 
@@ -100,7 +106,7 @@
         If Debug = True Then
             FrmDiagnostics.Show()
         End If
-        FullyLoaded = False
+        ' FullyLoaded = False
         K.CreateHook()
         SaveSetting("KeysPal", "GeneralSettings", "IsFirstTimeRun", False)
 
@@ -161,8 +167,9 @@
         UpdateIcons()
 
 
+        TmrPopEnabler.Enabled = True
 
-        FullyLoaded = True
+        ' FullyLoaded = True
 
     End Sub
 
@@ -202,12 +209,12 @@
                 CountToNormal = 0
                 OldCap = Cap
                 NotifyIcon1.Text = "Caps Lock ON"
-                If showpop = True And FullyLoaded = True Then
+                If ShowPop = True And EnableCapPop = True Then
                     FrmNotify.Label1.Text = "CAPS"
                     FrmNotify.Label2.Text = "ΟΝ"
                     FrmNotify.Show()
                 End If
-
+                '       EnableCapPop = True
             End If
             Panel1.BackColor = Color.DimGray
         Else
@@ -222,12 +229,12 @@
                 CountToNormal = 0
                 OldCap = Cap
                 NotifyIcon1.Text = "Caps Lock OFF"
-                If showpop = True And FullyLoaded = True Then
+                If ShowPop = True And EnableCapPop = True Then
                     FrmNotify.Label1.Text = "CAPS"
                     FrmNotify.Label2.Text = "OFF"
                     FrmNotify.Show()
                 End If
-
+                '    EnableCapPop = True
             End If
             Panel1.BackColor = Color.Red
         End If
@@ -244,12 +251,12 @@
                 counttonormal = 0
                 oldnum = num
                 NotifyIcon2.Text = "Num Lock ON"
-                If showpop = True And FullyLoaded = True Then
+                If ShowPop = True And EnableNumPop = True Then
                     FrmNotify.Label1.Text = "NUM"
                     FrmNotify.Label2.Text = "ON"
                     FrmNotify.Show()
                 End If
-
+                '   EnableNumPop = True
             End If
             Panel2.BackColor = Color.DimGray
         Else
@@ -265,12 +272,12 @@
                 oldnum = num
                 NotifyIcon2.Text = "Num Lock OFF"
 
-                If showpop = True And FullyLoaded = True Then
+                If ShowPop = True And EnableNumPop = True Then
                     FrmNotify.Label1.Text = "NUM"
                     FrmNotify.Label2.Text = "OFF"
                     FrmNotify.Show()
                 End If
-
+                '   EnableNumPop = True
             End If
             Panel2.BackColor = Color.Red
         End If
@@ -288,12 +295,12 @@
                 counttonormal = 0
                 oldscr = scr
                 NotifyIcon3.Text = "Scroll Lock ON"
-                If showpop = True And FullyLoaded = True Then
+                If ShowPop = True And EnableScrPop = True Then
                     FrmNotify.Label1.Text = "SCRL"
                     FrmNotify.Label2.Text = "ON"
                     FrmNotify.Show()
                 End If
-
+                '    EnableScrPop = True
             End If
             Panel3.BackColor = Color.DimGray
         Else
@@ -309,12 +316,12 @@
                 counttonormal = 0
                 oldscr = scr
                 NotifyIcon3.Text = "Scroll Lock OFF"
-                If showpop = True And FullyLoaded = True Then
+                If ShowPop = True And EnableScrPop = True Then
                     FrmNotify.Label1.Text = "SCRL"
                     FrmNotify.Label2.Text = "OFF"
                     FrmNotify.Show()
                 End If
-
+                '  EnableScrPop = True
             End If
             Panel3.BackColor = Color.Red
         End If
@@ -587,4 +594,11 @@
     End Sub
 
 
+
+    Private Sub TmrPopEnabler_Tick(sender As Object, e As EventArgs) Handles TmrPopEnabler.Tick
+        TmrPopEnabler.Enabled = False
+        EnableCapPop = True
+        EnableNumPop = True
+        EnableScrPop = True
+    End Sub
 End Class

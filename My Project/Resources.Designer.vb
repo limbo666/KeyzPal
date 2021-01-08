@@ -173,6 +173,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property New_Patch_Ver1_250x250() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("New Patch Ver1_250x250", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property numOff1() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("numOff1", resourceCulture)

@@ -7,14 +7,16 @@
     End Sub
 
     Private Sub FrmNotify_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Top = 200
+        '  Me.Top = 200
+        '  Me.Visible = False
+        Me.Top = (My.Computer.Screen.WorkingArea.Height - Me.Height) / 2
         Me.Left = (My.Computer.Screen.WorkingArea.Width - Me.Width) / 2
 
         Me.TopMost = True
         Me.TopMost = False
 
         Timer1.Enabled = True
-
+        ' Me.Visible = True
     End Sub
 
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
@@ -28,7 +30,4 @@
         End If
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-
-    End Sub
 End Class

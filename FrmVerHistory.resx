@@ -140,6 +140,8 @@
 
  1.0.3.10 - Second quarantine update
 .Impoved GUI behavior
+.Fixed bug with variables
+.Enabled the desktop notification function (It is a bit buggy but it works) 
 
 </value>
   </data>
