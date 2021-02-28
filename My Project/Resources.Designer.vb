@@ -151,6 +151,33 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property DeepBeep() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("DeepBeep", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property HappyHarmonyBeep() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("HappyHarmonyBeep", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property HarmonyBeep() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("HarmonyBeep", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property KeyzPal() As System.Drawing.Bitmap
@@ -277,6 +304,15 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("paypalLogo2", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property RobotBeep() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("RobotBeep", resourceCulture)
             End Get
         End Property
         

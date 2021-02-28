@@ -123,25 +123,28 @@
 .User can select which indicator will be active.
 .Normalization can be enabled to set Caps lock off, Num lock on and Scroll lock off after a selectable time period.
 
-1.0.2.7 - Quarantine days update
+1.0.2.7 - Spring-quarantine-days update
 .Added option to select icon set for tray indicators to adapt with Riajyuu suggestion (thanks) 
 .Added high contrast icons provided by user cubesky on github (thanks)
 .Fixed bug where scroll indicator was appeared even when it was disabled
 .Some other control optimizations 
 .Program icon and logo changed.
 
-1.0.3.8 - Holidays update
+1.0.3.8 - 2020-Holidays update
 .Added keyboard hook function to detect Caps lock keypress. Normalization time resets every time a key  is pressed.
 
- 1.0.3.9 - After "operation" update
+ 1.0.3.9 - After-surgical-operation update
 .Logo changed
 .Bug fixed by chris-kwl "normalization function is deactivated by opening settings" (Thanks)
 .Minor interface improvements
 
- 1.0.3.10 - Second quarantine update
+ 1.0.3.10 - Second-quarantine update
 .Impoved GUI behavior
 .Fixed bug with variables
 .Enabled the desktop notification function (It is a bit buggy but it works) 
+
+ 1.0.3.10 - Quarantine-will-never-end update
+. Added sound when normalize 
 
 </value>
   </data>

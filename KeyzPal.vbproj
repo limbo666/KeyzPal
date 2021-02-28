@@ -120,6 +120,7 @@
     </Compile>
     <Compile Include="Module1.vb" />
     <Compile Include="ModuleVariables.vb" />
+    <Compile Include="Module_Log.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -226,6 +227,14 @@
     <Content Include="KeyzPal.ico" />
     <None Include="Resources\CreditsImageHandWaterPump.png" />
     <None Include="Resources\New Patch Ver1_250x250.png" />
+    <None Include="Resources\DeepBeep.mp3" />
+    <None Include="Resources\HappyHarmonyBeep.mp3" />
+    <None Include="Resources\HarmonyBeep.mp3" />
+    <None Include="Resources\RobotBeep.mp3" />
+    <None Include="Resources\DeepBeep.wav" />
+    <None Include="Resources\HappyHarmonyBeep.wav" />
+    <None Include="Resources\HarmonyBeep.wav" />
+    <None Include="Resources\RobotBeep.wav" />
     <Content Include="Untitled.ico" />
     <None Include="Resources\paypalLogo2.png" />
     <None Include="Resources\paypalLogo.jpg" />

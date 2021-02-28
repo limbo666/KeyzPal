@@ -1,4 +1,5 @@
-﻿Public Class FrmMain
+﻿Imports System.IO
+Public Class FrmMain
     Dim IsFirstTimeRun As Boolean = True
     Dim StDN As Boolean = False
 
@@ -7,7 +8,7 @@
     Dim Cap As Integer
     Dim Num As Integer
     Dim Scr As Integer
-    Dim Debug As Boolean = False
+    '  Dim Debug As Boolean = False
     ' ShowPop As Boolean
 
     Dim FullyLoaded As Boolean
@@ -22,7 +23,7 @@
     Dim EnableScrPop As Boolean = False
 
 
-    Dim CountToNormal As Integer = 0
+
 
     Dim ImageSet As Integer = 1
     ' Keyboard hook variable below
@@ -53,6 +54,17 @@
         EnableNormalize = GetSetting("KeysPal", "GeneralSettings", "EnableNormalize", False)
         TimeToNormalize = GetSetting("KeysPal", "GeneralSettings", "TimeToNormalize", 60)
         ShowPop = GetSetting("KeysPal", "GeneralSettings", "ShowPop", False)
+
+        MakeSoundOnNormalize = GetSetting("KeysPal", "GeneralSettings", "MakeSoundOnNormalize", False)
+        SelectedNormalizationSound = GetSetting("KeysPal", "GeneralSettings", "SelectedNormalizationSound", 0)
+
+
+
+        CapsLockNormalValue = GetSetting("KeysPal", "GeneralSettings", "CapsLockNormalValue", False)
+        NumLockNormalValue = GetSetting("KeysPal", "GeneralSettings", "NumLockNormalValue", True)
+        ScrollLockNormalValue = GetSetting("KeysPal", "GeneralSettings", "ScrollLockNormalValue", False)
+
+
         Me.Top = GetSetting("KeysPal", "GeneralSettings", "frmmaintop", deftop)
         Me.Left = GetSetting("KeysPal", "GeneralSettings", "frmmainleft", defleft)
 
@@ -103,6 +115,7 @@
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        '  Debug = True 'used only for diagnostics window and log
         If Debug = True Then
             FrmDiagnostics.Show()
         End If
@@ -171,6 +184,9 @@
 
         ' FullyLoaded = True
 
+
+
+
     End Sub
 
 
@@ -200,7 +216,7 @@
             Cap = 1
             Label1.Text = "Caps Lock ON"
 
-            If cap <> oldcap Then
+            If Cap <> OldCap Then
                 Dim img As Image = PictureBox1.Image
                 Dim bm As Bitmap = img
                 Dim hIcon As IntPtr = bm.GetHicon
@@ -220,7 +236,7 @@
         Else
             Cap = 0
             Label1.Text = "Caps Lock OFF"
-            If cap <> oldcap Then
+            If Cap <> OldCap Then
                 Dim img As Image = PictureBox4.Image
                 Dim bm As Bitmap = img
                 Dim hIcon As IntPtr = bm.GetHicon
@@ -242,14 +258,14 @@
         If My.Computer.Keyboard.NumLock = True Then
             Num = 1
             Label2.Text = "Num Lock ON"
-            If num <> oldnum Then
+            If Num <> OldNum Then
                 Dim img As Image = PictureBox2.Image
                 Dim bm As Bitmap = img
                 Dim hIcon As IntPtr = bm.GetHicon
                 Dim TheIcon As Icon = Icon.FromHandle(hIcon)
                 NotifyIcon2.Icon = TheIcon
-                counttonormal = 0
-                oldnum = num
+                CountToNormal = 0
+                OldNum = Num
                 NotifyIcon2.Text = "Num Lock ON"
                 If ShowPop = True And EnableNumPop = True Then
                     FrmNotify.Label1.Text = "NUM"
@@ -260,16 +276,16 @@
             End If
             Panel2.BackColor = Color.DimGray
         Else
-            num = 0
+            Num = 0
             Label2.Text = "Num Lock OFF"
-            If num <> oldnum Then
+            If Num <> OldNum Then
                 Dim img As Image = PictureBox5.Image
                 Dim bm As Bitmap = img
                 Dim hIcon As IntPtr = bm.GetHicon
                 Dim TheIcon As Icon = Icon.FromHandle(hIcon)
                 NotifyIcon2.Icon = TheIcon
-                counttonormal = 0
-                oldnum = num
+                CountToNormal = 0
+                OldNum = Num
                 NotifyIcon2.Text = "Num Lock OFF"
 
                 If ShowPop = True And EnableNumPop = True Then
@@ -284,16 +300,16 @@
 
         If My.Computer.Keyboard.ScrollLock = True Then
 
-            scr = 1
+            Scr = 1
             Label3.Text = "Scroll Lock ON"
-            If scr <> oldscr Then
+            If Scr <> OldScr Then
                 Dim img As Image = PictureBox3.Image
                 Dim bm As Bitmap = img
                 Dim hIcon As IntPtr = bm.GetHicon
                 Dim TheIcon As Icon = Icon.FromHandle(hIcon)
                 NotifyIcon3.Icon = TheIcon
-                counttonormal = 0
-                oldscr = scr
+                CountToNormal = 0
+                OldScr = Scr
                 NotifyIcon3.Text = "Scroll Lock ON"
                 If ShowPop = True And EnableScrPop = True Then
                     FrmNotify.Label1.Text = "SCRL"
@@ -305,16 +321,16 @@
             Panel3.BackColor = Color.DimGray
         Else
 
-            scr = 0
+            Scr = 0
             Label3.Text = "Scroll Lock OFF"
-            If scr <> oldscr Then
+            If Scr <> OldScr Then
                 Dim img As Image = PictureBox6.Image
                 Dim bm As Bitmap = img
                 Dim hIcon As IntPtr = bm.GetHicon
                 Dim TheIcon As Icon = Icon.FromHandle(hIcon)
                 NotifyIcon3.Icon = TheIcon
-                counttonormal = 0
-                oldscr = scr
+                CountToNormal = 0
+                OldScr = Scr
                 NotifyIcon3.Text = "Scroll Lock OFF"
                 If ShowPop = True And EnableScrPop = True Then
                     FrmNotify.Label1.Text = "SCRL"
@@ -449,34 +465,67 @@
     End Sub
 
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
-        If counttonormal < TimeToNormalize Then
-            counttonormal = counttonormal + 1
+        Dim NeedToSoundSignal = 0
+        ' Normalize
+        If CountToNormal < TimeToNormalize Then
+            CountToNormal = CountToNormal + 1
 
         Else
             'turn CAPS lock off
-            If My.Computer.Keyboard.CapsLock = True Then
-
-                Call keybd_event(System.Windows.Forms.Keys.CapsLock, &H14, 1, 0)
-                Call keybd_event(System.Windows.Forms.Keys.CapsLock, &H14, 3, 0)
+            If My.Computer.Keyboard.CapsLock <> CapsLockNormalValue Then
+                ToggleCapsLock()
+                NeedToSoundSignal = NeedToSoundSignal + 1
+                Debuglog(Now & " Caps normalized")
             End If
-
-
             'turn NUM lock on
-            If My.Computer.Keyboard.NumLock = False Then
-                Call keybd_event(System.Windows.Forms.Keys.NumLock, &H14, 1, 0)
-                Call keybd_event(System.Windows.Forms.Keys.NumLock, &H14, 3, 0)
+            If My.Computer.Keyboard.NumLock <> NumLockNormalValue Then
+                ToggleNumLock()
+                NeedToSoundSignal = NeedToSoundSignal + 1
+                Debuglog(Now & " Num normalized")
             End If
-
             'turn Scroll lock off
-            If My.Computer.Keyboard.ScrollLock = True Then
-                Call keybd_event(System.Windows.Forms.Keys.Scroll, &H14, 1, 0)
-                Call keybd_event(System.Windows.Forms.Keys.Scroll, &H14, 3, 0)
+            If My.Computer.Keyboard.ScrollLock <> ScrollLockNormalValue Then
+                ToggleScrollLock()
+                NeedToSoundSignal = NeedToSoundSignal + 1
+                Debuglog(Now & " Scroll normalized")
             End If
+            CountToNormal = 0
 
 
-            counttonormal = 0
+
+            If NeedToSoundSignal > 0 Then
+                If MakeSoundOnNormalize = True Then
+                    If SelectedNormalizationSound = 0 Then
+                        My.Computer.Audio.Play(My.Resources.DeepBeep, AudioPlayMode.Background)
+                    ElseIf SelectedNormalizationSound = 1 Then
+                        My.Computer.Audio.Play(My.Resources.HarmonyBeep, AudioPlayMode.Background)
+                    ElseIf SelectedNormalizationSound = 2 Then
+                        My.Computer.Audio.Play(My.Resources.HappyHarmonyBeep, AudioPlayMode.Background)
+                    ElseIf SelectedNormalizationSound = 3 Then
+                        My.Computer.Audio.Play(My.Resources.RobotBeep, AudioPlayMode.Background)
+                    End If
+                    Debuglog(Now & "  normalized Sound")
+                End If
+                NeedToSoundSignal = 0
+            End If
             '  MsgBox("Back to normal")
         End If
+    End Sub
+
+    Private Sub ToggleCapsLock()
+        Call keybd_event(System.Windows.Forms.Keys.CapsLock, &H14, 1, 0)
+        Call keybd_event(System.Windows.Forms.Keys.CapsLock, &H14, 3, 0)
+    End Sub
+
+
+    Private Sub ToggleNumLock()
+        Call keybd_event(System.Windows.Forms.Keys.NumLock, &H14, 1, 0)
+        Call keybd_event(System.Windows.Forms.Keys.NumLock, &H14, 3, 0)
+    End Sub
+
+    Private Sub ToggleScrollLock()
+        Call keybd_event(System.Windows.Forms.Keys.Scroll, &H14, 1, 0)
+        Call keybd_event(System.Windows.Forms.Keys.Scroll, &H14, 3, 0)
     End Sub
 
     Private Sub TmrPopUp_Tick(sender As Object, e As EventArgs) Handles TmrPopUp.Tick
@@ -601,4 +650,6 @@
         EnableNumPop = True
         EnableScrPop = True
     End Sub
+
+
 End Class

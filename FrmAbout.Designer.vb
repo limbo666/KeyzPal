@@ -165,7 +165,7 @@ Partial Class FrmAbout
         Me.LblThanks.AutoSize = True
         Me.LblThanks.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblThanks.ForeColor = System.Drawing.Color.Red
-        Me.LblThanks.Location = New System.Drawing.Point(58, 68)
+        Me.LblThanks.Location = New System.Drawing.Point(58, 65)
         Me.LblThanks.Name = "LblThanks"
         Me.LblThanks.Size = New System.Drawing.Size(96, 20)
         Me.LblThanks.TabIndex = 13
@@ -204,9 +204,9 @@ Partial Class FrmAbout
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.KeyzPal.My.Resources.Resources.paypalLogo2
-        Me.PictureBox2.Location = New System.Drawing.Point(60, 132)
+        Me.PictureBox2.Location = New System.Drawing.Point(60, 130)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(92, 37)
+        Me.PictureBox2.Size = New System.Drawing.Size(92, 39)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 9
         Me.PictureBox2.TabStop = False

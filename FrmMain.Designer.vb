@@ -64,8 +64,8 @@ Partial Class FrmMain
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TmrResetLabel = New System.Windows.Forms.Timer(Me.components)
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.TmrPopEnabler = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -410,6 +410,10 @@ Partial Class FrmMain
         '
         Me.TmrResetLabel.Interval = 5000
         '
+        'TmrPopEnabler
+        '
+        Me.TmrPopEnabler.Interval = 5000
+        '
         'PictureBox8
         '
         Me.PictureBox8.Image = Global.KeyzPal.My.Resources.Resources.paypalLogo2
@@ -419,10 +423,6 @@ Partial Class FrmMain
         Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox8.TabIndex = 15
         Me.PictureBox8.TabStop = False
-        '
-        'TmrPopEnabler
-        '
-        Me.TmrPopEnabler.Interval = 5000
         '
         'FrmMain
         '

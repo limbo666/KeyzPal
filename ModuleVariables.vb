@@ -9,14 +9,26 @@ Module ModuleVariables
     Public ShowPop As Boolean
     Public StDN As Boolean = False
 
+    Public CapsLockNormalValue As Boolean = False
+    Public NumLockNormalValue As Boolean = True
+    Public ScrollLockNormalValue As Boolean = False
+    Public MakeSoundOnNormalize As Boolean = False
+    Public SelectedNormalizationSound As Integer = 0
 
+
+    Public CountToNormal As Integer = 0 'taken from frmmain
 
     Public Function CheckForNewVersion()
         Dim LatestVersion As Integer
         Dim RemoteFileNM = "https://raw.githubusercontent.com/limbo666/KeyzPal/master/latest_version/version.txt"
         Dim LocalFileNM = Application.StartupPath & "\version.txt"
         Using WClient As New WebClient()
-            WClient.DownloadFile(RemoteFileNM, LocalFileNM)
+            Try
+                WClient.DownloadFile(RemoteFileNM, LocalFileNM)
+            Catch ex As Exception
+
+            End Try
+
         End Using
         If File.Exists(LocalFileNM) Then
             Dim TextInFile = File.ReadAllText(LocalFileNM)
