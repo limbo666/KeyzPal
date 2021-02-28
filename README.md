@@ -9,7 +9,7 @@ The program currently offers:
 
 - *Lightweight interface - Runs on system tray.*
 
-- *Selectable Lock Keys to indicate.*
+- *Selectable Lock keys to indicate.*
 
 - *Option to auto start on windows start.*
 
@@ -18,6 +18,10 @@ The program currently offers:
 - *Keys normalization function.*
 
 - *Selectable icon sets.*  
+
+- *Selectable sound on normalization.*  
+
+- *Selectable keys normal state for normalization.*   
 
   
 
