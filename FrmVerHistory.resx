@@ -143,8 +143,9 @@
 .Fixed bug with variables
 .Enabled the desktop notification function (It is a bit buggy but it works) 
 
- 1.0.3.10 - Quarantine-will-never-end update
-. Added sound when normalize 
+ 1.0.4.11 - Quarantine-will-never-end update
+. Added sound when normalize with four different sound to select
+. Added keys normal state selection by user 
 
 </value>
   </data>
