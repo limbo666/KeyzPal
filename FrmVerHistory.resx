@@ -147,6 +147,11 @@
 . Added sound when normalize with four different sound to select
 . Added keys normal state selection by user 
 
+ 1.0.5.xx - New equipment fun update
+. Fixed resize main form bug
+. Fixed theme changing bug which appeared in previous release
+. Added conditional Caps lock function (experimental)
+
 </value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />

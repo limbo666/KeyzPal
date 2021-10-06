@@ -72,11 +72,9 @@ Public Class FrmSettings
 
         SaveSetting("KeysPal", "GeneralSettings", "SelectedNormalizationSound", SelectedNormalizationSound)
 
-
         SaveSetting("KeysPal", "GeneralSettings", "CapsLockNormalValue", CapsLockNormalValue)
         SaveSetting("KeysPal", "GeneralSettings", "NumLockNormalValue", NumLockNormalValue)
         SaveSetting("KeysPal", "GeneralSettings", "ScrollLockNormalValue", ScrollLockNormalValue)
-
 
 
     End Sub
@@ -126,8 +124,23 @@ Public Class FrmSettings
         End If
         Me.Top = deftop
         Me.Left = defleft
+        Try
+            For i As Integer = 0 To UpperCaseProgramList.Count - 1
+                RichTextBox1.AppendText(UpperCaseProgramList(i) & vbNewLine)
 
+            Next
 
+        Catch ex As Exception
+
+        End Try
+        Try
+            For i As Integer = 0 To LowerCaseProgramList.Count - 1
+                RichTextBox2.AppendText(LowerCaseProgramList(i) & vbNewLine)
+
+            Next
+        Catch ex As Exception
+
+        End Try
     End Sub
 
 
@@ -219,6 +232,60 @@ Public Class FrmSettings
         RadioButton3.Enabled = CheckBox4.Checked
         RadioButton4.Enabled = CheckBox4.Checked
         '   End If
+
+    End Sub
+
+    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
+
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+
+        Dim filepath = Application.StartupPath & "\lists.ini"
+
+        If System.IO.File.Exists(filepath) = True Then
+            Try
+                Process.Start(filepath)
+            Catch ex As Exception
+
+            End Try
+
+        Else
+            '  Try
+            Dim fs As System.IO.FileStream = System.IO.File.Create(filepath)
+            fs.Close()
+            Dim file As System.IO.StreamWriter
+
+            file = My.Computer.FileSystem.OpenTextFileWriter(filepath, True)
+            file.WriteLine("")
+            file.WriteLine("[UpperCase]")
+            file.WriteLine("Program1 = ""Set Your Upper Case Programs Here"" ")
+            file.WriteLine("Program2 = ""up to Program10"" ")
+
+            file.WriteLine("[Lowercase]")
+            file.WriteLine("Program1 = ""Set Your Lower Case Programs Here"" ")
+            file.WriteLine("Program2 = ""up to  Program10"" ")
+
+            file.Close()
+            wait(500)
+
+            Process.Start(filepath)
+            '   Catch ex As Exception
+
+            '  End Try
+        End If
+    End Sub
+
+
+    Private Sub wait(ByVal interval As Integer)  ' taken from https://stackoverflow.com/questions/13519274/delaying-in-vb-net/13520695
+        Dim sw As New Stopwatch
+        sw.Start()
+        Do While sw.ElapsedMilliseconds < interval
+            ' Allows UI to remain responsive
+            Application.DoEvents()
+        Loop
+        sw.Stop()
+
 
     End Sub
 End Class

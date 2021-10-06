@@ -133,6 +133,9 @@
   <data name="numOn1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\numOn1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="HappyHarmonyBeep" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HappyHarmonyBeep.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="numOn4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\numOn4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,14 +160,20 @@
   <data name="numOn2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\numOn2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="HarmonyBeep" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HarmonyBeep.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="paypalLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\paypalLogo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="numOff3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\numOff3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="numOn3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\numOn3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="numOff3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\numOff3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="scrOn4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\scrOn4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="capsOn4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\capsOn4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -174,6 +183,9 @@
   </data>
   <data name="numOff2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\numOff2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeepBeep" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DeepBeep.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="capsOff2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\capsOff2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,8 +202,8 @@
   <data name="capsOff3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\capsOff3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="scrOn4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\scrOn4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RobotBeep" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RobotBeep.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="CreditsImageHandWaterPump" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CreditsImageHandWaterPump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,22 +214,13 @@
   <data name="scrOn3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\scrOn3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="capsOff4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\capsOff4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="New Patch Ver1_250x250" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\New Patch Ver1_250x250.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DeepBeep" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DeepBeep.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="capsOff4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\capsOff4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HappyHarmonyBeep" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HappyHarmonyBeep.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="HarmonyBeep" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HarmonyBeep.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RobotBeep" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RobotBeep.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Yield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Yield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

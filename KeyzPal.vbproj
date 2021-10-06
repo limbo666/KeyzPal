@@ -118,6 +118,7 @@
     <Compile Include="FrmVerHistory.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ModINIFunctions.vb" />
     <Compile Include="Module1.vb" />
     <Compile Include="ModuleVariables.vb" />
     <Compile Include="Module_Log.vb" />
@@ -235,6 +236,7 @@
     <None Include="Resources\HappyHarmonyBeep.wav" />
     <None Include="Resources\HarmonyBeep.wav" />
     <None Include="Resources\RobotBeep.wav" />
+    <None Include="Resources\Yield.png" />
     <Content Include="Untitled.ico" />
     <None Include="Resources\paypalLogo2.png" />
     <None Include="Resources\paypalLogo.jpg" />

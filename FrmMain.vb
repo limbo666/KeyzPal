@@ -22,7 +22,7 @@ Public Class FrmMain
     Dim EnableNumPop As Boolean = False
     Dim EnableScrPop As Boolean = False
 
-
+    Dim PreviousWindowTitle As String = ""
 
 
     Dim ImageSet As Integer = 1
@@ -30,6 +30,22 @@ Public Class FrmMain
     Dim WithEvents K As New Module_Keyboard
     'Keyboard command below
     Private Declare Sub keybd_event Lib "user32" (ByVal bVk As Byte, ByVal bScan As Byte, ByVal dwFlags As Integer, ByVal dwExtraInfo As Integer)
+    Private Declare Function GetForegroundWindow Lib "user32" Alias "GetForegroundWindow" () As IntPtr
+    Public Declare Auto Function GetWindowText Lib "user32" (ByVal hWnd As System.IntPtr, ByVal lpString As System.Text.StringBuilder, ByVal cch As Integer) As Integer
+    Dim makel As String
+
+    Function GetCaption() As String
+        Dim Caption As New System.Text.StringBuilder(256)
+        Dim hWnd As IntPtr = GetForegroundWindow()
+        GetWindowText(hWnd, Caption, Caption.Capacity)
+        Return Caption.ToString()
+    End Function
+
+
+
+
+
+
 
     Sub SaveSettings()
         Try
@@ -119,7 +135,9 @@ Public Class FrmMain
         If Debug = True Then
             FrmDiagnostics.Show()
         End If
-        ' FullyLoaded = False
+        Me.MaximumSize = Me.Size
+        Me.MinimumSize = Me.Size
+        FullyLoaded = False
         K.CreateHook()
         SaveSetting("KeysPal", "GeneralSettings", "IsFirstTimeRun", False)
 
@@ -182,7 +200,14 @@ Public Class FrmMain
 
         TmrPopEnabler.Enabled = True
 
-        ' FullyLoaded = True
+
+        Call LoadForceToPrograms()
+
+        TmrGetFocusedWindow.Enabled = True
+        lblDevDiagnostics.Visible = True
+
+        lblDevDiagnostics2.Visible = True
+        FullyLoaded = True ' THIS CAME BACK TO FIX THEME CHANGING BUG
 
 
 
@@ -473,12 +498,19 @@ Public Class FrmMain
         Else
             'turn CAPS lock off
             If My.Computer.Keyboard.CapsLock <> CapsLockNormalValue Then
-                ToggleCapsLock()
-                NeedToSoundSignal = NeedToSoundSignal + 1
-                Debuglog(Now & " Caps normalized")
+                If UnderSpecificCaseProgram = False Then
+
+                    ToggleCapsLock()
+                    NeedToSoundSignal = NeedToSoundSignal + 1
+                    Debuglog(Now & " Caps normalized")
+                Else
+                    Debuglog(Now & " Caps not normalized because it is under specific window")
+                End If
+
+
             End If
-            'turn NUM lock on
-            If My.Computer.Keyboard.NumLock <> NumLockNormalValue Then
+                'turn NUM lock on
+                If My.Computer.Keyboard.NumLock <> NumLockNormalValue Then
                 ToggleNumLock()
                 NeedToSoundSignal = NeedToSoundSignal + 1
                 Debuglog(Now & " Num normalized")
@@ -643,7 +675,6 @@ Public Class FrmMain
     End Sub
 
 
-
     Private Sub TmrPopEnabler_Tick(sender As Object, e As EventArgs) Handles TmrPopEnabler.Tick
         TmrPopEnabler.Enabled = False
         EnableCapPop = True
@@ -651,5 +682,95 @@ Public Class FrmMain
         EnableScrPop = True
     End Sub
 
+    Private Sub TmrGetFocusedWindow_Tick(sender As Object, e As EventArgs) Handles TmrGetFocusedWindow.Tick
+        Dim CapTxt As String = GetCaption()
+        If makel <> CapTxt Then
+            makel = CapTxt
+            ' stop timer before showing msgbox so it is not detected!
+            TmrGetFocusedWindow.Stop()
 
+            CurrentFocusedWindow = CapTxt
+            lblDevDiagnostics.Text = CurrentFocusedWindow
+            ' MsgBox(CapTxt)
+            ' resume timer 
+            TmrGetFocusedWindow.Start()
+        End If
+
+        If PreviousWindowTitle <> CurrentFocusedWindow Then
+            PreviousWindowTitle = CurrentFocusedWindow
+            Call CompareWindowNames()
+        End If
+
+    End Sub
+
+
+    Private Sub CompareWindowNames()
+        Dim NumberOfListedPrograms As Integer = 0
+
+        Try
+            For i As Integer = 0 To UpperCaseProgramList.Count
+                If Trim(UpperCaseProgramList(i)) <> "" Then
+                    If CurrentFocusedWindow.IndexOf(UpperCaseProgramList(i)) > -1 Then
+                        lblDevDiagnostics.ForeColor = Color.Red
+                        ' UnderSpecificCaseProgram = True
+                        NumberOfListedPrograms += 1
+                        If My.Computer.Keyboard.CapsLock <> True Then
+                            ToggleCapsLock()
+                            '   NeedToSoundSignal = NeedToSoundSignal + 1
+                            Debuglog(Now & " Caps switched to UpperCase by program " & i)
+                            If SoundOnConditionalChange = True Then
+                                '    My.Computer.Audio.Play(My.Resources.DeepBeep, AudioPlayMode.Background)
+                            End If
+                        End If
+                    Else
+
+                        '    UnderSpecificCaseProgram = False
+                    End If
+                End If
+
+            Next
+
+        Catch ex As Exception
+
+        End Try
+
+        Try
+            For i As Integer = 0 To LowerCaseProgramList.Count
+                If Trim(LowerCaseProgramList(i)) <> "" Then
+                    If CurrentFocusedWindow.IndexOf(LowerCaseProgramList(i)) > -1 Then
+                        lblDevDiagnostics.ForeColor = Color.Blue
+                        '     UnderSpecificCaseProgram = True
+                        NumberOfListedPrograms += 1
+                        If My.Computer.Keyboard.CapsLock <> False Then
+                            ToggleCapsLock()
+                            '   NeedToSoundSignal = NeedToSoundSignal + 1
+                            Debuglog(Now & " Caps switched to LowerCase by program " & i)
+                            If SoundOnConditionalChange = True Then
+                                '    My.Computer.Audio.Play(My.Resources.DeepBeep, AudioPlayMode.Background)
+                            End If
+
+                        End If
+                    Else
+                        '    UnderSpecificCaseProgram = False
+                    End If
+                End If
+
+            Next
+        Catch ex As Exception
+
+        End Try
+
+
+        If NumberOfListedPrograms > 0 Then
+            PBoxYield.Visible = True
+            UnderSpecificCaseProgram = True
+        Else
+            UnderSpecificCaseProgram = 0
+            PBoxYield.Visible = False
+        End If
+        lblDevDiagnostics2.Text = UnderSpecificCaseProgram
+
+
+
+    End Sub
 End Class

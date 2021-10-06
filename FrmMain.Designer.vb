@@ -50,14 +50,7 @@ Partial Class FrmMain
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.TmrPopUp = New System.Windows.Forms.Timer(Me.components)
         Me.Button1 = New System.Windows.Forms.Button()
@@ -65,12 +58,25 @@ Partial Class FrmMain
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TmrResetLabel = New System.Windows.Forms.Timer(Me.components)
         Me.TmrPopEnabler = New System.Windows.Forms.Timer(Me.components)
+        Me.lblDevDiagnostics = New System.Windows.Forms.Label()
+        Me.TmrGetFocusedWindow = New System.Windows.Forms.Timer(Me.components)
+        Me.lblDevDiagnostics2 = New System.Windows.Forms.Label()
+        Me.PBoxYield = New System.Windows.Forms.PictureBox()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PBoxYield, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -78,7 +84,6 @@ Partial Class FrmMain
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Timer1
@@ -228,6 +233,7 @@ Partial Class FrmMain
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Gainsboro
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
+        Me.GroupBox1.Controls.Add(Me.PBoxYield)
         Me.GroupBox1.Controls.Add(Me.Panel3)
         Me.GroupBox1.Controls.Add(Me.Panel2)
         Me.GroupBox1.Controls.Add(Me.PictureBox7)
@@ -283,6 +289,106 @@ Partial Class FrmMain
         Me.Panel2.Size = New System.Drawing.Size(137, 4)
         Me.Panel2.TabIndex = 10
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.DimGray
+        Me.Panel1.Location = New System.Drawing.Point(156, 58)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(137, 4)
+        Me.Panel1.TabIndex = 9
+        '
+        'Timer2
+        '
+        Me.Timer2.Interval = 1000
+        '
+        'TmrPopUp
+        '
+        Me.TmrPopUp.Interval = 3000
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(305, 248)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 25)
+        Me.Button1.TabIndex = 12
+        Me.Button1.Text = "Close"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(225, 248)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 25)
+        Me.Button2.TabIndex = 13
+        Me.Button2.Text = "Hide"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label4.AutoSize = True
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Location = New System.Drawing.Point(6, 316)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(196, 13)
+        Me.Label4.TabIndex = 14
+        Me.Label4.Text = "At least one indicator should be enabled"
+        Me.Label4.Visible = False
+        '
+        'TmrResetLabel
+        '
+        Me.TmrResetLabel.Interval = 5000
+        '
+        'TmrPopEnabler
+        '
+        Me.TmrPopEnabler.Interval = 5000
+        '
+        'lblDevDiagnostics
+        '
+        Me.lblDevDiagnostics.AutoSize = True
+        Me.lblDevDiagnostics.Location = New System.Drawing.Point(6, 329)
+        Me.lblDevDiagnostics.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblDevDiagnostics.Name = "lblDevDiagnostics"
+        Me.lblDevDiagnostics.Size = New System.Drawing.Size(62, 13)
+        Me.lblDevDiagnostics.TabIndex = 16
+        Me.lblDevDiagnostics.Text = "Diagnostics"
+        Me.lblDevDiagnostics.Visible = False
+        '
+        'TmrGetFocusedWindow
+        '
+        Me.TmrGetFocusedWindow.Interval = 200
+        '
+        'lblDevDiagnostics2
+        '
+        Me.lblDevDiagnostics2.AutoSize = True
+        Me.lblDevDiagnostics2.Location = New System.Drawing.Point(99, 329)
+        Me.lblDevDiagnostics2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblDevDiagnostics2.Name = "lblDevDiagnostics2"
+        Me.lblDevDiagnostics2.Size = New System.Drawing.Size(68, 13)
+        Me.lblDevDiagnostics2.TabIndex = 17
+        Me.lblDevDiagnostics2.Text = "Diagnostics2"
+        Me.lblDevDiagnostics2.Visible = False
+        '
+        'PBoxYield
+        '
+        Me.PBoxYield.Image = Global.KeyzPal.My.Resources.Resources.Yield
+        Me.PBoxYield.Location = New System.Drawing.Point(283, 16)
+        Me.PBoxYield.Name = "PBoxYield"
+        Me.PBoxYield.Size = New System.Drawing.Size(29, 43)
+        Me.PBoxYield.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PBoxYield.TabIndex = 18
+        Me.PBoxYield.TabStop = False
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.Image = Global.KeyzPal.My.Resources.Resources.paypalLogo2
+        Me.PictureBox8.Location = New System.Drawing.Point(225, 287)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(156, 44)
+        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox8.TabIndex = 15
+        Me.PictureBox8.TabStop = False
+        '
         'PictureBox7
         '
         Me.PictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -293,14 +399,6 @@ Partial Class FrmMain
         Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox7.TabIndex = 10
         Me.PictureBox7.TabStop = False
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.DimGray
-        Me.Panel1.Location = New System.Drawing.Point(156, 58)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(137, 4)
-        Me.Panel1.TabIndex = 9
         '
         'PictureBox6
         '
@@ -368,67 +466,13 @@ Partial Class FrmMain
         Me.PictureBox1.TabStop = False
         Me.PictureBox1.Visible = False
         '
-        'Timer2
-        '
-        Me.Timer2.Interval = 1000
-        '
-        'TmrPopUp
-        '
-        Me.TmrPopUp.Interval = 3000
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(305, 248)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 25)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "Close"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(225, 248)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 25)
-        Me.Button2.TabIndex = 13
-        Me.Button2.Text = "Hide"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Label4
-        '
-        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label4.AutoSize = True
-        Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(6, 317)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(196, 13)
-        Me.Label4.TabIndex = 14
-        Me.Label4.Text = "At least one indicator should be enabled"
-        Me.Label4.Visible = False
-        '
-        'TmrResetLabel
-        '
-        Me.TmrResetLabel.Interval = 5000
-        '
-        'TmrPopEnabler
-        '
-        Me.TmrPopEnabler.Interval = 5000
-        '
-        'PictureBox8
-        '
-        Me.PictureBox8.Image = Global.KeyzPal.My.Resources.Resources.paypalLogo2
-        Me.PictureBox8.Location = New System.Drawing.Point(225, 288)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(156, 44)
-        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox8.TabIndex = 15
-        Me.PictureBox8.TabStop = False
-        '
         'FrmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(391, 343)
+        Me.Controls.Add(Me.lblDevDiagnostics2)
+        Me.Controls.Add(Me.lblDevDiagnostics)
         Me.Controls.Add(Me.PictureBox8)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button2)
@@ -447,6 +491,8 @@ Partial Class FrmMain
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PBoxYield, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
@@ -454,7 +500,6 @@ Partial Class FrmMain
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -502,4 +547,8 @@ Partial Class FrmMain
     Friend WithEvents NumericUpDown1 As NumericUpDown
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents TmrPopEnabler As Timer
+    Friend WithEvents lblDevDiagnostics As Label
+    Friend WithEvents TmrGetFocusedWindow As Timer
+    Friend WithEvents lblDevDiagnostics2 As Label
+    Friend WithEvents PBoxYield As PictureBox
 End Class
