@@ -56,6 +56,7 @@ Partial Class FrmSettings
         Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -322,7 +323,7 @@ Partial Class FrmSettings
         Me.GroupBox4.Controls.Add(Me.CheckBox5)
         Me.GroupBox4.Location = New System.Drawing.Point(101, 371)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(324, 58)
+        Me.GroupBox4.Size = New System.Drawing.Size(324, 65)
         Me.GroupBox4.TabIndex = 9
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Additional functions"
@@ -330,7 +331,7 @@ Partial Class FrmSettings
         'CheckBox5
         '
         Me.CheckBox5.AutoSize = True
-        Me.CheckBox5.Location = New System.Drawing.Point(19, 24)
+        Me.CheckBox5.Location = New System.Drawing.Point(19, 26)
         Me.CheckBox5.Name = "CheckBox5"
         Me.CheckBox5.Size = New System.Drawing.Size(251, 17)
         Me.CheckBox5.TabIndex = 0
@@ -341,7 +342,7 @@ Partial Class FrmSettings
         '
         Me.PictureBox1.Image = Global.KeyzPal.My.Resources.Resources.KeyzPal_Key_Logo
         Me.PictureBox1.Location = New System.Drawing.Point(11, 11)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(75, 75)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -350,11 +351,11 @@ Partial Class FrmSettings
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.RichTextBox1.Enabled = False
         Me.RichTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RichTextBox1.Location = New System.Drawing.Point(20, 33)
-        Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(200, 167)
         Me.RichTextBox1.TabIndex = 11
@@ -362,11 +363,11 @@ Partial Class FrmSettings
         '
         'RichTextBox2
         '
-        Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.RichTextBox2.Enabled = False
         Me.RichTextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RichTextBox2.Location = New System.Drawing.Point(20, 216)
-        Me.RichTextBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.RichTextBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.RichTextBox2.Name = "RichTextBox2"
         Me.RichTextBox2.Size = New System.Drawing.Size(200, 167)
         Me.RichTextBox2.TabIndex = 12
@@ -378,9 +379,9 @@ Partial Class FrmSettings
         Me.Label6.Location = New System.Drawing.Point(20, 17)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(136, 13)
+        Me.Label6.Size = New System.Drawing.Size(149, 13)
         Me.Label6.TabIndex = 13
-        Me.Label6.Text = "Force upper case programs"
+        Me.Label6.Text = "Programs to force upper case "
         '
         'Label7
         '
@@ -388,22 +389,23 @@ Partial Class FrmSettings
         Me.Label7.Location = New System.Drawing.Point(20, 202)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(134, 13)
+        Me.Label7.Size = New System.Drawing.Size(147, 13)
         Me.Label7.TabIndex = 14
-        Me.Label7.Text = "Force lower case programs"
+        Me.Label7.Text = "Programs to force lower case "
         '
         'GroupBox5
         '
+        Me.GroupBox5.Controls.Add(Me.LinkLabel2)
         Me.GroupBox5.Controls.Add(Me.LinkLabel1)
         Me.GroupBox5.Controls.Add(Me.Label6)
         Me.GroupBox5.Controls.Add(Me.Label7)
         Me.GroupBox5.Controls.Add(Me.RichTextBox1)
         Me.GroupBox5.Controls.Add(Me.RichTextBox2)
         Me.GroupBox5.Location = New System.Drawing.Point(430, 12)
-        Me.GroupBox5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox5.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.GroupBox5.Size = New System.Drawing.Size(240, 417)
+        Me.GroupBox5.Padding = New System.Windows.Forms.Padding(2)
+        Me.GroupBox5.Size = New System.Drawing.Size(240, 424)
         Me.GroupBox5.TabIndex = 15
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Conditional CAPS LOCK (beta)"
@@ -419,6 +421,18 @@ Partial Class FrmSettings
         Me.LinkLabel1.TabIndex = 15
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Open lists for edit"
+        '
+        'LinkLabel2
+        '
+        Me.LinkLabel2.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.LinkLabel2.AutoSize = True
+        Me.LinkLabel2.LinkColor = System.Drawing.Color.DarkKhaki
+        Me.LinkLabel2.Location = New System.Drawing.Point(175, 404)
+        Me.LinkLabel2.Name = "LinkLabel2"
+        Me.LinkLabel2.Size = New System.Drawing.Size(44, 13)
+        Me.LinkLabel2.TabIndex = 16
+        Me.LinkLabel2.TabStop = True
+        Me.LinkLabel2.Text = "Refresh"
         '
         'FrmSettings
         '
@@ -487,4 +501,5 @@ Partial Class FrmSettings
     Friend WithEvents Label7 As Label
     Friend WithEvents GroupBox5 As GroupBox
     Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents LinkLabel2 As LinkLabel
 End Class

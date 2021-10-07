@@ -122,8 +122,17 @@ Public Class FrmSettings
             defleft = (My.Computer.Screen.WorkingArea.Width - Me.Width) / 2
 
         End If
+
+        ListPrograms()
+
         Me.Top = deftop
         Me.Left = defleft
+
+    End Sub
+
+    Sub ListPrograms()
+
+
         Try
             For i As Integer = 0 To UpperCaseProgramList.Count - 1
                 RichTextBox1.AppendText(UpperCaseProgramList(i) & vbNewLine)
@@ -142,7 +151,6 @@ Public Class FrmSettings
 
         End Try
     End Sub
-
 
 
     Private Sub ChkRunAtStartup_CheckedChanged(sender As Object, e As EventArgs) Handles ChkRunAtStartup.CheckedChanged
@@ -287,5 +295,13 @@ Public Class FrmSettings
         sw.Stop()
 
 
+    End Sub
+
+    Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
+        RichTextBox1.Clear()
+        RichTextBox2.Clear()
+
+        LoadForceToPrograms()
+        ListPrograms()
     End Sub
 End Class

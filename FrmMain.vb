@@ -204,9 +204,9 @@ Public Class FrmMain
         Call LoadForceToPrograms()
 
         TmrGetFocusedWindow.Enabled = True
-        lblDevDiagnostics.Visible = True
+        '  lblDevDiagnostics.Visible = True
 
-        lblDevDiagnostics2.Visible = True
+        '   lblDevDiagnostics2.Visible = True
         FullyLoaded = True ' THIS CAME BACK TO FIX THEME CHANGING BUG
 
 
@@ -767,6 +767,7 @@ Public Class FrmMain
         Else
             UnderSpecificCaseProgram = 0
             PBoxYield.Visible = False
+            CountToNormal = 0
         End If
         lblDevDiagnostics2.Text = UnderSpecificCaseProgram
 

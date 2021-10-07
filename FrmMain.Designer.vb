@@ -48,9 +48,17 @@ Partial Class FrmMain
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.PBoxYield = New System.Windows.Forms.PictureBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.TmrPopUp = New System.Windows.Forms.Timer(Me.components)
         Me.Button1 = New System.Windows.Forms.Button()
@@ -61,22 +69,13 @@ Partial Class FrmMain
         Me.lblDevDiagnostics = New System.Windows.Forms.Label()
         Me.TmrGetFocusedWindow = New System.Windows.Forms.Timer(Me.components)
         Me.lblDevDiagnostics2 = New System.Windows.Forms.Label()
-        Me.PBoxYield = New System.Windows.Forms.PictureBox()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PBoxYield, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -84,6 +83,7 @@ Partial Class FrmMain
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Timer1
@@ -273,6 +273,16 @@ Partial Class FrmMain
         Me.NumericUpDown1.TabIndex = 11
         Me.NumericUpDown1.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
+        'PBoxYield
+        '
+        Me.PBoxYield.Image = Global.KeyzPal.My.Resources.Resources.Yield
+        Me.PBoxYield.Location = New System.Drawing.Point(292, 12)
+        Me.PBoxYield.Name = "PBoxYield"
+        Me.PBoxYield.Size = New System.Drawing.Size(25, 30)
+        Me.PBoxYield.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PBoxYield.TabIndex = 18
+        Me.PBoxYield.TabStop = False
+        '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.DimGray
@@ -289,6 +299,17 @@ Partial Class FrmMain
         Me.Panel2.Size = New System.Drawing.Size(137, 4)
         Me.Panel2.TabIndex = 10
         '
+        'PictureBox7
+        '
+        Me.PictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox7.Image = Global.KeyzPal.My.Resources.Resources.KeyzPal_Key_Logo
+        Me.PictureBox7.Location = New System.Drawing.Point(21, 18)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(97, 91)
+        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox7.TabIndex = 10
+        Me.PictureBox7.TabStop = False
+        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.DimGray
@@ -296,6 +317,72 @@ Partial Class FrmMain
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(137, 4)
         Me.Panel1.TabIndex = 9
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.Image = Global.KeyzPal.My.Resources.Resources.scrOff1
+        Me.PictureBox6.Location = New System.Drawing.Point(318, 146)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(37, 48)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox6.TabIndex = 8
+        Me.PictureBox6.TabStop = False
+        Me.PictureBox6.Visible = False
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.Image = Global.KeyzPal.My.Resources.Resources.numOff1
+        Me.PictureBox5.Location = New System.Drawing.Point(318, 80)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(37, 48)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox5.TabIndex = 7
+        Me.PictureBox5.TabStop = False
+        Me.PictureBox5.Visible = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.KeyzPal.My.Resources.Resources.capsOff1
+        Me.PictureBox4.Location = New System.Drawing.Point(318, 14)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(37, 48)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox4.TabIndex = 6
+        Me.PictureBox4.TabStop = False
+        Me.PictureBox4.Visible = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.KeyzPal.My.Resources.Resources.scrOn1
+        Me.PictureBox3.Location = New System.Drawing.Point(318, 146)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(37, 48)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 5
+        Me.PictureBox3.TabStop = False
+        Me.PictureBox3.Visible = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.KeyzPal.My.Resources.Resources.numOn1
+        Me.PictureBox2.Location = New System.Drawing.Point(318, 80)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(37, 48)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 4
+        Me.PictureBox2.TabStop = False
+        Me.PictureBox2.Visible = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.KeyzPal.My.Resources.Resources.capsOn1
+        Me.PictureBox1.Location = New System.Drawing.Point(318, 14)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(37, 48)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 3
+        Me.PictureBox1.TabStop = False
+        Me.PictureBox1.Visible = False
         '
         'Timer2
         '
@@ -369,16 +456,6 @@ Partial Class FrmMain
         Me.lblDevDiagnostics2.Text = "Diagnostics2"
         Me.lblDevDiagnostics2.Visible = False
         '
-        'PBoxYield
-        '
-        Me.PBoxYield.Image = Global.KeyzPal.My.Resources.Resources.Yield
-        Me.PBoxYield.Location = New System.Drawing.Point(283, 16)
-        Me.PBoxYield.Name = "PBoxYield"
-        Me.PBoxYield.Size = New System.Drawing.Size(29, 43)
-        Me.PBoxYield.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PBoxYield.TabIndex = 18
-        Me.PBoxYield.TabStop = False
-        '
         'PictureBox8
         '
         Me.PictureBox8.Image = Global.KeyzPal.My.Resources.Resources.paypalLogo2
@@ -388,83 +465,6 @@ Partial Class FrmMain
         Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox8.TabIndex = 15
         Me.PictureBox8.TabStop = False
-        '
-        'PictureBox7
-        '
-        Me.PictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox7.Image = Global.KeyzPal.My.Resources.Resources.KeyzPal_Key_Logo
-        Me.PictureBox7.Location = New System.Drawing.Point(21, 18)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(97, 91)
-        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox7.TabIndex = 10
-        Me.PictureBox7.TabStop = False
-        '
-        'PictureBox6
-        '
-        Me.PictureBox6.Image = Global.KeyzPal.My.Resources.Resources.scrOff1
-        Me.PictureBox6.Location = New System.Drawing.Point(318, 146)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(37, 48)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox6.TabIndex = 8
-        Me.PictureBox6.TabStop = False
-        Me.PictureBox6.Visible = False
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.Image = Global.KeyzPal.My.Resources.Resources.numOff1
-        Me.PictureBox5.Location = New System.Drawing.Point(318, 80)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(37, 48)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox5.TabIndex = 7
-        Me.PictureBox5.TabStop = False
-        Me.PictureBox5.Visible = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = Global.KeyzPal.My.Resources.Resources.capsOff1
-        Me.PictureBox4.Location = New System.Drawing.Point(318, 14)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(37, 48)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox4.TabIndex = 6
-        Me.PictureBox4.TabStop = False
-        Me.PictureBox4.Visible = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = Global.KeyzPal.My.Resources.Resources.scrOn1
-        Me.PictureBox3.Location = New System.Drawing.Point(318, 146)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(37, 48)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 5
-        Me.PictureBox3.TabStop = False
-        Me.PictureBox3.Visible = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.KeyzPal.My.Resources.Resources.numOn1
-        Me.PictureBox2.Location = New System.Drawing.Point(318, 80)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(37, 48)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 4
-        Me.PictureBox2.TabStop = False
-        Me.PictureBox2.Visible = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.KeyzPal.My.Resources.Resources.capsOn1
-        Me.PictureBox1.Location = New System.Drawing.Point(318, 14)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(37, 48)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 3
-        Me.PictureBox1.TabStop = False
-        Me.PictureBox1.Visible = False
         '
         'FrmMain
         '
@@ -492,7 +492,6 @@ Partial Class FrmMain
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PBoxYield, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
@@ -500,6 +499,7 @@ Partial Class FrmMain
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

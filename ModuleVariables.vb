@@ -29,6 +29,7 @@ Module ModuleVariables
 
 
     Public Sub LoadForceToPrograms()
+        UpperCaseProgramList.Clear()
         UpperCaseProgramList.Add(INIRead(Application.StartupPath & "\lists.ini", "UpperCase", "Program1", ""))
         UpperCaseProgramList.Add(INIRead(Application.StartupPath & "\lists.ini", "UpperCase", "Program2", ""))
         UpperCaseProgramList.Add(INIRead(Application.StartupPath & "\lists.ini", "UpperCase", "Program3", ""))
@@ -39,7 +40,7 @@ Module ModuleVariables
         UpperCaseProgramList.Add(INIRead(Application.StartupPath & "\lists.ini", "UpperCase", "Program8", ""))
         UpperCaseProgramList.Add(INIRead(Application.StartupPath & "\lists.ini", "UpperCase", "Program9", ""))
         UpperCaseProgramList.Add(INIRead(Application.StartupPath & "\lists.ini", "UpperCase", "Program10", ""))
-
+        LowerCaseProgramList.Clear()
         LowerCaseProgramList.Add(INIRead(Application.StartupPath & "\lists.ini", "LowerCase", "Program1", ""))
         LowerCaseProgramList.Add(INIRead(Application.StartupPath & "\lists.ini", "LowerCase", "Program2", ""))
         LowerCaseProgramList.Add(INIRead(Application.StartupPath & "\lists.ini", "LowerCase", "Program3", ""))
