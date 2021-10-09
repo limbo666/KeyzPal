@@ -223,4 +223,34 @@
   <data name="Yield" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Yield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="wav_ding01a" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wav_ding01a.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="wav_ding01b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wav_ding01b.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="wav_ding02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wav_ding02.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="wav_ding03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wav_ding03.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="wav_ding04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wav_ding04.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="wav_ding05" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wav_ding05.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="wav_ding06" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wav_ding06.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="wav_ding07" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wav_ding07.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="wav_ding08" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wav_ding08.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="wav_ding09" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wav_ding09.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

@@ -11,7 +11,7 @@ Public Class FrmMain
     '  Dim Debug As Boolean = False
     ' ShowPop As Boolean
 
-    Dim FullyLoaded As Boolean
+
 
     Dim OldCap As Integer = -1
     Dim OldNum As Integer = -1
@@ -25,6 +25,7 @@ Public Class FrmMain
     Dim PreviousWindowTitle As String = ""
 
 
+
     Dim ImageSet As Integer = 1
     ' Keyboard hook variable below
     Dim WithEvents K As New Module_Keyboard
@@ -33,6 +34,11 @@ Public Class FrmMain
     Private Declare Function GetForegroundWindow Lib "user32" Alias "GetForegroundWindow" () As IntPtr
     Public Declare Auto Function GetWindowText Lib "user32" (ByVal hWnd As System.IntPtr, ByVal lpString As System.Text.StringBuilder, ByVal cch As Integer) As Integer
     Dim makel As String
+
+    Dim SkipNormalSounding As Boolean = False
+
+
+    Dim IsTimeToAllowNotifications As Boolean = False
 
     Function GetCaption() As String
         Dim Caption As New System.Text.StringBuilder(256)
@@ -79,6 +85,9 @@ Public Class FrmMain
         CapsLockNormalValue = GetSetting("KeysPal", "GeneralSettings", "CapsLockNormalValue", False)
         NumLockNormalValue = GetSetting("KeysPal", "GeneralSettings", "NumLockNormalValue", True)
         ScrollLockNormalValue = GetSetting("KeysPal", "GeneralSettings", "ScrollLockNormalValue", False)
+
+        SoundOnNormalChange = GetSetting("KeysPal", "GeneralSettings", "SoundOnNormalChange", False)
+        WhichSound = GetSetting("KeysPal", "GeneralSettings", "WhichSound", 1)
 
 
         Me.Top = GetSetting("KeysPal", "GeneralSettings", "frmmaintop", deftop)
@@ -131,13 +140,17 @@ Public Class FrmMain
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        FullyLoaded = False
         '  Debug = True 'used only for diagnostics window and log
         If Debug = True Then
             FrmDiagnostics.Show()
         End If
+        TmrIsTimeToAllowNotifications.Enabled = True
         Me.MaximumSize = Me.Size
         Me.MinimumSize = Me.Size
-        FullyLoaded = False
+        NumericUpDown1.ReadOnly = True
+        NumericUpDown1.BackColor = Color.White
+
         K.CreateHook()
         SaveSetting("KeysPal", "GeneralSettings", "IsFirstTimeRun", False)
 
@@ -236,6 +249,40 @@ Public Class FrmMain
         Call Timer1_Tick(Nothing, Nothing)
 
     End Sub
+
+
+    Sub SoundOnNormalChange_PlayThatSound()
+        If IsTimeToAllowNotifications = True Then
+            If SoundOnNormalChange = True Then
+                If WhichSound = 1 Then
+                    My.Computer.Audio.Play(My.Resources.wav_ding01a, AudioPlayMode.Background)
+                ElseIf WhichSound = 2 Then
+                    My.Computer.Audio.Play(My.Resources.wav_ding01b, AudioPlayMode.Background)
+                ElseIf WhichSound = 3 Then
+                    My.Computer.Audio.Play(My.Resources.wav_ding02, AudioPlayMode.Background)
+                ElseIf WhichSound = 4 Then
+                    My.Computer.Audio.Play(My.Resources.wav_ding03, AudioPlayMode.Background)
+                ElseIf WhichSound = 5 Then
+                    My.Computer.Audio.Play(My.Resources.wav_ding04, AudioPlayMode.Background)
+                ElseIf WhichSound = 6 Then
+                    My.Computer.Audio.Play(My.Resources.wav_ding05, AudioPlayMode.Background)
+                ElseIf WhichSound = 7 Then
+                    My.Computer.Audio.Play(My.Resources.wav_ding06, AudioPlayMode.Background)
+                ElseIf WhichSound = 8 Then
+                    My.Computer.Audio.Play(My.Resources.wav_ding07, AudioPlayMode.Background)
+                ElseIf WhichSound = 9 Then
+                    My.Computer.Audio.Play(My.Resources.wav_ding08, AudioPlayMode.Background)
+                ElseIf WhichSound = 10 Then
+                    My.Computer.Audio.Play(My.Resources.wav_ding09, AudioPlayMode.Background)
+                End If
+
+
+            End If
+        End If
+
+    End Sub
+
+
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         If My.Computer.Keyboard.CapsLock = True Then
             Cap = 1
@@ -255,6 +302,7 @@ Public Class FrmMain
                     FrmNotify.Label2.Text = "ΟΝ"
                     FrmNotify.Show()
                 End If
+                SoundOnNormalChange_PlayThatSound()
                 '       EnableCapPop = True
             End If
             Panel1.BackColor = Color.DimGray
@@ -275,6 +323,7 @@ Public Class FrmMain
                     FrmNotify.Label2.Text = "OFF"
                     FrmNotify.Show()
                 End If
+                SoundOnNormalChange_PlayThatSound()
                 '    EnableCapPop = True
             End If
             Panel1.BackColor = Color.Red
@@ -297,6 +346,7 @@ Public Class FrmMain
                     FrmNotify.Label2.Text = "ON"
                     FrmNotify.Show()
                 End If
+                SoundOnNormalChange_PlayThatSound()
                 '   EnableNumPop = True
             End If
             Panel2.BackColor = Color.DimGray
@@ -318,6 +368,7 @@ Public Class FrmMain
                     FrmNotify.Label2.Text = "OFF"
                     FrmNotify.Show()
                 End If
+                SoundOnNormalChange_PlayThatSound()
                 '   EnableNumPop = True
             End If
             Panel2.BackColor = Color.Red
@@ -341,6 +392,7 @@ Public Class FrmMain
                     FrmNotify.Label2.Text = "ON"
                     FrmNotify.Show()
                 End If
+                SoundOnNormalChange_PlayThatSound()
                 '    EnableScrPop = True
             End If
             Panel3.BackColor = Color.DimGray
@@ -362,6 +414,7 @@ Public Class FrmMain
                     FrmNotify.Label2.Text = "OFF"
                     FrmNotify.Show()
                 End If
+                SoundOnNormalChange_PlayThatSound()
                 '  EnableScrPop = True
             End If
             Panel3.BackColor = Color.Red
@@ -499,27 +552,33 @@ Public Class FrmMain
             'turn CAPS lock off
             If My.Computer.Keyboard.CapsLock <> CapsLockNormalValue Then
                 If UnderSpecificCaseProgram = False Then
-
+                    SkipNormalSounding = True
                     ToggleCapsLock()
                     NeedToSoundSignal = NeedToSoundSignal + 1
                     Debuglog(Now & " Caps normalized")
+                    SkipNormalSounding = False
+
                 Else
                     Debuglog(Now & " Caps not normalized because it is under specific window")
                 End If
 
 
             End If
-                'turn NUM lock on
-                If My.Computer.Keyboard.NumLock <> NumLockNormalValue Then
+            'turn NUM lock on
+            If My.Computer.Keyboard.NumLock <> NumLockNormalValue Then
+                SkipNormalSounding = True
                 ToggleNumLock()
                 NeedToSoundSignal = NeedToSoundSignal + 1
                 Debuglog(Now & " Num normalized")
+                SkipNormalSounding = False
             End If
             'turn Scroll lock off
             If My.Computer.Keyboard.ScrollLock <> ScrollLockNormalValue Then
+                SkipNormalSounding = True
                 ToggleScrollLock()
                 NeedToSoundSignal = NeedToSoundSignal + 1
                 Debuglog(Now & " Scroll normalized")
+                SkipNormalSounding = False
             End If
             CountToNormal = 0
 
@@ -661,6 +720,7 @@ Public Class FrmMain
 
 
     Private Sub NumericUpDown1_ValueChanged(sender As Object, e As EventArgs) Handles NumericUpDown1.ValueChanged
+        ' IsTimeToAllowNotifications = False
         If FullyLoaded = True Then
             ImageSet = NumericUpDown1.Value
             SaveSetting("KeysPal", "GeneralSettings", "ImageSet", ImageSet)
@@ -671,7 +731,7 @@ Public Class FrmMain
             UpdateIcons()
 
         End If
-
+        '  IsTimeToAllowNotifications = True
     End Sub
 
 
@@ -773,5 +833,10 @@ Public Class FrmMain
 
 
 
+    End Sub
+
+    Private Sub TmrIsTimeToAllowNotifications_Tick(sender As Object, e As EventArgs) Handles TmrIsTimeToAllowNotifications.Tick
+        TmrIsTimeToAllowNotifications.Enabled = False
+        IsTimeToAllowNotifications = True
     End Sub
 End Class

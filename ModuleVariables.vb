@@ -28,6 +28,11 @@ Module ModuleVariables
     Public SoundOnConditionalChange As Boolean = True
 
 
+    Public SoundOnNormalChange As Boolean = False
+    Public WhichSound As Integer = 1
+    Public FullyLoaded As Boolean = False
+
+
     Public Sub LoadForceToPrograms()
         UpperCaseProgramList.Clear()
         UpperCaseProgramList.Add(INIRead(Application.StartupPath & "\lists.ini", "UpperCase", "Program1", ""))

@@ -151,6 +151,7 @@
 . Fixed bug on resize main form 
 . Fixed theme changing bug which appeared in previous release
 . Added conditional Caps Lock function (beta)
+. Added selectable sound notification on each lock key change
 
 </value>
   </data>

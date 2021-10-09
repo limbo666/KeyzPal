@@ -31,7 +31,7 @@ Partial Class FrmVerHistory
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(510, 198)
+        Me.Button1.Location = New System.Drawing.Point(510, 270)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 25)
         Me.Button1.TabIndex = 1
@@ -42,7 +42,7 @@ Partial Class FrmVerHistory
         '
         Me.PictureBox1.Image = Global.KeyzPal.My.Resources.Resources.KeyzPal_Key_Logo
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(75, 75)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -59,7 +59,7 @@ Partial Class FrmVerHistory
         Me.RichTextBox1.Location = New System.Drawing.Point(80, 3)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.ReadOnly = True
-        Me.RichTextBox1.Size = New System.Drawing.Size(505, 191)
+        Me.RichTextBox1.Size = New System.Drawing.Size(505, 261)
         Me.RichTextBox1.TabIndex = 0
         Me.RichTextBox1.TabStop = False
         Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
@@ -68,7 +68,7 @@ Partial Class FrmVerHistory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(589, 229)
+        Me.ClientSize = New System.Drawing.Size(589, 299)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.RichTextBox1)

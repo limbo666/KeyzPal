@@ -70,6 +70,7 @@ Partial Class FrmMain
         Me.TmrGetFocusedWindow = New System.Windows.Forms.Timer(Me.components)
         Me.lblDevDiagnostics2 = New System.Windows.Forms.Label()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.TmrIsTimeToAllowNotifications = New System.Windows.Forms.Timer(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -448,7 +449,7 @@ Partial Class FrmMain
         'lblDevDiagnostics2
         '
         Me.lblDevDiagnostics2.AutoSize = True
-        Me.lblDevDiagnostics2.Location = New System.Drawing.Point(99, 329)
+        Me.lblDevDiagnostics2.Location = New System.Drawing.Point(165, 329)
         Me.lblDevDiagnostics2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblDevDiagnostics2.Name = "lblDevDiagnostics2"
         Me.lblDevDiagnostics2.Size = New System.Drawing.Size(68, 13)
@@ -461,10 +462,14 @@ Partial Class FrmMain
         Me.PictureBox8.Image = Global.KeyzPal.My.Resources.Resources.paypalLogo2
         Me.PictureBox8.Location = New System.Drawing.Point(225, 287)
         Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(156, 44)
+        Me.PictureBox8.Size = New System.Drawing.Size(156, 39)
         Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox8.TabIndex = 15
         Me.PictureBox8.TabStop = False
+        '
+        'TmrIsTimeToAllowNotifications
+        '
+        Me.TmrIsTimeToAllowNotifications.Interval = 2000
         '
         'FrmMain
         '
@@ -551,4 +556,5 @@ Partial Class FrmMain
     Friend WithEvents TmrGetFocusedWindow As Timer
     Friend WithEvents lblDevDiagnostics2 As Label
     Friend WithEvents PBoxYield As PictureBox
+    Friend WithEvents TmrIsTimeToAllowNotifications As Timer
 End Class

@@ -397,6 +397,96 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property wav_ding01a() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("wav_ding01a", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property wav_ding01b() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("wav_ding01b", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property wav_ding02() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("wav_ding02", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property wav_ding03() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("wav_ding03", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property wav_ding04() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("wav_ding04", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property wav_ding05() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("wav_ding05", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property wav_ding06() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("wav_ding06", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property wav_ding07() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("wav_ding07", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property wav_ding08() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("wav_ding08", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property wav_ding09() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("wav_ding09", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property Yield() As System.Drawing.Bitmap

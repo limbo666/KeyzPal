@@ -1,6 +1,8 @@
 ﻿Imports Microsoft.Win32
 
 Public Class FrmSettings
+    Dim formIsLoading As Boolean = True
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         EnableCap = CheckBox1.Checked
         EnableNum = CheckBox2.Checked
@@ -27,6 +29,8 @@ Public Class FrmSettings
         End If
 
         MakeSoundOnNormalize = CheckBox6.Checked
+        SoundOnNormalChange = CheckBox7.Checked
+        WhichSound = NumericUpDown2.Value
 
         CapsLockNormalValue = ComboBox1.Text
         NumLockNormalValue = ComboBox2.Text
@@ -75,18 +79,25 @@ Public Class FrmSettings
         SaveSetting("KeysPal", "GeneralSettings", "CapsLockNormalValue", CapsLockNormalValue)
         SaveSetting("KeysPal", "GeneralSettings", "NumLockNormalValue", NumLockNormalValue)
         SaveSetting("KeysPal", "GeneralSettings", "ScrollLockNormalValue", ScrollLockNormalValue)
+        SaveSetting("KeysPal", "GeneralSettings", "SoundOnNormalChange", SoundOnNormalChange)
 
+        SaveSetting("KeysPal", "GeneralSettings", "WhichSound", WhichSound)
 
     End Sub
+    Private Declare Function HideCaret Lib "user32" (ByVal hwnd As Integer) As Integer
+
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        formIsLoading = True
 
         CheckBox1.Checked = EnableCap
         CheckBox2.Checked = EnableNum
         CheckBox3.Checked = EnableScroll
         CheckBox4.Checked = EnableNormalize
         CheckBox5.Checked = ShowPop
+        CheckBox7.Checked = SoundOnNormalChange
+        NumericUpDown2.Value = WhichSound
+
         NumericUpDown1.Value = TimeToNormalize
 
         CheckBox6.Checked = MakeSoundOnNormalize
@@ -127,6 +138,14 @@ Public Class FrmSettings
 
         Me.Top = deftop
         Me.Left = defleft
+
+
+        NumericUpDown2.ReadOnly = True
+        NumericUpDown2.BackColor = Color.White
+
+        HideCaret(NumericUpDown2.Controls(1).Handle)
+        formIsLoading = False
+
 
     End Sub
 
@@ -267,12 +286,28 @@ Public Class FrmSettings
             file = My.Computer.FileSystem.OpenTextFileWriter(filepath, True)
             file.WriteLine("")
             file.WriteLine("[UpperCase]")
-            file.WriteLine("Program1 = ""Set Your Upper Case Programs Here"" ")
-            file.WriteLine("Program2 = ""up to Program10"" ")
+            file.WriteLine("Program1 = ""Set your UPPER CASE programs here"" ")
+            file.WriteLine("Program2 = ""a part of title is normally enough"" ")
+            file.WriteLine("Program3 = ""but please try to use unique values to avoid misbehavior"" ")
+            file.WriteLine("Program4 = ""set program4 here"" ")
+            file.WriteLine("Program5 = ""set program5 here"" ")
+            file.WriteLine("Program6 = ""set program6 here"" ")
+            file.WriteLine("Program7 = ""set program7 here"" ")
+            file.WriteLine("Program8 = ""set program8 here"" ")
+            file.WriteLine("Program9 = ""set program9 here"" ")
+            file.WriteLine("Program10 = ""set program10 here"" ")
 
             file.WriteLine("[Lowercase]")
-            file.WriteLine("Program1 = ""Set Your Lower Case Programs Here"" ")
-            file.WriteLine("Program2 = ""up to  Program10"" ")
+            file.WriteLine("Program1 = ""SET YOUR lower case PROGRAMS HERE"" ")
+            file.WriteLine("Program2 = ""a part of title is normally enough"" ")
+            file.WriteLine("Program3 = ""but please try to use unique values to avoid misbehavior"" ")
+            file.WriteLine("Program4 = ""set program4 here"" ")
+            file.WriteLine("Program5 = ""set program5 here"" ")
+            file.WriteLine("Program6 = ""set program6 here"" ")
+            file.WriteLine("Program7 = ""set program7 here"" ")
+            file.WriteLine("Program8 = ""set program8 here"" ")
+            file.WriteLine("Program9 = ""set program9 here"" ")
+            file.WriteLine("Program10 = ""set program10 here"" ")
 
             file.Close()
             wait(500)
@@ -304,4 +339,40 @@ Public Class FrmSettings
         LoadForceToPrograms()
         ListPrograms()
     End Sub
+
+    Private Sub RadioButton3_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton3.CheckedChanged
+
+    End Sub
+
+    Private Sub CheckBox5_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox5.CheckedChanged
+
+    End Sub
+
+    Private Sub NumericUpDown2_ValueChanged(sender As Object, e As EventArgs) Handles NumericUpDown2.ValueChanged
+        If formIsLoading = False Then
+            If NumericUpDown2.Value = 1 Then
+                My.Computer.Audio.Play(My.Resources.wav_ding01a, AudioPlayMode.Background)
+            ElseIf NumericUpDown2.Value = 2 Then
+                My.Computer.Audio.Play(My.Resources.wav_ding01b, AudioPlayMode.Background)
+            ElseIf NumericUpDown2.Value = 3 Then
+                My.Computer.Audio.Play(My.Resources.wav_ding02, AudioPlayMode.Background)
+            ElseIf NumericUpDown2.Value = 4 Then
+                My.Computer.Audio.Play(My.Resources.wav_ding03, AudioPlayMode.Background)
+            ElseIf NumericUpDown2.Value = 5 Then
+                My.Computer.Audio.Play(My.Resources.wav_ding04, AudioPlayMode.Background)
+            ElseIf NumericUpDown2.Value = 6 Then
+                My.Computer.Audio.Play(My.Resources.wav_ding05, AudioPlayMode.Background)
+            ElseIf NumericUpDown2.Value = 7 Then
+                My.Computer.Audio.Play(My.Resources.wav_ding06, AudioPlayMode.Background)
+            ElseIf NumericUpDown2.Value = 8 Then
+                My.Computer.Audio.Play(My.Resources.wav_ding07, AudioPlayMode.Background)
+            ElseIf NumericUpDown2.Value = 9 Then
+                My.Computer.Audio.Play(My.Resources.wav_ding08, AudioPlayMode.Background)
+            ElseIf NumericUpDown2.Value = 10 Then
+                My.Computer.Audio.Play(My.Resources.wav_ding09, AudioPlayMode.Background)
+            End If
+        End If
+
+    End Sub
+
 End Class

@@ -49,21 +49,25 @@ Partial Class FrmSettings
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.CheckBox5 = New System.Windows.Forms.CheckBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.CheckBox7 = New System.Windows.Forms.CheckBox()
+        Me.NumericUpDown2 = New System.Windows.Forms.NumericUpDown()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox5.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'CheckBox1
@@ -98,7 +102,7 @@ Partial Class FrmSettings
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(594, 445)
+        Me.Button1.Location = New System.Drawing.Point(594, 475)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 25)
         Me.Button1.TabIndex = 3
@@ -147,10 +151,10 @@ Partial Class FrmSettings
         Me.GroupBox2.Controls.Add(Me.CheckBox4)
         Me.GroupBox2.Location = New System.Drawing.Point(101, 142)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(324, 223)
+        Me.GroupBox2.Size = New System.Drawing.Size(324, 205)
         Me.GroupBox2.TabIndex = 6
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Advanced options"
+        Me.GroupBox2.Text = "Key normalization"
         '
         'Label5
         '
@@ -301,7 +305,7 @@ Partial Class FrmSettings
         'ChkRunAtStartup
         '
         Me.ChkRunAtStartup.AutoSize = True
-        Me.ChkRunAtStartup.Location = New System.Drawing.Point(22, 26)
+        Me.ChkRunAtStartup.Location = New System.Drawing.Point(22, 25)
         Me.ChkRunAtStartup.Name = "ChkRunAtStartup"
         Me.ChkRunAtStartup.Size = New System.Drawing.Size(114, 17)
         Me.ChkRunAtStartup.TabIndex = 7
@@ -320,41 +324,33 @@ Partial Class FrmSettings
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.Label8)
+        Me.GroupBox4.Controls.Add(Me.NumericUpDown2)
+        Me.GroupBox4.Controls.Add(Me.CheckBox7)
         Me.GroupBox4.Controls.Add(Me.CheckBox5)
-        Me.GroupBox4.Location = New System.Drawing.Point(101, 371)
+        Me.GroupBox4.Location = New System.Drawing.Point(101, 353)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(324, 65)
+        Me.GroupBox4.Size = New System.Drawing.Size(324, 117)
         Me.GroupBox4.TabIndex = 9
         Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "Additional functions"
+        Me.GroupBox4.Text = "User norifications"
         '
         'CheckBox5
         '
         Me.CheckBox5.AutoSize = True
-        Me.CheckBox5.Location = New System.Drawing.Point(19, 26)
+        Me.CheckBox5.Location = New System.Drawing.Point(19, 33)
         Me.CheckBox5.Name = "CheckBox5"
         Me.CheckBox5.Size = New System.Drawing.Size(251, 17)
         Me.CheckBox5.TabIndex = 0
         Me.CheckBox5.Text = "Show screen notifications on each lock change"
         Me.CheckBox5.UseVisualStyleBackColor = True
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.KeyzPal.My.Resources.Resources.KeyzPal_Key_Logo
-        Me.PictureBox1.Location = New System.Drawing.Point(11, 11)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(75, 75)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 10
-        Me.PictureBox1.TabStop = False
-        '
         'RichTextBox1
         '
         Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.RichTextBox1.Enabled = False
         Me.RichTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox1.Location = New System.Drawing.Point(20, 33)
+        Me.RichTextBox1.Location = New System.Drawing.Point(20, 42)
         Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(200, 167)
@@ -366,7 +362,7 @@ Partial Class FrmSettings
         Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.RichTextBox2.Enabled = False
         Me.RichTextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox2.Location = New System.Drawing.Point(20, 216)
+        Me.RichTextBox2.Location = New System.Drawing.Point(20, 237)
         Me.RichTextBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.RichTextBox2.Name = "RichTextBox2"
         Me.RichTextBox2.Size = New System.Drawing.Size(200, 167)
@@ -376,7 +372,7 @@ Partial Class FrmSettings
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(20, 17)
+        Me.Label6.Location = New System.Drawing.Point(20, 26)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(149, 13)
@@ -386,7 +382,7 @@ Partial Class FrmSettings
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(20, 202)
+        Me.Label7.Location = New System.Drawing.Point(20, 223)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(147, 13)
@@ -405,40 +401,80 @@ Partial Class FrmSettings
         Me.GroupBox5.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox5.Size = New System.Drawing.Size(240, 424)
+        Me.GroupBox5.Size = New System.Drawing.Size(240, 458)
         Me.GroupBox5.TabIndex = 15
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Conditional CAPS LOCK (beta)"
-        '
-        'LinkLabel1
-        '
-        Me.LinkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.LinkColor = System.Drawing.Color.DarkKhaki
-        Me.LinkLabel1.Location = New System.Drawing.Point(132, 387)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(88, 13)
-        Me.LinkLabel1.TabIndex = 15
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "Open lists for edit"
         '
         'LinkLabel2
         '
         Me.LinkLabel2.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.LinkLabel2.AutoSize = True
         Me.LinkLabel2.LinkColor = System.Drawing.Color.DarkKhaki
-        Me.LinkLabel2.Location = New System.Drawing.Point(175, 404)
+        Me.LinkLabel2.Location = New System.Drawing.Point(176, 435)
         Me.LinkLabel2.Name = "LinkLabel2"
         Me.LinkLabel2.Size = New System.Drawing.Size(44, 13)
         Me.LinkLabel2.TabIndex = 16
         Me.LinkLabel2.TabStop = True
         Me.LinkLabel2.Text = "Refresh"
         '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.LinkColor = System.Drawing.Color.DarkKhaki
+        Me.LinkLabel1.Location = New System.Drawing.Point(132, 415)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(88, 13)
+        Me.LinkLabel1.TabIndex = 15
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Open lists for edit"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.KeyzPal.My.Resources.Resources.KeyzPal_Key_Logo
+        Me.PictureBox1.Location = New System.Drawing.Point(11, 11)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(75, 75)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 10
+        Me.PictureBox1.TabStop = False
+        '
+        'CheckBox7
+        '
+        Me.CheckBox7.AutoSize = True
+        Me.CheckBox7.Location = New System.Drawing.Point(19, 63)
+        Me.CheckBox7.Name = "CheckBox7"
+        Me.CheckBox7.Size = New System.Drawing.Size(216, 17)
+        Me.CheckBox7.TabIndex = 1
+        Me.CheckBox7.Text = "Make sound when a lock key is pressed"
+        Me.CheckBox7.UseVisualStyleBackColor = True
+        '
+        'NumericUpDown2
+        '
+        Me.NumericUpDown2.Location = New System.Drawing.Point(142, 83)
+        Me.NumericUpDown2.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
+        Me.NumericUpDown2.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.NumericUpDown2.Name = "NumericUpDown2"
+        Me.NumericUpDown2.Size = New System.Drawing.Size(41, 20)
+        Me.NumericUpDown2.TabIndex = 16
+        Me.NumericUpDown2.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(41, 87)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(96, 13)
+        Me.Label8.TabIndex = 17
+        Me.Label8.Text = "Selelcted sound # "
+        '
         'FrmSettings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(681, 473)
+        Me.ClientSize = New System.Drawing.Size(681, 511)
         Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.GroupBox4)
@@ -461,9 +497,10 @@ Partial Class FrmSettings
         Me.GroupBox3.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -502,4 +539,7 @@ Partial Class FrmSettings
     Friend WithEvents GroupBox5 As GroupBox
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents LinkLabel2 As LinkLabel
+    Friend WithEvents CheckBox7 As CheckBox
+    Friend WithEvents NumericUpDown2 As NumericUpDown
+    Friend WithEvents Label8 As Label
 End Class
