@@ -71,6 +71,7 @@ Partial Class FrmMain
         Me.lblDevDiagnostics2 = New System.Windows.Forms.Label()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.TmrIsTimeToAllowNotifications = New System.Windows.Forms.Timer(Me.components)
+        Me.ProjectOnGithubToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -138,13 +139,13 @@ Partial Class FrmMain
         'HideToTrayToolStripMenuItem
         '
         Me.HideToTrayToolStripMenuItem.Name = "HideToTrayToolStripMenuItem"
-        Me.HideToTrayToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.HideToTrayToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.HideToTrayToolStripMenuItem.Text = "Hide to system tray"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'EditToolStripMenuItem
@@ -157,12 +158,12 @@ Partial Class FrmMain
         'SettingsToolStripMenuItem
         '
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
-        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SettingsToolStripMenuItem.Text = "Settings"
         '
         'HelpToolStripMenuItem
         '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VersionHistoryToolStripMenuItem, Me.AboutToolStripMenuItem})
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VersionHistoryToolStripMenuItem, Me.ProjectOnGithubToolStripMenuItem, Me.AboutToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
@@ -170,13 +171,13 @@ Partial Class FrmMain
         'VersionHistoryToolStripMenuItem
         '
         Me.VersionHistoryToolStripMenuItem.Name = "VersionHistoryToolStripMenuItem"
-        Me.VersionHistoryToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.VersionHistoryToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.VersionHistoryToolStripMenuItem.Text = "Version history"
         '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'NotifyIcon1
@@ -471,6 +472,12 @@ Partial Class FrmMain
         '
         Me.TmrIsTimeToAllowNotifications.Interval = 2000
         '
+        'ProjectOnGithubToolStripMenuItem
+        '
+        Me.ProjectOnGithubToolStripMenuItem.Name = "ProjectOnGithubToolStripMenuItem"
+        Me.ProjectOnGithubToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ProjectOnGithubToolStripMenuItem.Text = "Project on Github"
+        '
         'FrmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -557,4 +564,5 @@ Partial Class FrmMain
     Friend WithEvents lblDevDiagnostics2 As Label
     Friend WithEvents PBoxYield As PictureBox
     Friend WithEvents TmrIsTimeToAllowNotifications As Timer
+    Friend WithEvents ProjectOnGithubToolStripMenuItem As ToolStripMenuItem
 End Class

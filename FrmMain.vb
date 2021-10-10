@@ -839,4 +839,8 @@ Public Class FrmMain
         TmrIsTimeToAllowNotifications.Enabled = False
         IsTimeToAllowNotifications = True
     End Sub
+
+    Private Sub ProjectOnGithubToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProjectOnGithubToolStripMenuItem.Click
+        Process.Start("https://github.com/limbo666/KeyzPal#keyzpal")
+    End Sub
 End Class
