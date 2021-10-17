@@ -1,6 +1,10 @@
 ﻿Imports System.IO
 Imports System.Net
 Module ModuleVariables
+
+    Private Declare Function GetForegroundWindow Lib "user32" Alias "GetForegroundWindow" () As IntPtr
+    Public Declare Auto Function GetWindowText Lib "user32" (ByVal hWnd As System.IntPtr, ByVal lpString As System.Text.StringBuilder, ByVal cch As Integer) As Integer
+
     Public EnableCap As Boolean
     Public EnableNum As Boolean
     Public EnableScroll As Boolean
@@ -32,6 +36,12 @@ Module ModuleVariables
     Public WhichSound As Integer = 1
     Public FullyLoaded As Boolean = False
 
+    Function GetCaption() As String
+        Dim Caption As New System.Text.StringBuilder(256)
+        Dim hWnd As IntPtr = GetForegroundWindow()
+        GetWindowText(hWnd, Caption, Caption.Capacity)
+        Return Caption.ToString()
+    End Function
 
     Public Sub LoadForceToPrograms()
         UpperCaseProgramList.Clear()

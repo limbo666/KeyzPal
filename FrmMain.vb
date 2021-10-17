@@ -31,8 +31,7 @@ Public Class FrmMain
     Dim WithEvents K As New Module_Keyboard
     'Keyboard command below
     Private Declare Sub keybd_event Lib "user32" (ByVal bVk As Byte, ByVal bScan As Byte, ByVal dwFlags As Integer, ByVal dwExtraInfo As Integer)
-    Private Declare Function GetForegroundWindow Lib "user32" Alias "GetForegroundWindow" () As IntPtr
-    Public Declare Auto Function GetWindowText Lib "user32" (ByVal hWnd As System.IntPtr, ByVal lpString As System.Text.StringBuilder, ByVal cch As Integer) As Integer
+
     Dim makel As String
 
     Dim SkipNormalSounding As Boolean = False
@@ -40,12 +39,7 @@ Public Class FrmMain
 
     Dim IsTimeToAllowNotifications As Boolean = False
 
-    Function GetCaption() As String
-        Dim Caption As New System.Text.StringBuilder(256)
-        Dim hWnd As IntPtr = GetForegroundWindow()
-        GetWindowText(hWnd, Caption, Caption.Capacity)
-        Return Caption.ToString()
-    End Function
+
 
 
 

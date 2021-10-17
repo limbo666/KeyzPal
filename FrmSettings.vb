@@ -375,4 +375,7 @@ Public Class FrmSettings
 
     End Sub
 
+    Private Sub LinkLabel3_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel3.LinkClicked
+        FrmDisplayFormostWindow.Show()
+    End Sub
 End Class
