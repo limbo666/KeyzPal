@@ -147,7 +147,7 @@
 . Added sound when normalize with four different sound to select
 . Added keys normal state selection by user 
 
- 1.0.5.xx - New-equipment-fun update
+ 1.0.5.14 - New-equipment-fun update
 . Fixed bug on resize main form 
 . Fixed theme changing bug which appeared in previous release
 . Added conditional Caps Lock function (beta)
