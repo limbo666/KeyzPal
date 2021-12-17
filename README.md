@@ -29,14 +29,14 @@ The program currently offers:
 
   
 
-Normalization function: 
+###### Normalization function: 
 
 This function can set the lock keys state to "normal" after a selectable period of time. From version 1.0.3.8 the program can detect key presses on the keyboard and reset the remaining time each time a key is pressed. This way the program will normalize the keys only if the system is inactive for the predefined time. 
 
 From version 1.0.4.11 the keys normal state can be selected by the user under settings.
 
 
-Conditional CAPS LOCK function (beta): 
+###### Conditional CAPS LOCK function (beta): 
 
 This function can be used to auto switch on (or off) CAPS LOCK dependind on the current active window. Up to 10 program titles per fucntion can be predifined on file lists.ini.
 lists.ini file should be located and the same folder with keyzpal.exe and its contents will be readed upon program launch. A part of thetitle on target window should be enough to auto switch to predifined CAPS lock. 
