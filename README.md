@@ -44,7 +44,7 @@ If is needed to have CAPS LOCK switched on each time NOTEPAD++ is selected, the 
 If is needed to have CAPS LOCK switched on each time a specific textfile (let's say `mydailynotes.txt`) is edited on NOTEPAD++ (or any other editor), the keyword `mydailynotes.txt` or the keyword `mydailynotes` should be added to one of the "UpperCase" lines on `lists.ini` file.<br/>
 
 The keywords should be as much unique as possible to distinguish each window and avoid unnecessary CAPS LOCK forcing.<br/>
-An example lists.ini file can be downloaded from [properties folder](https://github.com/limbo666/KeyzPal/blob/master/Properties/)<br/>
+An example `lists.ini` file can be downloaded from [properties folder](https://github.com/limbo666/KeyzPal/blob/master/Properties/)<br/>
 
 
 ## GUI
