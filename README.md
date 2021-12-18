@@ -57,7 +57,7 @@ You can get the latest executable from releases page: https://github.com/limbo66
 
 ## Installation 
 Installation is not needed. Unzip contents to a folder on your disk (e.g. C:\Tools\KeyzPal) and run the executable.<br>
-If you want to use the Condifional caps function you should place the `lists.ini` file in the same folder with the `keyzpal.exe`
+If you want to use the conditional caps function you should place the `lists.ini` file in the same folder with the `keyzpal.exe`. Download `lists.ini` from [properties folder](https://github.com/limbo666/KeyzPal/blob/master/Properties/)
 
 
 ## Compiling
