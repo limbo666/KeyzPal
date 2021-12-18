@@ -1,6 +1,6 @@
-# **KeyzPal**
-![alt text](https://github.com/limbo666/KeyzPal/blob/master/additional_files/KeyzPal_Key_Logo_1.png)
+# **KeyzPal** ![version](https://img.shields.io/github/v/tag/limbo666/keyzpal) [![Github All Releases](https://img.shields.io/github/downloads/limbo666/KeyzPal/total.svg)]()  ![alt text](https://img.shields.io/github/last-commit/limbo666/keyzpal/master)
 
+![alt text](https://github.com/limbo666/KeyzPal/blob/master/additional_files/KeyzPal_Key_Logo_1.png)
 KeyzPal is a Windows tray utility to indicate the **CAPS**, **NUM** and **SCROLL** key status. 
 
 
