@@ -153,6 +153,10 @@
 . Added conditional Caps Lock function (beta)
 . Added selectable sound notification on each lock key change
 
+ 1.0.5.15 - I-have-a-secret-helper update
+. Fixed changes notification pop-up from stealing focus
+
+
 </value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />

@@ -83,7 +83,7 @@ Partial Class FrmAbout
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(160, 15)
         Me.Label4.TabIndex = 4
-        Me.Label4.Text = "©2018-2021 Hand Water Pump"
+        Me.Label4.Text = "©2018-2023 Hand Water Pump"
         '
         'Label5
         '

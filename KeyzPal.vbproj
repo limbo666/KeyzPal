@@ -11,8 +11,9 @@
     <AssemblyName>KeyzPal</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -215,7 +216,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="colibri_new.ico" />
-    <Content Include="icondefault.ico" />
     <None Include="Resources\capsOff2.png" />
     <None Include="Resources\capsOn2.png" />
     <None Include="Resources\numOff2.png" />

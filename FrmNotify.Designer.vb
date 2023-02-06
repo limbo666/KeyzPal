@@ -32,9 +32,9 @@ Partial Class FrmNotify
         '
         'Label1
         '
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label1.Location = New System.Drawing.Point(-3, 16)
+        Me.Label1.Location = New System.Drawing.Point(-3, 23)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(180, 47)
         Me.Label1.TabIndex = 0
@@ -47,9 +47,9 @@ Partial Class FrmNotify
         '
         'Label2
         '
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label2.Location = New System.Drawing.Point(-3, 56)
+        Me.Label2.Location = New System.Drawing.Point(-3, 65)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(180, 47)
         Me.Label2.TabIndex = 1
@@ -75,6 +75,7 @@ Partial Class FrmNotify
         Me.Opacity = 0.8R
         Me.ShowInTaskbar = False
         Me.Text = "KeyzPal"
+        Me.TopMost = True
         Me.ResumeLayout(False)
 
     End Sub
