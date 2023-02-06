@@ -268,55 +268,56 @@ Public Class FrmSettings
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
 
-        Dim filepath = Application.StartupPath & "\lists.ini"
+        'Dim filepath = Application.StartupPath & "\lists.ini"
 
-        If System.IO.File.Exists(filepath) = True Then
-            Try
-                Process.Start(filepath)
-            Catch ex As Exception
+        'If System.IO.File.Exists(filepath) = True Then
+        '    Try
+        '        Process.Start(filepath)
+        '    Catch ex As Exception
 
-            End Try
+        '    End Try
 
-        Else
-            '  Try
-            Dim fs As System.IO.FileStream = System.IO.File.Create(filepath)
-            fs.Close()
-            Dim file As System.IO.StreamWriter
+        'Else
+        '    '  Try
+        '    Dim fs As System.IO.FileStream = System.IO.File.Create(filepath)
+        '    fs.Close()
+        '    Dim file As System.IO.StreamWriter
 
-            file = My.Computer.FileSystem.OpenTextFileWriter(filepath, True)
-            file.WriteLine("")
-            file.WriteLine("[UpperCase]")
-            file.WriteLine("Program1 = ""Set your UPPER CASE programs here"" ")
-            file.WriteLine("Program2 = ""a part of title is normally enough"" ")
-            file.WriteLine("Program3 = ""but please try to use unique values to avoid misbehavior"" ")
-            file.WriteLine("Program4 = ""set program4 here"" ")
-            file.WriteLine("Program5 = ""set program5 here"" ")
-            file.WriteLine("Program6 = ""set program6 here"" ")
-            file.WriteLine("Program7 = ""set program7 here"" ")
-            file.WriteLine("Program8 = ""set program8 here"" ")
-            file.WriteLine("Program9 = ""set program9 here"" ")
-            file.WriteLine("Program10 = ""set program10 here"" ")
+        '    file = My.Computer.FileSystem.OpenTextFileWriter(filepath, True)
+        '    file.WriteLine("")
+        '    file.WriteLine("[UpperCase]")
+        '    file.WriteLine("Program1 = ""Set your UPPER CASE programs here"" ")
+        '    file.WriteLine("Program2 = ""a part of title is normally enough"" ")
+        '    file.WriteLine("Program3 = ""but please try to use unique values to avoid misbehavior"" ")
+        '    file.WriteLine("Program4 = ""set program4 here"" ")
+        '    file.WriteLine("Program5 = ""set program5 here"" ")
+        '    file.WriteLine("Program6 = ""set program6 here"" ")
+        '    file.WriteLine("Program7 = ""set program7 here"" ")
+        '    file.WriteLine("Program8 = ""set program8 here"" ")
+        '    file.WriteLine("Program9 = ""set program9 here"" ")
+        '    file.WriteLine("Program10 = ""set program10 here"" ")
 
-            file.WriteLine("[Lowercase]")
-            file.WriteLine("Program1 = ""SET YOUR lower case PROGRAMS HERE"" ")
-            file.WriteLine("Program2 = ""a part of title is normally enough"" ")
-            file.WriteLine("Program3 = ""but please try to use unique values to avoid misbehavior"" ")
-            file.WriteLine("Program4 = ""set program4 here"" ")
-            file.WriteLine("Program5 = ""set program5 here"" ")
-            file.WriteLine("Program6 = ""set program6 here"" ")
-            file.WriteLine("Program7 = ""set program7 here"" ")
-            file.WriteLine("Program8 = ""set program8 here"" ")
-            file.WriteLine("Program9 = ""set program9 here"" ")
-            file.WriteLine("Program10 = ""set program10 here"" ")
+        '    file.WriteLine("[Lowercase]")
+        '    file.WriteLine("Program1 = ""SET YOUR lower case PROGRAMS HERE"" ")
+        '    file.WriteLine("Program2 = ""a part of title is normally enough"" ")
+        '    file.WriteLine("Program3 = ""but please try to use unique values to avoid misbehavior"" ")
+        '    file.WriteLine("Program4 = ""set program4 here"" ")
+        '    file.WriteLine("Program5 = ""set program5 here"" ")
+        '    file.WriteLine("Program6 = ""set program6 here"" ")
+        '    file.WriteLine("Program7 = ""set program7 here"" ")
+        '    file.WriteLine("Program8 = ""set program8 here"" ")
+        '    file.WriteLine("Program9 = ""set program9 here"" ")
+        '    file.WriteLine("Program10 = ""set program10 here"" ")
 
-            file.Close()
-            wait(500)
+        '    file.Close()
+        '    wait(500)
 
-            Process.Start(filepath)
-            '   Catch ex As Exception
+        '    Process.Start(filepath)
+        '    '   Catch ex As Exception
 
-            '  End Try
-        End If
+        '    '  End Try
+        'End If
+        FrmEditor.Show()
     End Sub
 
 
@@ -332,7 +333,7 @@ Public Class FrmSettings
 
     End Sub
 
-    Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
+    Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
         RichTextBox1.Clear()
         RichTextBox2.Clear()
 

@@ -154,8 +154,10 @@
 . Added selectable sound notification on each lock key change
 
  1.0.5.15 - I-have-a-secret-helper update
+. Updated to framework 4.8 to maximize compatibility
 . Fixed changes notification pop-up from stealing focus
-
+. Removed unused resources
+. Added internal text editor to edit lists.ini file
 
 </value>
   </data>
