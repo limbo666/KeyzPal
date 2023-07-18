@@ -1,4 +1,8 @@
-﻿Imports System.IO
+﻿Imports System.ComponentModel
+Imports System.IO
+Imports System.Net.Sockets
+Imports System.Text
+
 Public Class FrmMain
     Dim IsFirstTimeRun As Boolean = True
     Dim StDN As Boolean = False
@@ -38,9 +42,6 @@ Public Class FrmMain
 
 
     Dim IsTimeToAllowNotifications As Boolean = False
-
-
-
 
 
 
@@ -88,7 +89,7 @@ Public Class FrmMain
         Me.Left = GetSetting("KeysPal", "GeneralSettings", "frmmainleft", defleft)
 
         IsFirstTimeRun = GetSetting("KeysPal", "GeneralSettings", "IsFirstTimeRun", True)
-
+        EnableHardwareIntegration = GetSetting("KeysPal", "GeneralSettings", "EnableHardwareIntegration", False)
 
         StDN = GetSetting("KeysPal", "GeneralSettings", "StDN", False)
         If Me.Left < 0 Then
@@ -837,4 +838,29 @@ Public Class FrmMain
     Private Sub ProjectOnGithubToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProjectOnGithubToolStripMenuItem.Click
         Process.Start("https://github.com/limbo666/KeyzPal#keyzpal")
     End Sub
+
+    'example calling function:
+    'Dim success As Boolean = Await SendUDPCommand(text, port, ip)
+
+    'If success Then
+    '    Console.WriteLine("UDP command sent successfully.")
+    'Else
+    '    Console.WriteLine("Failed to send UDP command.")
+    'End If
+
+    Public Async Function SendUDPCommand(ByVal text As String, ByVal port As Integer, ByVal ip As String) As Task(Of Boolean)
+        Try
+            Await Task.Run(Sub()
+                               Dim udpClient As New UdpClient()
+                               Dim bytes As Byte() = Encoding.ASCII.GetBytes(text)
+                               udpClient.Send(bytes, bytes.Length, ip, port)
+                               udpClient.Close()
+                           End Sub)
+            Return True
+        Catch ex As Exception
+            '   Console.WriteLine(ex.Message)
+            Return False
+        End Try
+    End Function
+
 End Class

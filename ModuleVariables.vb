@@ -22,7 +22,12 @@ Module ModuleVariables
 
     Public CountToNormal As Integer = 0 'taken from frmmain
 
+    'Below values for Hardware integration with https://github.com/limbo666/Mimic_For_KeyzPal
+    Public EnableHardwareIntegration As Boolean
+    Public TargetIpAddress As String = "255.255.255.255"
+    Public TargetPort As Integer = 22689
 
+    ' Hardware section end
 
     Public CurrentFocusedWindow As String
 

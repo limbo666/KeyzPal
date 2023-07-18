@@ -35,7 +35,7 @@ Public Class FrmSettings
         CapsLockNormalValue = ComboBox1.Text
         NumLockNormalValue = ComboBox2.Text
         ScrollLockNormalValue = ComboBox3.Text
-
+        EnableHardwareIntegration = ChkHardwareIntegration.Checked
 
         TimeToNormalize = NumericUpDown1.Value
         CountToNormal = 0
@@ -58,7 +58,7 @@ Public Class FrmSettings
         End If
 
         ChkRunAtStartup.Checked = GetSetting("KeysPal", "GeneralSettings", "StartWithWindows", False)
-
+        ChkHardwareIntegration.Checked = EnableHardwareIntegration
     End Sub
 
     Sub Savesettings()
@@ -82,7 +82,7 @@ Public Class FrmSettings
         SaveSetting("KeysPal", "GeneralSettings", "SoundOnNormalChange", SoundOnNormalChange)
 
         SaveSetting("KeysPal", "GeneralSettings", "WhichSound", WhichSound)
-
+        SaveSetting("KeysPal", "GeneralSettings", "EnableHardwareIntegration", ChkHardwareIntegration.Checked)
     End Sub
     Private Declare Function HideCaret Lib "user32" (ByVal hwnd As Integer) As Integer
 
@@ -96,6 +96,8 @@ Public Class FrmSettings
         CheckBox4.Checked = EnableNormalize
         CheckBox5.Checked = ShowPop
         CheckBox7.Checked = SoundOnNormalChange
+
+        ChkHardwareIntegration.Checked = EnableHardwareIntegration
         NumericUpDown2.Value = WhichSound
 
         NumericUpDown1.Value = TimeToNormalize
@@ -378,5 +380,13 @@ Public Class FrmSettings
 
     Private Sub LinkLabel3_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel3.LinkClicked
         FrmDisplayFormostWindow.Show()
+    End Sub
+
+    Private Sub ChkHardwareIntegration_CheckedChanged(sender As Object, e As EventArgs) Handles ChkHardwareIntegration.CheckedChanged
+        If ChkHardwareIntegration.Checked = True Then
+            lnkOptions.Enabled = True
+        Else
+            lnkOptions.Enabled = False
+        End If
     End Sub
 End Class
