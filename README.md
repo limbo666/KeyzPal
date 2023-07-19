@@ -25,7 +25,9 @@ The program currently offers:
 
 - *On screen notifications.*
 
-- *Conditional CAPS LOCK function.* 
+- *Conditional CAPS LOCK function.*
+  
+- *Hardware integration.* 
 
   
 
@@ -46,6 +48,8 @@ If is needed to have CAPS LOCK switched on each time a specific textfile (let's 
 The keywords should be as much unique as possible to distinguish each window and avoid unnecessary CAPS LOCK forcing.<br/>
 An example `lists.ini` file can be downloaded from [properties folder](https://github.com/limbo666/KeyzPal/blob/master/Properties/)<br/>
 
+## Hardware Integration 
+A simple herdware besed on ESP8266 microcontroller boards can be created to act as keyboard lights mimic. Check this repository https://github.com/limbo666/Mimic_For_KeyzPal <br>
 
 ## GUI
 ![](https://github.com/limbo666/KeyzPal/blob/master/additional_files/gui_1.png?raw=true)
