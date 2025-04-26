@@ -90,6 +90,12 @@ Public Class FrmSettings
 
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
+        Me.MaximumSize = Me.Size
+        Me.MinimumSize = Me.Size
+
+
         formIsLoading = True
 
         CheckBox1.Checked = EnableCap

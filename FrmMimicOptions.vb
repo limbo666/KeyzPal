@@ -2,6 +2,10 @@
     Dim prevEnableHardwareIntegrationvalue As Boolean
 
     Private Sub FrmMimicOptions_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        Me.MaximumSize = Me.Size
+        Me.MinimumSize = Me.Size
+
         prevEnableHardwareIntegrationvalue = EnableHardwareIntegration
         Me.Icon = FrmMain.Icon
         Dim deftop As Integer
