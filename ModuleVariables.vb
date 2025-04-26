@@ -1,5 +1,7 @@
 ﻿Imports System.IO
 Imports System.Net
+Imports System.Net.Sockets
+Imports System.Text
 Module ModuleVariables
 
     Private Declare Function GetForegroundWindow Lib "user32" Alias "GetForegroundWindow" () As IntPtr
@@ -36,10 +38,13 @@ Module ModuleVariables
     Public UnderSpecificCaseProgram As Boolean = False
     Public SoundOnConditionalChange As Boolean = True
 
+    Public EnableLanguageNotifications As Boolean = True
 
     Public SoundOnNormalChange As Boolean = False
     Public WhichSound As Integer = 1
     Public FullyLoaded As Boolean = False
+
+
 
     Function GetCaption() As String
         Dim Caption As New System.Text.StringBuilder(256)
@@ -104,6 +109,27 @@ Module ModuleVariables
             End If
 
         End If
+    End Function
+
+    Private udpClient As New UdpClient()
+    Private isInitialized As Boolean = False
+
+
+    Public Async Function SendUDPCommand(ByVal text As String, ByVal port As Integer, ByVal ip As String) As Task(Of Boolean)
+        Try
+            If Not isInitialized Then
+                UdpClient.Connect(ip, port)
+                isInitialized = True
+            End If
+
+            Dim bytes As Byte() = Encoding.ASCII.GetBytes(text)
+            Await UdpClient.SendAsync(bytes, bytes.Length)
+            Return True
+        Catch ex As Exception
+            ' Handle error or attempt to reconnect
+            isInitialized = False
+            Return False
+        End Try
     End Function
 
 End Module

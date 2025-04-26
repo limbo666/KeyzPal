@@ -88,11 +88,23 @@
     <Compile Include="FrmEditor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmLanguage.Designer.vb">
+      <DependentUpon>frmLanguage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLanguage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmMain.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMain.Designer.vb">
       <DependentUpon>FrmMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMimicOptions.Designer.vb">
+      <DependentUpon>FrmMimicOptions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMimicOptions.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmSettings.Designer.vb">
@@ -159,9 +171,15 @@
     <EmbeddedResource Include="FrmEditor.resx">
       <DependentUpon>FrmEditor.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmLanguage.resx">
+      <DependentUpon>frmLanguage.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMimicOptions.resx">
+      <DependentUpon>FrmMimicOptions.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSettings.resx">
       <DependentUpon>FrmSettings.vb</DependentUpon>

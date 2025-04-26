@@ -30,7 +30,7 @@ Partial Class FrmEditor
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(11, 33)
+        Me.RichTextBox1.Location = New System.Drawing.Point(11, 12)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(445, 391)
         Me.RichTextBox1.TabIndex = 0
@@ -47,7 +47,7 @@ Partial Class FrmEditor
         '
         'SaveButton
         '
-        Me.SaveButton.Location = New System.Drawing.Point(284, 430)
+        Me.SaveButton.Location = New System.Drawing.Point(284, 409)
         Me.SaveButton.Name = "SaveButton"
         Me.SaveButton.Size = New System.Drawing.Size(83, 30)
         Me.SaveButton.TabIndex = 2
@@ -56,7 +56,7 @@ Partial Class FrmEditor
         '
         'CancelButton
         '
-        Me.CancelButton.Location = New System.Drawing.Point(373, 430)
+        Me.CancelButton.Location = New System.Drawing.Point(373, 409)
         Me.CancelButton.Name = "CancelButton"
         Me.CancelButton.Size = New System.Drawing.Size(83, 30)
         Me.CancelButton.TabIndex = 3
@@ -67,13 +67,14 @@ Partial Class FrmEditor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(468, 482)
+        Me.ClientSize = New System.Drawing.Size(468, 445)
         Me.Controls.Add(Me.CancelButton)
         Me.Controls.Add(Me.SaveButton)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Name = "FrmEditor"
-        Me.Text = "FrmEditor"
+        Me.ShowInTaskbar = False
+        Me.Text = "Edit conditional CAPS programs"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

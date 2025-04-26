@@ -159,6 +159,14 @@
 . Removed unused resources
 . Added internal text editor to edit lists.ini file
 
+ 1.0.6.16 - 2023-Holidays-update
+. Added basic support for mimic hardware
+
+ 1.0.7.18 - I-must-add-this-feature update
+. Added input language indicator
+. Fixed some interface elements and their behavior
+. Hardware mimic support rewritten to be more stabel and faster
+ 
 </value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />

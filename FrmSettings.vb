@@ -36,7 +36,7 @@ Public Class FrmSettings
         NumLockNormalValue = ComboBox2.Text
         ScrollLockNormalValue = ComboBox3.Text
         EnableHardwareIntegration = ChkHardwareIntegration.Checked
-
+        EnableLanguageNotifications = CheckBox8.Checked
         TimeToNormalize = NumericUpDown1.Value
         CountToNormal = 0
         Call Savesettings()
@@ -83,6 +83,8 @@ Public Class FrmSettings
 
         SaveSetting("KeysPal", "GeneralSettings", "WhichSound", WhichSound)
         SaveSetting("KeysPal", "GeneralSettings", "EnableHardwareIntegration", ChkHardwareIntegration.Checked)
+        SaveSetting("KeysPal", "GeneralSettings", "EnableLanguageNotifications", EnableLanguageNotifications)
+
     End Sub
     Private Declare Function HideCaret Lib "user32" (ByVal hwnd As Integer) As Integer
 
@@ -116,6 +118,8 @@ Public Class FrmSettings
         End If
 
 
+        CheckBox8.Checked = EnableLanguageNotifications
+
         Call CheckBox6_CheckedChanged(Nothing, Nothing)
 
 
@@ -142,14 +146,55 @@ Public Class FrmSettings
         Me.Left = defleft
 
 
-        NumericUpDown2.ReadOnly = True
-        NumericUpDown2.BackColor = Color.White
+        '  NumericUpDown2.ReadOnly = True
 
-        HideCaret(NumericUpDown2.Controls(1).Handle)
+
+        '  HideCaret(NumericUpDown2.Controls(1).Handle)
+        NumericUpDown1.ReadOnly = True ' Prevent typing
+        NumericUpDown1.InterceptArrowKeys = True ' Ensure arrow keys work for up/down
+        NumericUpDown2.BackColor = Color.White
         formIsLoading = False
 
 
     End Sub
+
+    ' Optional: Prevent the blinking cursor by handling GotFocus
+    Private Sub NumericUpDown2_GotFocus(sender As Object, e As EventArgs) Handles NumericUpDown2.GotFocus
+        ' Move focus to another control or keep the control from showing the cursor
+        Me.SelectNextControl(NumericUpDown2, True, True, False, True)
+    End Sub
+
+    ' Optional: Block key input to prevent any typing attempts
+    Private Sub NumericUpDown2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles NumericUpDown2.KeyPress
+        e.Handled = True ' Ignore all key presses
+    End Sub
+
+    Private Sub RichTextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles RichTextBox1.KeyPress
+        ' Allow copy (Ctrl+C) and other non-editing shortcuts
+        If e.KeyChar <> ChrW(Keys.ControlKey) AndAlso Not (e.KeyChar = ChrW(3)) Then ' ChrW(3) is Ctrl+C
+            e.Handled = True ' Block all other key presses
+        End If
+    End Sub
+
+    Private Sub RichTextBox1_MouseDown(sender As Object, e As MouseEventArgs) Handles RichTextBox1.MouseDown
+        ' Ensure text selection works
+        RichTextBox1.SelectionStart = RichTextBox1.GetCharIndexFromPosition(e.Location)
+    End Sub
+
+
+    Private Sub RichTextBox2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles RichTextBox2.KeyPress
+        ' Allow copy (Ctrl+C) and other non-editing shortcuts
+        If e.KeyChar <> ChrW(Keys.ControlKey) AndAlso Not (e.KeyChar = ChrW(3)) Then ' ChrW(3) is Ctrl+C
+            e.Handled = True ' Block all other key presses
+        End If
+    End Sub
+
+
+    Private Sub RichTextBox2_MouseDown(sender As Object, e As MouseEventArgs) Handles RichTextBox2.MouseDown
+        ' Ensure text selection works
+        RichTextBox2.SelectionStart = RichTextBox2.GetCharIndexFromPosition(e.Location)
+    End Sub
+
 
     Sub ListPrograms()
 
@@ -384,9 +429,27 @@ Public Class FrmSettings
 
     Private Sub ChkHardwareIntegration_CheckedChanged(sender As Object, e As EventArgs) Handles ChkHardwareIntegration.CheckedChanged
         If ChkHardwareIntegration.Checked = True Then
-            lnkOptions.Enabled = True
+            Button3.Enabled = True
         Else
-            lnkOptions.Enabled = False
+            Button3.Enabled = False
         End If
+    End Sub
+
+    Private Sub lnkOptions_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs)
+
+    End Sub
+
+    Private Sub LinkLabel4_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel4.LinkClicked
+        Try
+            Process.Start("https://github.com/limbo666/Mimic_For_KeyzPal")
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        'MsgBox("This option is not available yet. Please check back later.")
+        FrmMimicOptions.ShowDialog()
     End Sub
 End Class

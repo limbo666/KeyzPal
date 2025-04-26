@@ -3,6 +3,10 @@ Imports System.IO
 Imports System.Net.Sockets
 Imports System.Text
 
+Imports System.Windows.Forms
+Imports System.Runtime.InteropServices
+
+
 Public Class FrmMain
     Dim IsFirstTimeRun As Boolean = True
     Dim StDN As Boolean = False
@@ -14,8 +18,6 @@ Public Class FrmMain
     Dim Scr As Integer
     '  Dim Debug As Boolean = False
     ' ShowPop As Boolean
-
-
 
     Dim OldCap As Integer = -1
     Dim OldNum As Integer = -1
@@ -44,7 +46,7 @@ Public Class FrmMain
     Dim IsTimeToAllowNotifications As Boolean = False
 
 
-
+    Dim periodicSend As Integer = -1
 
 
 
@@ -98,6 +100,9 @@ Public Class FrmMain
         If Me.Top < 0 Then
             Me.Top = deftop
         End If
+
+
+        EnableLanguageNotifications = GetSetting("KeysPal", "GeneralSettings", "EnableLanguageNotifications", True)
 
     End Sub
 
@@ -223,7 +228,6 @@ Public Class FrmMain
     End Sub
 
 
-
     Public Sub EnableDisableIcons()
         If EnableCap = True Then
             NotifyIcon1.Visible = True
@@ -298,6 +302,9 @@ Public Class FrmMain
                     FrmNotify.Show()
                 End If
                 SoundOnNormalChange_PlayThatSound()
+                If EnableHardwareIntegration = True Then
+                    SendUDPCommand("capsON", 22689, "255.255.255.255")
+                End If
                 '       EnableCapPop = True
             End If
             Panel1.BackColor = Color.DimGray
@@ -319,6 +326,9 @@ Public Class FrmMain
                     FrmNotify.Show()
                 End If
                 SoundOnNormalChange_PlayThatSound()
+                If EnableHardwareIntegration = True Then
+                    SendUDPCommand("capsOFF", 22689, "255.255.255.255")
+                End If
                 '    EnableCapPop = True
             End If
             Panel1.BackColor = Color.Red
@@ -342,6 +352,9 @@ Public Class FrmMain
                     FrmNotify.Show()
                 End If
                 SoundOnNormalChange_PlayThatSound()
+                If EnableHardwareIntegration = True Then
+                    SendUDPCommand("numON", 22689, "255.255.255.255")
+                End If
                 '   EnableNumPop = True
             End If
             Panel2.BackColor = Color.DimGray
@@ -364,6 +377,10 @@ Public Class FrmMain
                     FrmNotify.Show()
                 End If
                 SoundOnNormalChange_PlayThatSound()
+                If EnableHardwareIntegration = True Then
+                    SendUDPCommand("numOFF", 22689, "255.255.255.255")
+                End If
+
                 '   EnableNumPop = True
             End If
             Panel2.BackColor = Color.Red
@@ -388,6 +405,9 @@ Public Class FrmMain
                     FrmNotify.Show()
                 End If
                 SoundOnNormalChange_PlayThatSound()
+                If EnableHardwareIntegration = True Then
+                    SendUDPCommand("scrollON", 22689, "255.255.255.255")
+                End If
                 '    EnableScrPop = True
             End If
             Panel3.BackColor = Color.DimGray
@@ -410,17 +430,132 @@ Public Class FrmMain
                     FrmNotify.Show()
                 End If
                 SoundOnNormalChange_PlayThatSound()
+                If EnableHardwareIntegration = True Then
+                    SendUDPCommand("scrollOFF", 22689, "255.255.255.255")
+                End If
                 '  EnableScrPop = True
             End If
             Panel3.BackColor = Color.Red
         End If
 
 
-
-
         Call UpdateIcons()
+        If EnableLanguageNotifications = True Then
+            CheckKeyboardLanguage(Nothing, Nothing)
+
+        End If
+
+
+        If EnableHardwareIntegration = True Then
+            If periodicSend = -1 Then
+                sendallleds()
+            ElseIf periodicSend >= 25 Then
+                sendallleds()
+                periodicSend = 0
+            End If
+            periodicSend += 1
+        End If
+
 
     End Sub
+    'Sub sendAllLeds()
+    '    If My.Computer.Keyboard.CapsLock = True Then
+    '        SendUDPCommand("capsON", 22689, "255.255.255.255")
+    '    Else
+    '        SendUDPCommand("capsOFF", 22689, "255.255.255.255")
+    '    End If
+    '    If My.Computer.Keyboard.NumLock = True Then
+    '        SendUDPCommand("numON", 22689, "255.255.255.255")
+    '    Else
+    '        SendUDPCommand("numOFF", 22689, "255.255.255.255")
+    '    End If
+    '    If My.Computer.Keyboard.ScrollLock = True Then
+    '        SendUDPCommand("scrollON", 22689, "255.255.255.255")
+    '    Else
+    '        SendUDPCommand("scrollOFF", 22689, "255.255.255.255")
+    '    End If
+    'End Sub
+    Async Sub sendAllLeds()
+        If Not EnableHardwareIntegration Then Return
+
+        Dim commands As New List(Of Task(Of Boolean))
+
+        commands.Add(SendUDPCommand(If(My.Computer.Keyboard.CapsLock, "capsON", "capsOFF"), 22689, "255.255.255.255"))
+        commands.Add(SendUDPCommand(If(My.Computer.Keyboard.NumLock, "numON", "numOFF"), 22689, "255.255.255.255"))
+        commands.Add(SendUDPCommand(If(My.Computer.Keyboard.ScrollLock, "scrollON", "scrollOFF"), 22689, "255.255.255.255"))
+
+        Await Task.WhenAll(commands)
+    End Sub
+
+    'example calling function:
+    'Dim success As Boolean = Await SendUDPCommand(text, port, ip)
+
+    'If success Then
+    '    Console.WriteLine("UDP command sent successfully.")
+    'Else
+    '    Console.WriteLine("Failed to send UDP command.")
+    'End If
+
+    '    ' Turn on Caps Lock with red color
+    'Await SendUDPCommand("capsRed", 22689, "255.255.255.255")
+    'Await SendUDPCommand("capsON", 22689, "255.255.255.255")
+
+    '' Turn off Num Lock
+    'Await SendUDPCommand("numOFF", 22689, "255.255.255.255")
+
+    '' Change Scroll Lock to blue
+    'Await SendUDPCommand("scrollBlue", 22689, "255.255.255.255")
+
+    '' Reboot the device
+    'Await SendUDPCommand("Reboot", 22689, "255.255.255.255")
+
+
+    '    Toggle States : 
+    '"capsON" - Turns on Caps Lock LED
+    '"capsOFF" - Turns off Caps Lock LED
+    '"numON" - Turns on Num Lock LED
+    '"numOFF" - Turns off Num Lock LED
+    '"scrollON" - Turns on Scroll Lock LED
+    '"scrollOFF" - Turns off Scroll Lock LED
+    'Color Change Commands:
+    '"capsRed" - Sets Caps Lock to red
+    '"capsGreen" - Sets Caps Lock to green
+    '"capsBlue" - Sets Caps Lock to blue
+    '"capsPurple" - Sets Caps Lock to purple
+    '"capsWhite" - Sets Caps Lock to white
+    '"capsYellow" - Sets Caps Lock to yellow
+    '"capsAqua" - Sets Caps Lock to aqua
+    '"capsOrange" - Sets Caps Lock to orange
+    '"capsPink" - Sets Caps Lock to pink
+    '"capsMagenta" - Sets Caps Lock to magenta
+    '"capsLime" - Sets Caps Lock to lime
+    '(Replace "caps" with "num" Or "scroll" for the other keys)
+    'System Commands : 
+    '"Reboot" - Restarts the ESP8266
+    '"Eeprom" - Reloads colors from EEPROM
+
+
+
+
+
+    'Public Async Function SendUDPCommand(ByVal text As String, ByVal port As Integer, ByVal ip As String) As Task(Of Boolean)
+    '    Try
+    '        Await Task.Run(Sub()
+    '                           Dim udpClient As New UdpClient()
+    '                           Dim bytes As Byte() = Encoding.ASCII.GetBytes(text)
+    '                           udpClient.Send(bytes, bytes.Length, ip, port)
+    '                           udpClient.Close()
+    '                       End Sub)
+    '        Return True
+    '    Catch ex As Exception
+    '        '   Console.WriteLine(ex.Message)
+    '        Return False
+    '    End Try
+    'End Function
+
+
+
+
     Sub UpdateImageSet()
 
 
@@ -839,28 +974,91 @@ Public Class FrmMain
         Process.Start("https://github.com/limbo666/KeyzPal#keyzpal")
     End Sub
 
-    'example calling function:
-    'Dim success As Boolean = Await SendUDPCommand(text, port, ip)
 
-    'If success Then
-    '    Console.WriteLine("UDP command sent successfully.")
-    'Else
-    '    Console.WriteLine("Failed to send UDP command.")
-    'End If
 
-    Public Async Function SendUDPCommand(ByVal text As String, ByVal port As Integer, ByVal ip As String) As Task(Of Boolean)
-        Try
-            Await Task.Run(Sub()
-                               Dim udpClient As New UdpClient()
-                               Dim bytes As Byte() = Encoding.ASCII.GetBytes(text)
-                               udpClient.Send(bytes, bytes.Length, ip, port)
-                               udpClient.Close()
-                           End Sub)
-            Return True
-        Catch ex As Exception
-            '   Console.WriteLine(ex.Message)
-            Return False
-        End Try
+
+    ' Declare API functions to get keyboard layout
+    <DllImport("user32.dll")>
+    Private Shared Function GetKeyboardLayout(idThread As UInteger) As IntPtr
     End Function
+
+    <DllImport("user32.dll")>
+    Private Shared Function GetWindowThreadProcessId(hwnd As IntPtr, ByRef lpdwProcessId As UInteger) As UInteger
+    End Function
+
+    <DllImport("user32.dll")>
+    Private Shared Function GetForegroundWindow() As IntPtr
+    End Function
+    Private previousLanguageId As Integer = -1
+    Private isFirstCheck As Boolean = True
+
+    Private Sub CheckKeyboardLanguage(sender As Object, e As EventArgs)
+        Try
+            ' Get the current foreground window
+            Dim foregroundWindow As IntPtr = GetForegroundWindow()
+
+            ' Get the thread ID of the foreground window
+            Dim threadId As UInteger = GetWindowThreadProcessId(foregroundWindow, Nothing)
+
+            ' Get the keyboard layout for the current thread
+            Dim keyboardLayout As IntPtr = GetKeyboardLayout(threadId)
+
+            ' Extract language ID (low word of keyboard layout)
+            Dim languageId As Integer = (keyboardLayout.ToInt32() And &HFFFF)
+
+            ' Skip the first check to initialize previousLanguageId
+            If isFirstCheck Then
+                previousLanguageId = languageId
+                isFirstCheck = False
+                Return
+            End If
+
+            ' Check if language has changed
+            If languageId <> previousLanguageId Then
+
+                previousLanguageId = languageId
+                ' Convert to culture info for language code
+                Dim cultureInfo As New System.Globalization.CultureInfo(languageId)
+                Dim languageCode As String = cultureInfo.TwoLetterISOLanguageName.ToUpper()
+
+                'MessageBox.Show($"Keyboard language changed to: {languageCode}",
+                '               "Language Change",
+                '               MessageBoxButtons.OK,
+                '               MessageBoxIcon.Information)
+
+                frmLanguage.Label1.Text = languageCode
+                ' Show the form
+                If languageCode = "EN" Then
+
+                    frmLanguage.BackColor = Color.Red
+                ElseIf languageCode = "EL" Then
+                    frmLanguage.BackColor = Color.Blue
+                ElseIf languageCode = "DE" Then
+                    frmLanguage.BackColor = Color.Maroon
+                ElseIf languageCode = "ES" Then
+                    frmLanguage.BackColor = Color.DarkGreen
+                ElseIf languageCode = "FR" Then
+                    frmLanguage.BackColor = Color.MidnightBlue
+                ElseIf languageCode = "IT" Then
+                    frmLanguage.BackColor = Color.DarkTurquoise
+                Else
+                    frmLanguage.BackColor = Color.Green
+
+                End If
+
+
+                    frmLanguage.Show()
+
+
+
+
+                End If
+
+        Catch ex As Exception
+            ' Handle potential errors silently
+            ' Could log to a file if needed
+        End Try
+    End Sub
+
 
 End Class

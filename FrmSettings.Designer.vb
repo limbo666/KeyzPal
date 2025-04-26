@@ -48,6 +48,7 @@ Partial Class FrmSettings
         Me.ChkRunAtStartup = New System.Windows.Forms.CheckBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox8 = New System.Windows.Forms.CheckBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.NumericUpDown2 = New System.Windows.Forms.NumericUpDown()
         Me.CheckBox7 = New System.Windows.Forms.CheckBox()
@@ -60,10 +61,12 @@ Partial Class FrmSettings
         Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.LinkLabel4 = New System.Windows.Forms.LinkLabel()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.ChkHardwareIntegration = New System.Windows.Forms.CheckBox()
-        Me.lnkOptions = New System.Windows.Forms.LinkLabel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,8 +74,8 @@ Partial Class FrmSettings
         Me.GroupBox4.SuspendLayout()
         CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox5.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox6.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'CheckBox1
@@ -107,7 +110,7 @@ Partial Class FrmSettings
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(595, 494)
+        Me.Button1.Location = New System.Drawing.Point(594, 550)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 25)
         Me.Button1.TabIndex = 3
@@ -329,16 +332,27 @@ Partial Class FrmSettings
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.CheckBox8)
         Me.GroupBox4.Controls.Add(Me.Label8)
         Me.GroupBox4.Controls.Add(Me.NumericUpDown2)
         Me.GroupBox4.Controls.Add(Me.CheckBox7)
         Me.GroupBox4.Controls.Add(Me.CheckBox5)
         Me.GroupBox4.Location = New System.Drawing.Point(101, 307)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(324, 109)
+        Me.GroupBox4.Size = New System.Drawing.Size(324, 133)
         Me.GroupBox4.TabIndex = 9
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "User norifications"
+        '
+        'CheckBox8
+        '
+        Me.CheckBox8.AutoSize = True
+        Me.CheckBox8.Location = New System.Drawing.Point(19, 110)
+        Me.CheckBox8.Name = "CheckBox8"
+        Me.CheckBox8.Size = New System.Drawing.Size(186, 17)
+        Me.CheckBox8.TabIndex = 18
+        Me.CheckBox8.Text = "Show active language notification"
+        Me.CheckBox8.UseVisualStyleBackColor = True
         '
         'Label8
         '
@@ -355,6 +369,7 @@ Partial Class FrmSettings
         Me.NumericUpDown2.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
         Me.NumericUpDown2.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.NumericUpDown2.Name = "NumericUpDown2"
+        Me.NumericUpDown2.ReadOnly = True
         Me.NumericUpDown2.Size = New System.Drawing.Size(41, 20)
         Me.NumericUpDown2.TabIndex = 16
         Me.NumericUpDown2.Value = New Decimal(New Integer() {1, 0, 0, 0})
@@ -382,26 +397,28 @@ Partial Class FrmSettings
         'RichTextBox1
         '
         Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.RichTextBox1.Enabled = False
         Me.RichTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RichTextBox1.Location = New System.Drawing.Point(20, 42)
         Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(200, 167)
+        Me.RichTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal
+        Me.RichTextBox1.Size = New System.Drawing.Size(200, 189)
         Me.RichTextBox1.TabIndex = 11
         Me.RichTextBox1.Text = ""
+        Me.RichTextBox1.WordWrap = False
         '
         'RichTextBox2
         '
         Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.RichTextBox2.Enabled = False
         Me.RichTextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox2.Location = New System.Drawing.Point(20, 237)
+        Me.RichTextBox2.Location = New System.Drawing.Point(20, 247)
         Me.RichTextBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.Size = New System.Drawing.Size(200, 167)
+        Me.RichTextBox2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal
+        Me.RichTextBox2.Size = New System.Drawing.Size(200, 193)
         Me.RichTextBox2.TabIndex = 12
         Me.RichTextBox2.Text = ""
+        Me.RichTextBox2.WordWrap = False
         '
         'Label6
         '
@@ -416,7 +433,7 @@ Partial Class FrmSettings
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(20, 223)
+        Me.Label7.Location = New System.Drawing.Point(20, 233)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(147, 13)
@@ -436,7 +453,7 @@ Partial Class FrmSettings
         Me.GroupBox5.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox5.Size = New System.Drawing.Size(240, 477)
+        Me.GroupBox5.Size = New System.Drawing.Size(240, 533)
         Me.GroupBox5.TabIndex = 15
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Conditional CAPS LOCK (beta)"
@@ -446,7 +463,7 @@ Partial Class FrmSettings
         Me.LinkLabel3.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.LinkLabel3.AutoSize = True
         Me.LinkLabel3.LinkColor = System.Drawing.Color.DarkKhaki
-        Me.LinkLabel3.Location = New System.Drawing.Point(96, 451)
+        Me.LinkLabel3.Location = New System.Drawing.Point(96, 490)
         Me.LinkLabel3.Name = "LinkLabel3"
         Me.LinkLabel3.Size = New System.Drawing.Size(124, 13)
         Me.LinkLabel3.TabIndex = 17
@@ -458,7 +475,7 @@ Partial Class FrmSettings
         Me.LinkLabel2.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.LinkLabel2.AutoSize = True
         Me.LinkLabel2.LinkColor = System.Drawing.Color.DarkKhaki
-        Me.LinkLabel2.Location = New System.Drawing.Point(176, 409)
+        Me.LinkLabel2.Location = New System.Drawing.Point(176, 448)
         Me.LinkLabel2.Name = "LinkLabel2"
         Me.LinkLabel2.Size = New System.Drawing.Size(44, 13)
         Me.LinkLabel2.TabIndex = 16
@@ -470,12 +487,54 @@ Partial Class FrmSettings
         Me.LinkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.LinkLabel1.AutoSize = True
         Me.LinkLabel1.LinkColor = System.Drawing.Color.DarkKhaki
-        Me.LinkLabel1.Location = New System.Drawing.Point(132, 430)
+        Me.LinkLabel1.Location = New System.Drawing.Point(132, 469)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(88, 13)
         Me.LinkLabel1.TabIndex = 15
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Open lists for edit"
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.Controls.Add(Me.Button3)
+        Me.GroupBox6.Controls.Add(Me.LinkLabel4)
+        Me.GroupBox6.Controls.Add(Me.Label9)
+        Me.GroupBox6.Controls.Add(Me.ChkHardwareIntegration)
+        Me.GroupBox6.Location = New System.Drawing.Point(104, 446)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(321, 99)
+        Me.GroupBox6.TabIndex = 16
+        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.Text = "Hardware integration"
+        '
+        'LinkLabel4
+        '
+        Me.LinkLabel4.AutoSize = True
+        Me.LinkLabel4.Location = New System.Drawing.Point(16, 71)
+        Me.LinkLabel4.Name = "LinkLabel4"
+        Me.LinkLabel4.Size = New System.Drawing.Size(239, 13)
+        Me.LinkLabel4.TabIndex = 3
+        Me.LinkLabel4.TabStop = True
+        Me.LinkLabel4.Text = "https://github.com/limbo666/Mimic_For_KeyzPal"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(16, 56)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(215, 13)
+        Me.Label9.TabIndex = 2
+        Me.Label9.Text = "Mimic hardware is open source. Learn more:"
+        '
+        'ChkHardwareIntegration
+        '
+        Me.ChkHardwareIntegration.AutoSize = True
+        Me.ChkHardwareIntegration.Location = New System.Drawing.Point(16, 22)
+        Me.ChkHardwareIntegration.Name = "ChkHardwareIntegration"
+        Me.ChkHardwareIntegration.Size = New System.Drawing.Size(88, 17)
+        Me.ChkHardwareIntegration.TabIndex = 0
+        Me.ChkHardwareIntegration.Text = "Control mimic"
+        Me.ChkHardwareIntegration.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
@@ -488,43 +547,20 @@ Partial Class FrmSettings
         Me.PictureBox1.TabIndex = 10
         Me.PictureBox1.TabStop = False
         '
-        'GroupBox6
+        'Button3
         '
-        Me.GroupBox6.Controls.Add(Me.lnkOptions)
-        Me.GroupBox6.Controls.Add(Me.ChkHardwareIntegration)
-        Me.GroupBox6.Location = New System.Drawing.Point(104, 422)
-        Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(321, 67)
-        Me.GroupBox6.TabIndex = 16
-        Me.GroupBox6.TabStop = False
-        Me.GroupBox6.Text = "Hardware integration"
-        '
-        'ChkHardwareIntegration
-        '
-        Me.ChkHardwareIntegration.AutoSize = True
-        Me.ChkHardwareIntegration.Location = New System.Drawing.Point(20, 25)
-        Me.ChkHardwareIntegration.Name = "ChkHardwareIntegration"
-        Me.ChkHardwareIntegration.Size = New System.Drawing.Size(88, 17)
-        Me.ChkHardwareIntegration.TabIndex = 0
-        Me.ChkHardwareIntegration.Text = "Control mimic"
-        Me.ChkHardwareIntegration.UseVisualStyleBackColor = True
-        '
-        'lnkOptions
-        '
-        Me.lnkOptions.AutoSize = True
-        Me.lnkOptions.Enabled = False
-        Me.lnkOptions.Location = New System.Drawing.Point(173, 26)
-        Me.lnkOptions.Name = "lnkOptions"
-        Me.lnkOptions.Size = New System.Drawing.Size(43, 13)
-        Me.lnkOptions.TabIndex = 1
-        Me.lnkOptions.TabStop = True
-        Me.lnkOptions.Text = "Options"
+        Me.Button3.Location = New System.Drawing.Point(135, 16)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(131, 23)
+        Me.Button3.TabIndex = 4
+        Me.Button3.Text = "Hardware options"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'FrmSettings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(681, 527)
+        Me.ClientSize = New System.Drawing.Size(681, 581)
         Me.Controls.Add(Me.GroupBox6)
         Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.PictureBox1)
@@ -551,9 +587,9 @@ Partial Class FrmSettings
         CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox6.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -598,5 +634,8 @@ Partial Class FrmSettings
     Friend WithEvents LinkLabel3 As LinkLabel
     Friend WithEvents GroupBox6 As GroupBox
     Friend WithEvents ChkHardwareIntegration As CheckBox
-    Friend WithEvents lnkOptions As LinkLabel
+    Friend WithEvents CheckBox8 As CheckBox
+    Friend WithEvents LinkLabel4 As LinkLabel
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Button3 As Button
 End Class
