@@ -165,7 +165,8 @@
  1.0.7.18 - I-must-add-this-feature update
 . Added input language indicator
 . Fixed some interface elements and their behavior
-. Hardware mimic support rewritten to be more stabel and faster
+. Hardware mimic support rewritten to be more stable and faster
+. Updated the active window detection 
  
 </value>
   </data>
