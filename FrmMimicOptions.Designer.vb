@@ -40,9 +40,12 @@ Partial Class FrmMimicOptions
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -53,7 +56,7 @@ Partial Class FrmMimicOptions
         Me.GroupBox1.Controls.Add(Me.ComboBox3)
         Me.GroupBox1.Controls.Add(Me.ComboBox2)
         Me.GroupBox1.Controls.Add(Me.ComboBox1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 98)
+        Me.GroupBox1.Location = New System.Drawing.Point(101, 98)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(306, 80)
         Me.GroupBox1.TabIndex = 0
@@ -122,7 +125,7 @@ Partial Class FrmMimicOptions
         '
         Me.GroupBox2.Controls.Add(Me.Button1)
         Me.GroupBox2.Controls.Add(Me.Button2)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 184)
+        Me.GroupBox2.Location = New System.Drawing.Point(101, 184)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(306, 80)
         Me.GroupBox2.TabIndex = 0
@@ -131,18 +134,18 @@ Partial Class FrmMimicOptions
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(176, 19)
+        Me.Button1.Location = New System.Drawing.Point(161, 25)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(94, 45)
+        Me.Button1.Size = New System.Drawing.Size(123, 39)
         Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Restore colors  from EEPROM "
+        Me.Button1.Text = "Restore colors from EEPROM "
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(33, 19)
+        Me.Button2.Location = New System.Drawing.Point(21, 25)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(94, 45)
+        Me.Button2.Size = New System.Drawing.Size(123, 39)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Reboot Mimic device"
         Me.Button2.UseVisualStyleBackColor = True
@@ -155,7 +158,7 @@ Partial Class FrmMimicOptions
         Me.GroupBox3.Controls.Add(Me.Button5)
         Me.GroupBox3.Controls.Add(Me.Button4)
         Me.GroupBox3.Controls.Add(Me.Button3)
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox3.Location = New System.Drawing.Point(101, 12)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(306, 80)
         Me.GroupBox3.TabIndex = 1
@@ -219,18 +222,40 @@ Partial Class FrmMimicOptions
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(12, 271)
+        Me.Label4.Location = New System.Drawing.Point(101, 271)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(310, 26)
+        Me.Label4.Size = New System.Drawing.Size(304, 26)
         Me.Label4.TabIndex = 2
-        Me.Label4.Text = "NOTICE: the hardware mimic doesn't gets updated by keyboard " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "status while this p" &
-    "anel is visible "
+        Me.Label4.Text = "NOTE: The hardware mimic doesn't gets updated by keyboard " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "status while this pan" &
+    "el is visible "
+        '
+        'Button9
+        '
+        Me.Button9.Location = New System.Drawing.Point(332, 313)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(75, 23)
+        Me.Button9.TabIndex = 3
+        Me.Button9.Text = "OK"
+        Me.Button9.UseVisualStyleBackColor = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.KeyzPal.My.Resources.Resources.KeyzPal_Key_Logo
+        Me.PictureBox1.Location = New System.Drawing.Point(11, 14)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(80, 72)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 12
+        Me.PictureBox1.TabStop = False
         '
         'FrmMimicOptions
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(334, 315)
+        Me.ClientSize = New System.Drawing.Size(419, 348)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.Button9)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
@@ -244,6 +269,7 @@ Partial Class FrmMimicOptions
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -267,4 +293,6 @@ Partial Class FrmMimicOptions
     Friend WithEvents Button4 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Label4 As Label
+    Friend WithEvents Button9 As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

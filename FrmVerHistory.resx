@@ -159,14 +159,14 @@
 . Removed unused resources
 . Added internal text editor to edit lists.ini file
 
- 1.0.6.16 - 2023-Holidays-update
+ 1.0.6.16 - 2023-Holidays update
 . Added basic support for mimic hardware
 
  1.0.7.18 - I-must-add-this-feature update
-. Added input language indicator
+. Added input language indicator popup function
 . Fixed some interface elements and their behavior
 . Hardware mimic support rewritten to be more stable and faster
-. Updated the active window detection 
+. Updated the active window detection to copy title on mouse hover
  
 </value>
   </data>

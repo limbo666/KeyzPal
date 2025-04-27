@@ -45,10 +45,10 @@ Public Class FrmEditor
 
         If File.Exists(filePath) Then
             RichTextBox1.Text = File.ReadAllText(filePath)
-            Label1.Text = "File contents - edit to fit your needs"
+            Label1.Text = "Edit lists below to add your programs"
         Else
             RichTextBox1.Text = defaultText
-            Label1.Text = "Default data - edit to fit your needs"
+            Label1.Text = "Default data - Edit lists below to add your programs"
         End If
     End Sub
 

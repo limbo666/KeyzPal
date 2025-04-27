@@ -62,11 +62,12 @@ Partial Class FrmSettings
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.LinkLabel4 = New System.Windows.Forms.LinkLabel()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.ChkHardwareIntegration = New System.Windows.Forms.CheckBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -110,7 +111,7 @@ Partial Class FrmSettings
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(594, 550)
+        Me.Button1.Location = New System.Drawing.Point(656, 550)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 25)
         Me.Button1.TabIndex = 3
@@ -396,26 +397,26 @@ Partial Class FrmSettings
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.RichTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RichTextBox1.Location = New System.Drawing.Point(20, 42)
         Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal
-        Me.RichTextBox1.Size = New System.Drawing.Size(200, 189)
+        Me.RichTextBox1.Size = New System.Drawing.Size(264, 189)
         Me.RichTextBox1.TabIndex = 11
         Me.RichTextBox1.Text = ""
         Me.RichTextBox1.WordWrap = False
         '
         'RichTextBox2
         '
-        Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.RichTextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox2.Location = New System.Drawing.Point(20, 247)
+        Me.RichTextBox2.Location = New System.Drawing.Point(20, 257)
         Me.RichTextBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.RichTextBox2.Name = "RichTextBox2"
         Me.RichTextBox2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal
-        Me.RichTextBox2.Size = New System.Drawing.Size(200, 193)
+        Me.RichTextBox2.Size = New System.Drawing.Size(264, 193)
         Me.RichTextBox2.TabIndex = 12
         Me.RichTextBox2.Text = ""
         Me.RichTextBox2.WordWrap = False
@@ -423,7 +424,7 @@ Partial Class FrmSettings
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(20, 26)
+        Me.Label6.Location = New System.Drawing.Point(20, 25)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(149, 13)
@@ -433,7 +434,7 @@ Partial Class FrmSettings
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(20, 233)
+        Me.Label7.Location = New System.Drawing.Point(20, 242)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(147, 13)
@@ -453,41 +454,41 @@ Partial Class FrmSettings
         Me.GroupBox5.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox5.Size = New System.Drawing.Size(240, 533)
+        Me.GroupBox5.Size = New System.Drawing.Size(301, 533)
         Me.GroupBox5.TabIndex = 15
         Me.GroupBox5.TabStop = False
-        Me.GroupBox5.Text = "Conditional CAPS LOCK (beta)"
+        Me.GroupBox5.Text = "Conditional CAPS LOCK"
         '
         'LinkLabel3
         '
         Me.LinkLabel3.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.LinkLabel3.AutoSize = True
-        Me.LinkLabel3.LinkColor = System.Drawing.Color.DarkKhaki
-        Me.LinkLabel3.Location = New System.Drawing.Point(96, 490)
+        Me.LinkLabel3.LinkColor = System.Drawing.Color.SlateBlue
+        Me.LinkLabel3.Location = New System.Drawing.Point(113, 503)
         Me.LinkLabel3.Name = "LinkLabel3"
-        Me.LinkLabel3.Size = New System.Drawing.Size(124, 13)
+        Me.LinkLabel3.Size = New System.Drawing.Size(171, 13)
         Me.LinkLabel3.TabIndex = 17
         Me.LinkLabel3.TabStop = True
-        Me.LinkLabel3.Text = "Show active window title"
+        Me.LinkLabel3.Text = "Show active (focused) window title"
         '
         'LinkLabel2
         '
         Me.LinkLabel2.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.LinkLabel2.AutoSize = True
-        Me.LinkLabel2.LinkColor = System.Drawing.Color.DarkKhaki
-        Me.LinkLabel2.Location = New System.Drawing.Point(176, 448)
+        Me.LinkLabel2.LinkColor = System.Drawing.Color.SlateBlue
+        Me.LinkLabel2.Location = New System.Drawing.Point(220, 463)
         Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(44, 13)
+        Me.LinkLabel2.Size = New System.Drawing.Size(64, 13)
         Me.LinkLabel2.TabIndex = 16
         Me.LinkLabel2.TabStop = True
-        Me.LinkLabel2.Text = "Refresh"
+        Me.LinkLabel2.Text = "Refresh lists"
         '
         'LinkLabel1
         '
         Me.LinkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.LinkColor = System.Drawing.Color.DarkKhaki
-        Me.LinkLabel1.Location = New System.Drawing.Point(132, 469)
+        Me.LinkLabel1.LinkColor = System.Drawing.Color.SlateBlue
+        Me.LinkLabel1.Location = New System.Drawing.Point(196, 482)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(88, 13)
         Me.LinkLabel1.TabIndex = 15
@@ -507,9 +508,19 @@ Partial Class FrmSettings
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Hardware integration"
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(135, 16)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(131, 23)
+        Me.Button3.TabIndex = 4
+        Me.Button3.Text = "Hardware options"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'LinkLabel4
         '
         Me.LinkLabel4.AutoSize = True
+        Me.LinkLabel4.LinkColor = System.Drawing.Color.SlateBlue
         Me.LinkLabel4.Location = New System.Drawing.Point(16, 71)
         Me.LinkLabel4.Name = "LinkLabel4"
         Me.LinkLabel4.Size = New System.Drawing.Size(239, 13)
@@ -547,20 +558,21 @@ Partial Class FrmSettings
         Me.PictureBox1.TabIndex = 10
         Me.PictureBox1.TabStop = False
         '
-        'Button3
+        'Button4
         '
-        Me.Button3.Location = New System.Drawing.Point(135, 16)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(131, 23)
-        Me.Button3.TabIndex = 4
-        Me.Button3.Text = "Hardware options"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Button4.Location = New System.Drawing.Point(575, 550)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 25)
+        Me.Button4.TabIndex = 17
+        Me.Button4.Text = "Cancel"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'FrmSettings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(681, 581)
+        Me.ClientSize = New System.Drawing.Size(750, 581)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.GroupBox6)
         Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.PictureBox1)
@@ -638,4 +650,5 @@ Partial Class FrmSettings
     Friend WithEvents LinkLabel4 As LinkLabel
     Friend WithEvents Label9 As Label
     Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
 End Class

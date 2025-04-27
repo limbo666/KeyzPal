@@ -626,8 +626,19 @@ Public Class FrmMain
         End If
     End Sub
 
-    Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+    Private Async Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         'CountActiveIndicators()
+        If EnableHardwareIntegration = True Then
+
+            Dim commands As New List(Of Task(Of Boolean))
+
+            commands.Add(SendUDPCommand("capsOFF", 22689, "255.255.255.255"))
+            commands.Add(SendUDPCommand("numOFF", 22689, "255.255.255.255"))
+            commands.Add(SendUDPCommand("scrollOFF", 22689, "255.255.255.255"))
+
+            Await (Task.WhenAll(commands))
+        End If
+
         K.DiposeHook()
 
         If CommandClose = True Then

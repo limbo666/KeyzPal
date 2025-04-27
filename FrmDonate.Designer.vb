@@ -31,8 +31,10 @@ Partial Class FrmDonate
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TmrScroll
@@ -41,7 +43,7 @@ Partial Class FrmDonate
         '
         'TmrHold
         '
-        Me.TmrHold.Interval = 4500
+        Me.TmrHold.Interval = 7000
         '
         'Label1
         '
@@ -58,7 +60,7 @@ Partial Class FrmDonate
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
         Me.Label2.Location = New System.Drawing.Point(6, 1)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(64, 16)
+        Me.Label2.Size = New System.Drawing.Size(63, 16)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "KeyzPal"
         '
@@ -77,7 +79,7 @@ Partial Class FrmDonate
         Me.GroupBox1.Controls.Add(Me.PictureBox1)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(9, 8)
+        Me.GroupBox1.Location = New System.Drawing.Point(91, 7)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(283, 84)
         Me.GroupBox1.TabIndex = 5
@@ -93,11 +95,23 @@ Partial Class FrmDonate
         Me.PictureBox1.TabIndex = 4
         Me.PictureBox1.TabStop = False
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.KeyzPal.My.Resources.Resources.KeyzPal_Key_Logo
+        Me.PictureBox2.Location = New System.Drawing.Point(11, 7)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(75, 75)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 11
+        Me.PictureBox2.TabStop = False
+        '
         'FrmDonate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(302, 102)
+        Me.ClientSize = New System.Drawing.Size(386, 102)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -106,6 +120,7 @@ Partial Class FrmDonate
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -117,4 +132,5 @@ Partial Class FrmDonate
     Friend WithEvents Label3 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

@@ -72,4 +72,8 @@
     Private Sub ComboBox3_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox3.SelectedIndexChanged
         SendUDPCommand("scroll" & ComboBox3.Text, 22689, "255.255.255.255")
     End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        Me.Close()
+    End Sub
 End Class

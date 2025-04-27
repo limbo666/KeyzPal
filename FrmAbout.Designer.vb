@@ -79,7 +79,7 @@ Partial Class FrmAbout
         '
         Me.Label4.AutoSize = True
         Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label4.Location = New System.Drawing.Point(26, 346)
+        Me.Label4.Location = New System.Drawing.Point(26, 344)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(160, 15)
         Me.Label4.TabIndex = 4
@@ -88,7 +88,7 @@ Partial Class FrmAbout
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(81, 37)
+        Me.Label5.Location = New System.Drawing.Point(64, 18)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(90, 13)
         Me.Label5.TabIndex = 5
@@ -96,7 +96,6 @@ Partial Class FrmAbout
         '
         'Button1
         '
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Location = New System.Drawing.Point(130, 380)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(70, 25)
@@ -106,18 +105,18 @@ Partial Class FrmAbout
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.BurlyWood
+        Me.Panel1.BackColor = System.Drawing.Color.PeachPuff
         Me.Panel1.Controls.Add(Me.Label7)
         Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Location = New System.Drawing.Point(-17, 190)
+        Me.Panel1.Location = New System.Drawing.Point(1, 199)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(246, 63)
+        Me.Panel1.Size = New System.Drawing.Size(210, 36)
         Me.Panel1.TabIndex = 7
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(100, 19)
+        Me.Label7.Location = New System.Drawing.Point(85, 2)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(44, 13)
         Me.Label7.TabIndex = 6
@@ -126,6 +125,7 @@ Partial Class FrmAbout
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.LinkColor = System.Drawing.Color.SteelBlue
         Me.LinkLabel1.Location = New System.Drawing.Point(43, 170)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(127, 13)
@@ -136,7 +136,7 @@ Partial Class FrmAbout
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(8, 365)
+        Me.Label6.Location = New System.Drawing.Point(8, 361)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(16, 13)
         Me.Label6.TabIndex = 10
@@ -153,6 +153,7 @@ Partial Class FrmAbout
         'LinkLabel2
         '
         Me.LinkLabel2.AutoSize = True
+        Me.LinkLabel2.LinkColor = System.Drawing.Color.SteelBlue
         Me.LinkLabel2.Location = New System.Drawing.Point(9, 386)
         Me.LinkLabel2.Name = "LinkLabel2"
         Me.LinkLabel2.Size = New System.Drawing.Size(89, 13)
@@ -194,7 +195,7 @@ Partial Class FrmAbout
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.KeyzPal.My.Resources.Resources.New_Patch_Ver1_250x250
-        Me.PictureBox3.Location = New System.Drawing.Point(52, 251)
+        Me.PictureBox3.Location = New System.Drawing.Point(52, 244)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(110, 97)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
