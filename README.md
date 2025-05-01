@@ -38,7 +38,7 @@ This function can set the lock keys state to "normal" after a selectable period 
 From version 1.0.4.11 the keys normal state can be selected by the user under settings.
 
 
-## Conditional CAPS LOCK function (beta): 
+## Conditional CAPS LOCK function: 
 This function can be used to auto switch on (or off) CAPS LOCK dependind on the current active window. Up to 10 program titles per fucntion can be predifined on file lists.ini.<br/>
 This file should be places in the same folder with `keyzpal.exe`. Its contents will be readed upon program launch.<br/> A part of the target window title should be enough to auto switch to predifined CAPS lock. <br/>
 <br/>
