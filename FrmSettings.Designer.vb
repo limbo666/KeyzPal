@@ -22,6 +22,7 @@ Partial Class FrmSettings
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmSettings))
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
@@ -68,6 +69,7 @@ Partial Class FrmSettings
         Me.ChkHardwareIntegration = New System.Windows.Forms.CheckBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,6 +89,7 @@ Partial Class FrmSettings
         Me.CheckBox1.Size = New System.Drawing.Size(77, 17)
         Me.CheckBox1.TabIndex = 0
         Me.CheckBox1.Text = "Caps Lock"
+        Me.ToolTip1.SetToolTip(Me.CheckBox1, "Enable the Caps Lock icon")
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'CheckBox2
@@ -97,6 +100,7 @@ Partial Class FrmSettings
         Me.CheckBox2.Size = New System.Drawing.Size(75, 17)
         Me.CheckBox2.TabIndex = 1
         Me.CheckBox2.Text = "Num Lock"
+        Me.ToolTip1.SetToolTip(Me.CheckBox2, "Enable the Num Lock icon")
         Me.CheckBox2.UseVisualStyleBackColor = True
         '
         'CheckBox3
@@ -107,6 +111,7 @@ Partial Class FrmSettings
         Me.CheckBox3.Size = New System.Drawing.Size(79, 17)
         Me.CheckBox3.TabIndex = 2
         Me.CheckBox3.Text = "Scroll Lock"
+        Me.ToolTip1.SetToolTip(Me.CheckBox3, "Enable the Scroll Lock icon")
         Me.CheckBox3.UseVisualStyleBackColor = True
         '
         'Button1
@@ -138,6 +143,8 @@ Partial Class FrmSettings
         Me.CheckBox4.Size = New System.Drawing.Size(97, 17)
         Me.CheckBox4.TabIndex = 5
         Me.CheckBox4.Text = "Normalize keys"
+        Me.ToolTip1.SetToolTip(Me.CheckBox4, "Return the lock keys in the predefined (normal) state after the selected time per" &
+        "iod")
         Me.CheckBox4.UseVisualStyleBackColor = True
         '
         'GroupBox2
@@ -290,6 +297,7 @@ Partial Class FrmSettings
         Me.CheckBox6.Size = New System.Drawing.Size(161, 17)
         Me.CheckBox6.TabIndex = 9
         Me.CheckBox6.Text = "Make sound when normalize"
+        Me.ToolTip1.SetToolTip(Me.CheckBox6, "Indicate the normalizarion with a sound")
         Me.CheckBox6.UseVisualStyleBackColor = True
         '
         'Label1
@@ -319,6 +327,7 @@ Partial Class FrmSettings
         Me.ChkRunAtStartup.Size = New System.Drawing.Size(114, 17)
         Me.ChkRunAtStartup.TabIndex = 7
         Me.ChkRunAtStartup.Text = "Start with windows"
+        Me.ToolTip1.SetToolTip(Me.ChkRunAtStartup, "Makes program launch automatically when operating system starts")
         Me.ChkRunAtStartup.UseVisualStyleBackColor = True
         '
         'GroupBox3
@@ -353,6 +362,8 @@ Partial Class FrmSettings
         Me.CheckBox8.Size = New System.Drawing.Size(186, 17)
         Me.CheckBox8.TabIndex = 18
         Me.CheckBox8.Text = "Show active language notification"
+        Me.ToolTip1.SetToolTip(Me.CheckBox8, "Displays a popup indicator for active language code when input language is change" &
+        "d")
         Me.CheckBox8.UseVisualStyleBackColor = True
         '
         'Label8
@@ -383,6 +394,7 @@ Partial Class FrmSettings
         Me.CheckBox7.Size = New System.Drawing.Size(216, 17)
         Me.CheckBox7.TabIndex = 1
         Me.CheckBox7.Text = "Make sound when a lock key is pressed"
+        Me.ToolTip1.SetToolTip(Me.CheckBox7, "Indicate the key lock change with a sound")
         Me.CheckBox7.UseVisualStyleBackColor = True
         '
         'CheckBox5
@@ -393,15 +405,18 @@ Partial Class FrmSettings
         Me.CheckBox5.Size = New System.Drawing.Size(251, 17)
         Me.CheckBox5.TabIndex = 0
         Me.CheckBox5.Text = "Show screen notifications on each lock change"
+        Me.ToolTip1.SetToolTip(Me.CheckBox5, "Shows a popup window to indicate the change")
         Me.CheckBox5.UseVisualStyleBackColor = True
         '
         'RichTextBox1
         '
+        Me.RichTextBox1.BackColor = System.Drawing.Color.White
         Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.RichTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RichTextBox1.Location = New System.Drawing.Point(20, 42)
         Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.ReadOnly = True
         Me.RichTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal
         Me.RichTextBox1.Size = New System.Drawing.Size(264, 189)
         Me.RichTextBox1.TabIndex = 11
@@ -410,11 +425,13 @@ Partial Class FrmSettings
         '
         'RichTextBox2
         '
+        Me.RichTextBox2.BackColor = System.Drawing.Color.White
         Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.RichTextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RichTextBox2.Location = New System.Drawing.Point(20, 257)
         Me.RichTextBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.RichTextBox2.Name = "RichTextBox2"
+        Me.RichTextBox2.ReadOnly = True
         Me.RichTextBox2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal
         Me.RichTextBox2.Size = New System.Drawing.Size(264, 193)
         Me.RichTextBox2.TabIndex = 12
@@ -470,6 +487,7 @@ Partial Class FrmSettings
         Me.LinkLabel3.TabIndex = 17
         Me.LinkLabel3.TabStop = True
         Me.LinkLabel3.Text = "Show active (focused) window title"
+        Me.ToolTip1.SetToolTip(Me.LinkLabel3, "A tool to find out which window name is detected by the program ")
         '
         'LinkLabel2
         '
@@ -482,6 +500,7 @@ Partial Class FrmSettings
         Me.LinkLabel2.TabIndex = 16
         Me.LinkLabel2.TabStop = True
         Me.LinkLabel2.Text = "Refresh lists"
+        Me.ToolTip1.SetToolTip(Me.LinkLabel2, "Reload list if edited with an external editor")
         '
         'LinkLabel1
         '
@@ -494,6 +513,7 @@ Partial Class FrmSettings
         Me.LinkLabel1.TabIndex = 15
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Open lists for edit"
+        Me.ToolTip1.SetToolTip(Me.LinkLabel1, "Open local editor for the lists")
         '
         'GroupBox6
         '
@@ -515,6 +535,7 @@ Partial Class FrmSettings
         Me.Button3.Size = New System.Drawing.Size(131, 23)
         Me.Button3.TabIndex = 4
         Me.Button3.Text = "Hardware options"
+        Me.ToolTip1.SetToolTip(Me.Button3, "Set options and test the hardware")
         Me.Button3.UseVisualStyleBackColor = True
         '
         'LinkLabel4
@@ -545,6 +566,7 @@ Partial Class FrmSettings
         Me.ChkHardwareIntegration.Size = New System.Drawing.Size(88, 17)
         Me.ChkHardwareIntegration.TabIndex = 0
         Me.ChkHardwareIntegration.Text = "Control mimic"
+        Me.ToolTip1.SetToolTip(Me.ChkHardwareIntegration, "Sends comands to LAN  to control hardware LEDs." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10))
         Me.ChkHardwareIntegration.UseVisualStyleBackColor = True
         '
         'PictureBox1
@@ -651,4 +673,5 @@ Partial Class FrmSettings
     Friend WithEvents Label9 As Label
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

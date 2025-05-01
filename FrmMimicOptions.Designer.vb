@@ -22,6 +22,7 @@ Partial Class FrmMimicOptions
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -42,6 +43,7 @@ Partial Class FrmMimicOptions
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Button9 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -139,6 +141,7 @@ Partial Class FrmMimicOptions
         Me.Button1.Size = New System.Drawing.Size(123, 39)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Restore colors from EEPROM "
+        Me.ToolTip1.SetToolTip(Me.Button1, "Diagnostic tool to verify that colors are saved ")
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
@@ -148,6 +151,7 @@ Partial Class FrmMimicOptions
         Me.Button2.Size = New System.Drawing.Size(123, 39)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Reboot Mimic device"
+        Me.ToolTip1.SetToolTip(Me.Button2, "Diagnostic command to remote reboot the hardware")
         Me.Button2.UseVisualStyleBackColor = True
         '
         'GroupBox3
@@ -163,7 +167,7 @@ Partial Class FrmMimicOptions
         Me.GroupBox3.Size = New System.Drawing.Size(306, 80)
         Me.GroupBox3.TabIndex = 1
         Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Maunal light control"
+        Me.GroupBox3.Text = "Manual light control"
         '
         'Button8
         '
@@ -172,6 +176,7 @@ Partial Class FrmMimicOptions
         Me.Button8.Size = New System.Drawing.Size(75, 23)
         Me.Button8.TabIndex = 5
         Me.Button8.Text = "ScrollOff"
+        Me.ToolTip1.SetToolTip(Me.Button8, "Direct control of the LED")
         Me.Button8.UseVisualStyleBackColor = True
         '
         'Button7
@@ -181,6 +186,7 @@ Partial Class FrmMimicOptions
         Me.Button7.Size = New System.Drawing.Size(75, 23)
         Me.Button7.TabIndex = 4
         Me.Button7.Text = "ScrollOn"
+        Me.ToolTip1.SetToolTip(Me.Button7, "Direct control of the LED")
         Me.Button7.UseVisualStyleBackColor = True
         '
         'Button6
@@ -190,6 +196,7 @@ Partial Class FrmMimicOptions
         Me.Button6.Size = New System.Drawing.Size(75, 23)
         Me.Button6.TabIndex = 3
         Me.Button6.Text = "NumOff"
+        Me.ToolTip1.SetToolTip(Me.Button6, "Direct control of the LED")
         Me.Button6.UseVisualStyleBackColor = True
         '
         'Button5
@@ -199,6 +206,7 @@ Partial Class FrmMimicOptions
         Me.Button5.Size = New System.Drawing.Size(75, 23)
         Me.Button5.TabIndex = 2
         Me.Button5.Text = "NumOn"
+        Me.ToolTip1.SetToolTip(Me.Button5, "Direct control of the LED")
         Me.Button5.UseVisualStyleBackColor = True
         '
         'Button4
@@ -208,6 +216,7 @@ Partial Class FrmMimicOptions
         Me.Button4.Size = New System.Drawing.Size(75, 23)
         Me.Button4.TabIndex = 1
         Me.Button4.Text = "CapsOff"
+        Me.ToolTip1.SetToolTip(Me.Button4, "Direct control of the LED")
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Button3
@@ -217,6 +226,7 @@ Partial Class FrmMimicOptions
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 0
         Me.Button3.Text = "CapsOn"
+        Me.ToolTip1.SetToolTip(Me.Button3, "Direct control of the LED")
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Label4
@@ -295,4 +305,5 @@ Partial Class FrmMimicOptions
     Friend WithEvents Label4 As Label
     Friend WithEvents Button9 As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

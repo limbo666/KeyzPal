@@ -36,6 +36,7 @@ Partial Class FrmMain
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VersionHistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProjectOnGithubToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
@@ -71,7 +72,7 @@ Partial Class FrmMain
         Me.lblDevDiagnostics2 = New System.Windows.Forms.Label()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.TmrIsTimeToAllowNotifications = New System.Windows.Forms.Timer(Me.components)
-        Me.ProjectOnGithubToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -139,13 +140,13 @@ Partial Class FrmMain
         'HideToTrayToolStripMenuItem
         '
         Me.HideToTrayToolStripMenuItem.Name = "HideToTrayToolStripMenuItem"
-        Me.HideToTrayToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.HideToTrayToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
         Me.HideToTrayToolStripMenuItem.Text = "Hide to system tray"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'EditToolStripMenuItem
@@ -158,7 +159,7 @@ Partial Class FrmMain
         'SettingsToolStripMenuItem
         '
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
-        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.SettingsToolStripMenuItem.Text = "Settings"
         '
         'HelpToolStripMenuItem
@@ -171,13 +172,19 @@ Partial Class FrmMain
         'VersionHistoryToolStripMenuItem
         '
         Me.VersionHistoryToolStripMenuItem.Name = "VersionHistoryToolStripMenuItem"
-        Me.VersionHistoryToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.VersionHistoryToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
         Me.VersionHistoryToolStripMenuItem.Text = "Version history"
+        '
+        'ProjectOnGithubToolStripMenuItem
+        '
+        Me.ProjectOnGithubToolStripMenuItem.Name = "ProjectOnGithubToolStripMenuItem"
+        Me.ProjectOnGithubToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.ProjectOnGithubToolStripMenuItem.Text = "Project on Github"
         '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'NotifyIcon1
@@ -273,6 +280,7 @@ Partial Class FrmMain
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(46, 20)
         Me.NumericUpDown1.TabIndex = 11
+        Me.ToolTip1.SetToolTip(Me.NumericUpDown1, "Select between the predefined icon sets")
         Me.NumericUpDown1.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'PBoxYield
@@ -284,6 +292,8 @@ Partial Class FrmMain
         Me.PBoxYield.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PBoxYield.TabIndex = 18
         Me.PBoxYield.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PBoxYield, "Indicates that Caps is turned on by ""Conditional command""")
+        Me.PBoxYield.Visible = False
         '
         'Panel3
         '
@@ -401,6 +411,7 @@ Partial Class FrmMain
         Me.Button1.Size = New System.Drawing.Size(75, 25)
         Me.Button1.TabIndex = 12
         Me.Button1.Text = "Close"
+        Me.ToolTip1.SetToolTip(Me.Button1, "Closes the program")
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
@@ -410,6 +421,7 @@ Partial Class FrmMain
         Me.Button2.Size = New System.Drawing.Size(75, 25)
         Me.Button2.TabIndex = 13
         Me.Button2.Text = "Hide"
+        Me.ToolTip1.SetToolTip(Me.Button2, "Hides to tray")
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Label4
@@ -467,16 +479,11 @@ Partial Class FrmMain
         Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox8.TabIndex = 15
         Me.PictureBox8.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox8, "Support me")
         '
         'TmrIsTimeToAllowNotifications
         '
         Me.TmrIsTimeToAllowNotifications.Interval = 2000
-        '
-        'ProjectOnGithubToolStripMenuItem
-        '
-        Me.ProjectOnGithubToolStripMenuItem.Name = "ProjectOnGithubToolStripMenuItem"
-        Me.ProjectOnGithubToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ProjectOnGithubToolStripMenuItem.Text = "Project on Github"
         '
         'FrmMain
         '
@@ -565,4 +572,5 @@ Partial Class FrmMain
     Friend WithEvents PBoxYield As PictureBox
     Friend WithEvents TmrIsTimeToAllowNotifications As Timer
     Friend WithEvents ProjectOnGithubToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

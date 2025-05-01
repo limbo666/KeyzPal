@@ -162,11 +162,12 @@
  1.0.6.16 - 2023-Holidays update
 . Added basic support for mimic hardware
 
- 1.0.7.18 - I-must-add-this-feature update
+ 1.0.7.19 - I-must-add-this-feature update
 . Added input language indicator popup function
-. Fixed some interface elements and their behavior
+. Fixed lot of interface elements and their behavior
 . Hardware mimic support rewritten to be more stable and faster
 . Updated the active window detection to copy title on mouse hover
+. Added tooltips
  
 </value>
   </data>
